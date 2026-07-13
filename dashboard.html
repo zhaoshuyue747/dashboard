@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东莞市橙辉供应链管理有限公司 · 实时数据大屏</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:         #f0f4f8;
+    --surface:    #ffffff;
+    --border:     #dce3ec;
+    --text-main:  #1a2233;
+    --text-sub:   #5a6a82;
+    --text-mute:  #8fa0b8;
+    --accent:     #1677ff;
+    --green:      #10b981;
+    --red:        #ef4444;
+    --orange:     #f97316;
+    --yellow:     #eab308;
+    --tag-blue:   #dbeafe;   --tag-blue-t:  #1d4ed8;
+    --tag-green:  #d1fae5;   --tag-green-t: #065f46;
+    --tag-red:    #fee2e2;   --tag-red-t:   #991b1b;
+    --tag-orange: #fff7ed;   --tag-orange-t:#9a3412;
+    --tag-purple: #ede9fe;   --tag-purple-t:#5b21b6;
+    --section-head: #e8edf5;
+    --font: 'PingFang SC','Microsoft YaHei',sans-serif;
+  }
+  body { font-family:var(--font); background:var(--bg); color:var(--text-main); font-size:13px; line-height:1.5; min-width:1280px; }
+
+  /* ===== Header ===== */
+  .header { background:#0d1b3e; color:#fff; text-align:center; padding:12px 24px 9px; position:sticky; top:0; z-index:100; border-bottom:2px solid var(--accent); }
+  .header h1 { font-size:20px; font-weight:600; letter-spacing:1px; }
+  .header .meta { margin-top:4px; font-size:12px; color:#9db8e0; display:flex; justify-content:center; gap:24px; }
+  .dot { display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--green); animation:pulse 1.4s infinite; vertical-align:middle; margin-right:3px; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.5)} }
+  #live-clock { color:#7dd3fc; font-weight:600; letter-spacing:1px; }
+
+  /* ===== Layout ===== */
+  .main { max-width:1440px; margin:0 auto; padding:14px 18px 40px; }
+  .section { background:var(--surface); border:1px solid var(--border); border-radius:10px; margin-bottom:14px; overflow:hidden; }
+  .section-title { background:var(--section-head); padding:8px 16px; font-size:13px; font-weight:600; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:8px; }
+  .section-title::before { content:''; width:4px; height:14px; background:var(--accent); border-radius:2px; display:inline-block; }
+  .scroll-x { overflow-x:auto; }
+
+  /* ===== Tags ===== */
+  .tag { font-size:10px; padding:1px 7px; border-radius:10px; font-weight:500; }
+  .tag-blue   { background:var(--tag-blue);   color:var(--tag-blue-t); }
+  .tag-green  { background:var(--tag-green);  color:var(--tag-green-t); }
+  .tag-red    { background:var(--tag-red);    color:var(--tag-red-t); }
+  .tag-orange { background:var(--tag-orange); color:var(--tag-orange-t); }
+  .tag-purple { background:var(--tag-purple); color:var(--tag-purple-t); }
+
+  /* ===== 占位样式 ===== */
+  .ph { display:inline-block; background:#fff8e1; border:1px dashed #f59e0b; border-radius:3px; padding:0 5px; font-size:11px; color:#b45309; }
+  .placeholder { color:#94a3b8; font-style:italic; font-size:11px; }
+
+  /* ===== Ⅰ 公司概览 — 双行KPI ===== */
+  .kpi-grid { display:grid; grid-template-columns:repeat(3,1fr); }
+  /* 信保单独占满 → 内部分月度/季度两列 */
+  .kpi-xinbao { grid-column:1 / -1; border-bottom:1px solid var(--border); }
+  .kpi-xinbao-inner { display:grid; grid-template-columns:1fr 1fr; }
+  .kpi-card { padding:16px 20px; border-right:1px solid var(--border); }
+  .kpi-card:last-child { border-right:none; }
+  .kpi-card .kpi-label { font-size:11px; color:var(--text-sub); margin-bottom:4px; display:flex; align-items:center; gap:6px; }
+  .kpi-card .kpi-value { font-size:28px; font-weight:700; color:var(--text-main); line-height:1.15; }
+  .kpi-card .kpi-unit  { font-size:14px; font-weight:400; margin-left:2px; }
+  .kpi-card .kpi-sub   { margin-top:6px; font-size:11px; color:var(--text-mute); display:flex; flex-wrap:wrap; gap:10px; }
+  .kpi-card .kpi-sub .up   { color:var(--red); }
+  .kpi-card .kpi-sub .down { color:var(--green); }
+  .kpi-card .kpi-sub .warn { color:var(--orange); font-weight:600; }
+  /* 完成率进度条 */
+  .kpi-progress { margin-top:8px; display:flex; align-items:center; gap:8px; font-size:11px; }
+  .kpi-bar { flex:1; height:6px; background:#e8edf5; border-radius:3px; overflow:hidden; }
+  .kpi-fill { height:100%; border-radius:3px; transition:width .8s ease; }
+  .fill-blue   { background:var(--accent); }
+  .fill-green  { background:var(--green); }
+  .fill-orange { background:var(--orange); }
+  .fill-red    { background:var(--red); }
+  .kpi-pct { font-weight:700; min-width:38px; text-align:right; }
+  /* 分隔线 */
+  .kpi-divider { width:1px; background:var(--border); margin:12px 0; }
+
+  /* 下排3卡 */
+  .kpi-row2 { display:grid; grid-template-columns:repeat(3,1fr); }
+  .kpi-row2 .kpi-card { border-right:1px solid var(--border); border-bottom:none; }
+  .kpi-row2 .kpi-card:last-child { border-right:none; }
+
+  /* ===== Ⅱ 核心分析 ===== */
+  .analysis-wrap { display:grid; grid-template-columns:1fr 1fr; }
+  .analysis-col  { padding:14px 16px; }
+  .analysis-col + .analysis-col { border-left:1px solid var(--border); }
+  .a-block { margin-bottom:14px; }
+  .a-block:last-child { margin-bottom:0; }
+  .a-title { font-size:12px; font-weight:600; color:var(--accent); margin-bottom:6px; border-left:3px solid var(--accent); padding-left:6px; }
+  .a-line  { font-size:12px; color:var(--text-sub); margin-bottom:3px; line-height:1.7; }
+  .a-line .hl  { color:var(--red);    font-weight:600; }
+  .a-line .ok  { color:var(--green);  font-weight:600; }
+  .a-line .num { color:var(--text-main); font-weight:600; }
+  .focus-ol { padding-left:18px; }
+  .focus-ol li { font-size:12px; color:var(--text-sub); line-height:2; }
+
+  /* ===== Ⅲ 个人业绩 ===== */
+  /* 顶部总览条 */
+  .person-summary { display:flex; gap:0; border-bottom:1px solid var(--border); }
+  .ps-item { flex:1; padding:10px 16px; border-right:1px solid var(--border); text-align:center; }
+  .ps-item:last-child { border-right:none; }
+  .ps-item .ps-val { font-size:20px; font-weight:700; color:var(--accent); }
+  .ps-item .ps-lbl { font-size:11px; color:var(--text-sub); margin-top:2px; }
+
+  /* 人员网格 */
+  .person-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); }
+  .person-card { background:var(--surface); padding:12px 14px; }
+  .pc-top  { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+  .pc-name { font-size:14px; font-weight:700; color:var(--text-main); }
+  .pc-role { display:flex; gap:4px; }
+  /* 双口径数值行 */
+  .pc-metrics { display:grid; grid-template-columns:1fr 1fr; gap:4px 12px; margin-bottom:8px; }
+  .pc-metric { font-size:11px; color:var(--text-sub); }
+  .pc-metric b { color:var(--text-main); font-size:13px; }
+  .pc-metric .up   { color:var(--red);   font-size:10px; }
+  .pc-metric .down { color:var(--green); font-size:10px; }
+  /* 进度条 */
+  .prog-row { display:flex; align-items:center; gap:6px; margin-top:5px; font-size:11px; color:var(--text-sub); }
+  .prog-bar { flex:1; height:5px; background:#e8edf5; border-radius:3px; overflow:hidden; }
+  .prog-fill { height:100%; border-radius:3px; transition:width .7s ease; }
+  .prog-pct { min-width:36px; text-align:right; font-weight:600; font-size:11px; }
+
+  /* ===== Ⅳ 排名表 ===== */
+  .rank-table { width:100%; border-collapse:collapse; font-size:12px; }
+  .rank-table th { background:#f5f7fa; color:var(--text-sub); font-weight:500; padding:8px 10px; border-bottom:1px solid var(--border); text-align:center; white-space:nowrap; }
+  .rank-table td { padding:7px 10px; border-bottom:1px solid #f0f4f8; text-align:center; white-space:nowrap; }
+  .rank-table tr:last-child td { border-bottom:none; }
+  .rank-table tr:hover td { background:#f8fafc; }
+  .rank-num { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; font-weight:700; font-size:12px; }
+  .r1 { background:#fef3c7; color:#92400e; }
+  .r2 { background:#e5e7eb; color:#374151; }
+  .r3 { background:#fde8d8; color:#9a3412; }
+  .rn { background:#f3f4f6; color:#6b7280; }
+  .score-cell { display:flex; align-items:center; gap:6px; }
+  .score-bar  { flex:1; height:7px; background:#e8edf5; border-radius:3px; overflow:hidden; min-width:60px; }
+  .score-fill { height:100%; border-radius:3px; }
+  .tfoot-row td { font-weight:700; background:#f0f4f8; border-top:2px solid var(--border); }
+
+  /* ===== Ⅴ TOP10 ===== */
+  .top10-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; padding:12px 14px; }
+  .top10-block h4 { font-size:12px; font-weight:600; color:var(--text-sub); margin-bottom:8px; }
+  .top10-block + .top10-block { border-left:1px solid var(--border); padding-left:14px; }
+  .t10 { width:100%; border-collapse:collapse; font-size:12px; }
+  .t10 th { color:var(--text-mute); font-weight:500; padding:5px 8px; border-bottom:1px solid var(--border); text-align:center; }
+  .t10 td { padding:5px 8px; border-bottom:1px solid #f5f7fa; text-align:center; }
+  .t10 td:nth-child(2) { text-align:left; max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .t10 tr:last-child td { border-bottom:none; }
+  .delta-up   { color:var(--red); font-weight:600; }
+  .delta-down { color:var(--green); font-weight:600; }
+
+
+  /* 数据路径说明浮层 */
+  .path-tip { font-size:10px; color:var(--text-mute); background:#f8fafc; border:1px dashed var(--border); border-radius:4px; padding:2px 7px; cursor:default; }
+  .path-tip:hover { background:#eff6ff; color:var(--accent); }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <h1>东莞市橙辉供应链管理有限公司 · 实时数据大屏</h1>
+  <div class="meta">
+    <span>业务运营分析台</span>
+    <span>|</span>
+    <span><span class="dot"></span>实时播报中</span>
+    <span>|</span>
+    <span>数期：FY27Q1</span>
+    <span>|</span>
+    <span>更新：<span id="live-clock">--:--:--</span></span>
+    <span>|</span>
+    <span>生态主管：杨婷婷 &nbsp;|&nbsp; 大区：深莞惠大区</span>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ══════════════════════════════════════════════
+     Ⅰ 公司概览
+     数据路径：激励 → 业务目标 → 信保 → 拍档（公司维度）→ 总实收
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">Ⅰ &nbsp;公司概览
+    <span class="path-tip" title="数据罗盘 → 激励 → 业务目标 → 信保 → 拍档 → 总实收">取数：激励→业务目标→信保→拍档</span>
+  </div>
+
+  <!-- 信保实收：月度 + 季度并排 -->
+  <div class="kpi-xinbao">
+    <div class="kpi-xinbao-inner">
+
+      <!-- 月度 -->
+      <div class="kpi-card">
+        <div class="kpi-label"><span class="tag tag-blue">信保实收 · 月度</span> <span style="font-size:10px;color:var(--text-mute)" id="cur-month-label">2026-07</span></div>
+        <div class="kpi-value">
+          <!-- 路径：月度总实收 USD → 换算万USD显示 -->
+          <span id="xinbao-month-val" class="ph">10,480,651</span>
+          <span class="kpi-unit">USD</span>
+        </div>
+        <div class="kpi-progress">
+          <span style="min-width:60px;font-size:11px;color:var(--text-sub)">月度完成率</span>
+          <div class="kpi-bar"><div class="kpi-fill fill-orange" id="xinbao-month-bar" style="width:40.98%"></div></div>
+          <span class="kpi-pct" id="xinbao-month-pct" style="color:var(--orange)">40.98%</span>
+        </div>
+        <div class="kpi-sub">
+          <span>目标 <b id="xinbao-month-target" class="ph">25,573,303</b> USD</span>
+          <span>同比 <span class="up" id="xinbao-month-yoy">↑78.52%</span></span>
+          <span>差额 <span class="hl" id="xinbao-month-gap"><span class="ph">-15,092,652</span> USD</span></span>
+        </div>
+      </div>
+
+      <!-- 季度 -->
+      <div class="kpi-card" style="border-left:1px solid var(--border)">
+        <div class="kpi-label"><span class="tag tag-purple">信保实收 · 季度</span> <span style="font-size:10px;color:var(--text-mute)">FY27Q1</span></div>
+        <div class="kpi-value">
+          <span id="xinbao-quarter-val" class="ph">10,480,651</span>
+          <span class="kpi-unit">USD</span>
+        </div>
+        <div class="kpi-progress">
+          <span style="min-width:60px;font-size:11px;color:var(--text-sub)">季度完成率</span>
+          <div class="kpi-bar"><div class="kpi-fill fill-red" id="xinbao-quarter-bar" style="width:12.77%"></div></div>
+          <span class="kpi-pct" id="xinbao-quarter-pct" style="color:var(--red)">12.77%</span>
+        </div>
+        <div class="kpi-sub">
+          <span>目标 <b id="xinbao-quarter-target" class="ph">82,046,954</b> USD</span>
+          <span>同比 <span class="up" id="xinbao-quarter-yoy">↑78.52%</span></span>
+          <span>差额 <span class="hl" id="xinbao-quarter-gap"><span class="ph">-71,566,303</span> USD</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 下排：ACP / 活跃客户 / 0积分 -->
+  <div class="kpi-row2">
+
+    <!-- ACP收入 -->
+    <div class="kpi-card">
+      <div class="kpi-label"><span class="tag tag-green">ACP收入</span>
+        <span class="path-tip" title="激励 → 业务目标 → ACP → 拍档销售 → 总实收">激励→业务目标→ACP→拍档销售</span>
+      </div>
+      <!-- 月度/季度切换显示 -->
+      <div style="display:flex;gap:6px;margin-bottom:4px">
+        <span onclick="acpSwitch('m',this)" style="font-size:10px;padding:1px 8px;border-radius:8px;cursor:pointer;background:var(--accent);color:#fff">月度</span>
+        <span onclick="acpSwitch('q',this)" style="font-size:10px;padding:1px 8px;border-radius:8px;cursor:pointer;background:#e8edf5;color:var(--text-sub)">季度</span>
+      </div>
+      <div class="kpi-value">
+        <span id="acp-val">1,552,421</span>
+        <span class="kpi-unit">USD</span>
+      </div>
+      <div class="kpi-progress">
+        <span style="min-width:60px;font-size:11px;color:var(--text-sub)" id="acp-period-lbl">月度完成率</span>
+        <div class="kpi-bar"><div class="kpi-fill fill-red" id="acp-bar" style="width:31.75%"></div></div>
+        <span class="kpi-pct" id="acp-pct" style="color:var(--red)">31.75%</span>
+      </div>
+      <div class="kpi-sub">
+        <span>目标 <b id="acp-target">4,889,880</b> USD</span>
+        <span>同比 <span class="down" id="acp-yoy">↓24.28%</span></span>
+        <span>差额 <span class="hl" id="acp-gap">-3,337,459</span> USD</span>
+      </div>
+    </div>
+
+    <!-- 活跃客户 -->
+    <div class="kpi-card">
+      <div class="kpi-label"><span class="tag tag-orange">活跃客户</span>
+        <span class="path-tip" title="大促及场景运营 → FY27活跃客户 → 销售数据 → 公司行">大促及场景运营→FY27活跃客户→销售数据</span>
+      </div>
+      <div class="kpi-value"><span id="active-val">264</span><span class="kpi-unit">家</span></div>
+      <div class="kpi-progress">
+        <span style="min-width:60px;font-size:11px;color:var(--text-sub)">同比完成率</span>
+        <div class="kpi-bar"><div class="kpi-fill fill-green" id="active-bar" style="width:100%"></div></div>
+        <span class="kpi-pct" id="active-pct" style="color:var(--green)">105.6%</span>
+      </div>
+      <div class="kpi-sub">
+        <span>同期基准 <b>250</b> 家</span>
+        <span class="ok">↑超额 14家</span>
+        <span>口径：季度信保&ACP实收>$3万</span>
+      </div>
+    </div>
+
+
+      <div class="kpi-value" style="color:var(--red)"><span id="zero-val" class="ph">??</span><span class="kpi-unit" style="color:var(--red)">单</span></div>
+      <div class="kpi-sub">
+        <span>较昨日 <span class="ph warn">±??</span></span>
+        <span>待激活总量 <b class="ph">??</b></span>
+        <span><span class="dot" style="background:var(--red)"></span>实时刷新中</span>
+      </div>
+      <!-- 快速说明 -->
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">
+        数据源：客户管理→AIO客户画像→横向展示→近6月GMV=0
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     Ⅱ 核心分析与策略启因
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">Ⅱ &nbsp;核心分析与策略启因</div>
+  <div class="analysis-wrap">
+
+    <!-- 左列 -->
+    <div class="analysis-col">
+      <div class="a-block">
+        <div class="a-title">指标解析</div>
+        <div class="a-line">
+          信保月度实收 <span class="num ph">10,480,651</span> USD，目标 <span class="ph">25,573,303</span> USD，完成率 <span class="hl">40.98%</span>，
+          同比 <span class="ok">↑78.52%</span>；季度完成率 <span class="hl">12.77%</span>，差额 <span class="hl">-71,566,303 USD</span>
+        </div>
+        <div class="a-line">ACP月度实收 <span class="num">1,552,421</span> USD，目标 4,889,880 USD，完成率 <span class="hl">31.75%</span>，同比 <span class="hl">↓24.28%</span>；季度完成率 <span class="hl">10.25%</span>，差额 <span class="hl">-13,592,615 USD</span></div>
+        <div class="a-line">活跃客户：<span class="num">264家</span>，同期基准250家，完成率 <span class="ok">105.6%</span>，超额 <span class="ok">+14家</span>（口径：季度信保&ACP实收>$3万）</div>
+        <div class="a-line">优爆品数：<span class="ph">待校验路径后填入</span></div>
+      </div>
+      <div class="a-block">
+        <div class="a-title">近况预测</div>
+        <div class="a-line">按当前日均进度，信保季度预计达 <span class="ph">??万</span>，距目标缺口约 <span class="hl ph">?? USD</span></div>
+        <div class="a-line">活跃客户缺口 <span class="ph">??家</span>，需日均新增 <span class="ph">??家</span> 可完成目标</div>
+        <div class="a-line">0积分待激活 <span class="ph">??单</span>，激活后预计释放收入约 <span class="ph">??万 USD</span></div>
+      </div>
+    </div>
+
+    <!-- 右列 -->
+    <div class="analysis-col">
+      <div class="a-block">
+        <div class="a-title">3方客户分析</div>
+        <div class="a-line">老客户：<span class="ph">待路径确认</span>家，活跃占比 <span class="ph">??%</span></div>
+        <div class="a-line">新客户：本季引入 <span class="ph">??家</span>，已产生收入 <span class="ph">??家</span>，转化率 <span class="ph">??%</span></div>
+        <div class="a-line">流失预警：<span class="hl ph">??家</span>（近 <span class="ph">??</span> 天未下单）需重点跟进</div>
+      </div>
+      <div class="a-block">
+        <div class="a-title">重心问题</div>
+        <ol class="focus-ol">
+          <li class="placeholder">【待填入】如：季度完成率仅12.77%，需在剩余 ?? 天内冲刺 71,566,303 USD</li>
+          <li class="placeholder">【待填入】如：0积分客户 ?? 单，激活率低是核心瓶颈</li>
+          <li class="placeholder">【待填入】如：ACP拉新进展待确认</li>
+          <li class="placeholder">【待填入】如：流失客户回流手段缺乏</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     Ⅲ 个人业绩导图
+     数据路径：激励 → 业务目标 → 信保 → 拍档销售 → 各人月度/季度总实收
+     销售名单：高盛强 赵舒越 燕磊 杨婷婷 欧阳杰俊 李朝燕 刘鑫 狄鹏 杨佳玮
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">Ⅲ &nbsp;个人业绩导图
+    <span class="path-tip" title="激励 → 业务目标 → 信保 → 拍档销售 → 月度/季度总实收+同比">取数：激励→业务目标→信保→拍档销售</span>
+  </div>
+
+  <!-- 团队汇总条 -->
+  <div class="person-summary">
+    <div class="ps-item">
+      <div class="ps-val" id="team-month">10,480,651</div>
+      <div class="ps-lbl">团队月度总实收 (USD) · 2026-07</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="team-quarter"><span class="ph">??</span></div>
+      <div class="ps-lbl">团队季度总实收 (USD)</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" style="color:var(--orange)">9</div>
+      <div class="ps-lbl">在职销售人数</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" style="color:var(--red)"><span class="ph">??</span>%</div>
+      <div class="ps-lbl">季度平均完成率</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" style="color:var(--green)">杨婷婷</div>
+      <div class="ps-lbl">销售主管</div>
+    </div>
+  </div>
+
+  <!-- 9人卡片网格 -->
+  <div class="person-grid">
+
+    <!-- ① 高盛强 -->
+    <div class="person-card">
+      <div class="pc-top">
+        <div class="pc-name">高盛强</div>
+        <div class="pc-role"><span class="tag tag-blue">销售</span></div>
+      </div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>4,970,703 <span style="font-size:10px">USD</span></b> <span class="up">↑204.52%</span></div>
+        <div class="pc-metric">ACP实收<br><b>164,753 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>8,000,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-3,029,298</b></div>
+      </div>
+      <div class="prog-row">
+        <span style="min-width:48px">月达成</span>
+        <div class="prog-bar"><div class="prog-fill fill-orange" style="width:62%"></div></div>
+        <span class="prog-pct" style="color:var(--orange)">62%</span>
+      </div>
+      <div class="prog-row">
+        <span style="min-width:48px">时间进度</span>
+        <div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div>
+        <span class="prog-pct" style="color:var(--accent)">40%</span>
+      </div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--orange)">62%</b> 超时间进度40% <span style="color:var(--green)">▲领先</span></div>
+    </div>
+
+    <!-- ② 赵舒越 -->
+    <div class="person-card" style="background:#f0fdf4">
+      <div class="pc-top"><div class="pc-name">赵舒越</div><div class="pc-role"><span class="tag tag-green">老板</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>768,378 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>189,448 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>2,000,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-1,231,623</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-red" style="width:38%"></div></div><span class="prog-pct" style="color:var(--red)">38%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--red)">38%</b> 落后时间进度 <span style="color:var(--red)">▼滞后</span></div>
+    </div>
+
+    <!-- ③ 燕磊 -->
+    <div class="person-card">
+      <div class="pc-top"><div class="pc-name">燕磊</div><div class="pc-role"><span class="tag tag-blue">销售</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>1,288,466 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>293,385 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>3,000,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-1,711,535</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-orange" style="width:43%"></div></div><span class="prog-pct" style="color:var(--orange)">43%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--orange)">43%</b> 超时间进度 <span style="color:var(--green)">▲领先</span></div>
+    </div>
+
+    <!-- ④ 杨婷婷（主管） -->
+    <div class="person-card" style="background:#f0f9ff">
+      <div class="pc-top"><div class="pc-name">杨婷婷</div><div class="pc-role"><span class="tag tag-purple">主管</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>950,661 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>236,835 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>7,573,296</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-6,622,635</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-red" style="width:13%"></div></div><span class="prog-pct" style="color:var(--red)">13%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--red)">13%</b> 严重落后时间进度 <span style="color:var(--red)">▼危险</span></div>
+    </div>
+
+    <!-- ⑤ 欧阳杰俊 -->
+    <div class="person-card">
+      <div class="pc-top"><div class="pc-name">欧阳杰俊</div><div class="pc-role"><span class="tag tag-blue">销售</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>463,173 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>217,429 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>2,000,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-1,536,828</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-red" style="width:23%"></div></div><span class="prog-pct" style="color:var(--red)">23%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--red)">23%</b> 严重落后时间进度 <span style="color:var(--red)">▼危险</span></div>
+    </div>
+
+    <!-- ⑥ 李朝燕 -->
+    <div class="person-card">
+      <div class="pc-top"><div class="pc-name">李朝燕</div><div class="pc-role"><span class="tag tag-blue">销售</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>868,744 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>72,460 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>1,000,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-131,257</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-green" style="width:87%"></div></div><span class="prog-pct" style="color:var(--green)">87%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--green)">87%</b> 大幅超时间进度 <span style="color:var(--green)">▲优秀</span></div>
+    </div>
+
+    <!-- ⑦ 刘鑫 -->
+    <div class="person-card">
+      <div class="pc-top"><div class="pc-name">刘鑫</div><div class="pc-role"><span class="tag tag-blue">销售</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>619,928 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>172,144 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>1,000,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-380,073</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-orange" style="width:62%"></div></div><span class="prog-pct" style="color:var(--orange)">62%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--orange)">62%</b> 超时间进度 <span style="color:var(--green)">▲领先</span></div>
+    </div>
+
+    <!-- ⑧ 狄鹏 -->
+    <div class="person-card">
+      <div class="pc-top"><div class="pc-name">狄鹏</div><div class="pc-role"><span class="tag tag-blue">销售</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>285,892 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>162,081 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>500,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-214,109</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-orange" style="width:57%"></div></div><span class="prog-pct" style="color:var(--orange)">57%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--orange)">57%</b> 超时间进度 <span style="color:var(--green)">▲领先</span></div>
+    </div>
+
+    <!-- ⑨ 杨佳玮 -->
+    <div class="person-card">
+      <div class="pc-top"><div class="pc-name">杨佳玮</div><div class="pc-role"><span class="tag tag-blue">销售</span></div></div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>261,659 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">ACP实收<br><b>60,685 <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>500,001</b></div>
+        <div class="pc-metric">差额<br><b style="color:var(--red)">-238,342</b></div>
+      </div>
+      <div class="prog-row"><span style="min-width:48px">月达成</span><div class="prog-bar"><div class="prog-fill fill-orange" style="width:52%"></div></div><span class="prog-pct" style="color:var(--orange)">52%</span></div>
+      <div class="prog-row"><span style="min-width:48px">时间进度</span><div class="prog-bar"><div class="prog-fill fill-blue" style="width:40%"></div></div><span class="prog-pct" style="color:var(--accent)">40%</span></div>
+      <div style="margin-top:6px;font-size:10px;color:var(--text-mute)">2026-07 &nbsp;|&nbsp; 完成率<b style="color:var(--orange)">52%</b> 超时间进度 <span style="color:var(--green)">▲领先</span></div>
+    </div>
+
+  </div><!-- /person-grid -->
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     Ⅳ 综合师名册（排名榜）
+     数据路径：同 Ⅲ，按季度总实收降序排列
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">Ⅳ &nbsp;综合师名册
+    <span class="path-tip" title="激励 → 业务目标 → 信保 → 拍档销售 → 按季度总实收排序">取数：激励→业务目标→信保→拍档销售（季度降序）</span>
+  </div>
+  <div class="scroll-x">
+  <table class="rank-table">
+    <thead>
+      <tr>
+        <th>排名</th>
+        <th>姓名</th>
+        <th>角色</th>
+        <th>月度实收(USD)</th>
+        <th>月同比</th>
+        <th>季度实收(USD)</th>
+        <th>季同比</th>
+        <th>月度目标(USD)</th>
+        <th>月达成率</th>
+        <th>季度目标(USD)</th>
+        <th>季达成率</th>
+        <th>季度得分</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 按2026-06季度实收降序初始填入（目标数据待校验后填入完成率和进度条） -->
+      <!-- 按月度完成率降序（2026-07） -->
+      <tr>
+        <td><span class="rank-num r1">1</span></td><td><b>李朝燕</b></td><td><span class="tag tag-blue">销售</span></td>
+        <td>868,744</td><td class="up">↑229.54%</td>
+        <td>868,744</td><td>—</td>
+        <td>1,000,001</td><td style="color:var(--green)">87%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-green" style="width:87%"></div></div><b style="color:var(--green)">87%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num r2">2</span></td><td><b>高盛强</b></td><td><span class="tag tag-blue">销售</span></td>
+        <td>4,970,703</td><td class="up">↑204.52%</td>
+        <td>4,970,703</td><td>—</td>
+        <td>8,000,001</td><td style="color:var(--orange)">62%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-orange" style="width:62%"></div></div><b style="color:var(--orange)">62%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num r3">3</span></td><td><b>刘鑫</b></td><td><span class="tag tag-blue">销售</span></td>
+        <td>619,928</td><td class="up">↑17.81%</td>
+        <td>619,928</td><td>—</td>
+        <td>1,000,001</td><td style="color:var(--orange)">62%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-orange" style="width:62%"></div></div><b style="color:var(--orange)">62%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num rn">4</span></td><td>狄鹏</td><td><span class="tag tag-blue">销售</span></td>
+        <td>285,892</td><td class="down">↓12.82%</td>
+        <td>285,892</td><td>—</td>
+        <td>500,001</td><td style="color:var(--orange)">57%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-orange" style="width:57%"></div></div><b style="color:var(--orange)">57%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num rn">5</span></td><td>杨佳玮</td><td><span class="tag tag-blue">销售</span></td>
+        <td>261,659</td><td class="down">↓0.05%</td>
+        <td>261,659</td><td>—</td>
+        <td>500,001</td><td style="color:var(--orange)">52%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-orange" style="width:52%"></div></div><b style="color:var(--orange)">52%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num rn">6</span></td><td>燕磊</td><td><span class="tag tag-blue">销售</span></td>
+        <td>1,288,466</td><td class="up">↑40.25%</td>
+        <td>1,288,466</td><td>—</td>
+        <td>3,000,001</td><td style="color:var(--orange)">43%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-orange" style="width:43%"></div></div><b style="color:var(--orange)">43%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num rn">7</span></td><td>赵舒越</td><td><span class="tag tag-green">老板</span></td>
+        <td>768,378</td><td class="up">↑74.04%</td>
+        <td>768,378</td><td>—</td>
+        <td>2,000,001</td><td style="color:var(--red)">38%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-red" style="width:38%"></div></div><b style="color:var(--red)">38%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num rn">8</span></td><td>欧阳杰俊</td><td><span class="tag tag-blue">销售</span></td>
+        <td>463,173</td><td class="down">↓49.81%</td>
+        <td>463,173</td><td>—</td>
+        <td>2,000,001</td><td style="color:var(--red)">23%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-red" style="width:23%"></div></div><b style="color:var(--red)">23%</b></div></td>
+      </tr>
+      <tr>
+        <td><span class="rank-num rn">9</span></td><td>杨婷婷</td><td><span class="tag tag-purple">主管</span></td>
+        <td>950,661</td><td class="up">↑66.76%</td>
+        <td>950,661</td><td>—</td>
+        <td>7,573,296</td><td style="color:var(--red)">13%</td><td class="ph">??</td><td class="ph">??%</td>
+        <td><div class="score-cell"><div class="score-bar"><div class="score-fill fill-red" style="width:13%"></div></div><b style="color:var(--red)">13%</b></div></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="tfoot-row">
+        <td colspan="3">合计</td>
+        <td>10,487,604</td><td>—</td>
+        <td class="ph">待汇总</td><td>—</td>
+        <td class="ph">??</td><td class="ph">??%</td>
+        <td class="ph">??</td><td class="ph">??%</td>
+        <td>—</td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
+     Ⅴ 信保季度客户变动 TOP10
+     数据路径：待校验（客户管理 / 信保业务明细）
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">Ⅴ &nbsp;信保客户同比变动 TOP10
+    <span class="path-tip" title="客户管理 → AIO客户画像&业务诊断 → 全量客户明细（纵向展示）→ 线上交易：当月实收 vs 去年同月同期实收 / 当季实收 vs 去年同季同期实收">客户管理→AIO客户画像→全量客户明细→线上交易同期对比</span>
+  </div>
+
+  <!-- 口径切换 -->
+  <div style="display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center">
+    <span style="font-size:12px;color:var(--text-sub);font-weight:600">对比口径：</span>
+    <span class="chip active" onclick="top10Switch('month',this)">当月 vs 去年同月</span>
+    <span class="chip" onclick="top10Switch('quarter',this)">当季 vs 去年同季</span>
+    <span style="margin-left:auto;font-size:11px;color:var(--text-mute)">数据源：AIO全量客户明细 · 线上交易模块 · 当前口径：<span id="top10-period-lbl">2026-07 vs 2025-07</span></span>
+  </div>
+
+  <div class="top10-grid">
+    <!-- 增长TOP10 -->
+    <div class="top10-block">
+      <h4>▲ 信保增长 TOP10 &nbsp;<span style="font-weight:400;color:var(--text-mute);font-size:11px">按同比增量USD降序</span></h4>
+      <table class="t10">
+        <thead>
+          <tr>
+            <th>#</th><th>客户名称</th><th>业务员</th>
+            <th>去年同期(USD)</th><th>本期(USD)</th><th>增量(USD)</th><th>同比</th>
+          </tr>
+        </thead>
+        <tbody id="top10-up-body">
+          <tr><td>1</td><td>广东绿达新能源有限公司</td><td>高盛强</td><td>43,400</td><td>3,813,760</td><td class="delta-up">+3,770,360</td><td class="up">↑8687.5%</td></tr>
+          <tr><td>2</td><td>金顺新材料科技(广东)有限公司</td><td>李朝燕</td><td>16,868</td><td>303,764</td><td class="delta-up">+286,896</td><td class="up">↑1700.8%</td></tr>
+          <tr><td>3</td><td>东莞市兴风林有机玻璃制品有限公司</td><td>赵舒越</td><td>1,959</td><td>255,102</td><td class="delta-up">+253,143</td><td class="up">↑12922%</td></tr>
+          <tr><td>4</td><td>深圳瑞奇包装用品有限公司</td><td>燕磊</td><td>155,115</td><td>311,271</td><td class="delta-up">+156,156</td><td class="up">↑100.7%</td></tr>
+          <tr><td>5</td><td>东莞市麓瀚科技有限公司</td><td>李朝燕</td><td>0</td><td>150,442</td><td class="delta-up">+150,442</td><td class="up">新增</td></tr>
+          <tr><td>6</td><td>东莞市永方电子科技有限公司</td><td>燕磊</td><td>557</td><td>147,115</td><td class="delta-up">+146,558</td><td class="up">↑26312%</td></tr>
+          <tr><td>7</td><td>广东华文新材料科技有限公司</td><td>燕磊</td><td>554</td><td>142,820</td><td class="delta-up">+142,266</td><td class="up">↑25680%</td></tr>
+          <tr><td>8</td><td>东莞市纱美特服饰有限公司</td><td>李朝燕</td><td>23,228</td><td>164,457</td><td class="delta-up">+141,229</td><td class="up">↑608.0%</td></tr>
+          <tr><td>9</td><td>东莞市同恩进出口有限公司</td><td>刘鑫</td><td>23,447</td><td>157,934</td><td class="delta-up">+134,487</td><td class="up">↑573.6%</td></tr>
+          <tr><td>10</td><td>广东吉盛科实业有限公司</td><td>杨婷婷</td><td>1,256</td><td>135,006</td><td class="delta-up">+133,750</td><td class="up">↑10649%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 下降TOP10 -->
+    <div class="top10-block">
+      <h4>▼ 信保下降 TOP10 &nbsp;<span style="font-weight:400;color:var(--red);font-size:11px">⚠ 需重点跟进</span></h4>
+      <table class="t10">
+        <thead>
+          <tr>
+            <th>#</th><th>客户名称</th><th>业务员</th>
+            <th>去年同期(USD)</th><th>本期(USD)</th><th>降量(USD)</th><th>同比</th>
+          </tr>
+        </thead>
+        <tbody id="top10-down-body">
+          <tr><td>1</td><td>深圳市刘氏太阳能铁锂能源有限公司</td><td>欧阳杰俊</td><td>394,287</td><td>0</td><td class="delta-down">-394,287</td><td style="color:var(--red)">↓100%</td></tr>
+          <tr><td>2</td><td>广东千度科技有限公司</td><td>高盛强</td><td>178,008</td><td>1,789</td><td class="delta-down">-176,219</td><td style="color:var(--red)">↓99.0%</td></tr>
+          <tr><td>3</td><td>东莞市恒越实业有限公司</td><td>欧阳杰俊</td><td>120,600</td><td>781</td><td class="delta-down">-119,819</td><td style="color:var(--red)">↓99.4%</td></tr>
+          <tr><td>4</td><td>东莞市紫鹿服饰有限公司</td><td>杨佳玮</td><td>104,401</td><td>1,183</td><td class="delta-down">-103,218</td><td style="color:var(--red)">↓98.9%</td></tr>
+          <tr><td>5</td><td>深圳市移扩科技有限公司</td><td>燕磊</td><td>89,078</td><td>0</td><td class="delta-down">-89,078</td><td style="color:var(--red)">↓100%</td></tr>
+          <tr><td>6</td><td>东莞市联迪科技有限公司</td><td>高盛强</td><td>79,266</td><td>4,703</td><td class="delta-down">-74,563</td><td style="color:var(--red)">↓94.1%</td></tr>
+          <tr><td>7</td><td>广东逸动生活服饰科技有限公司</td><td>高盛强</td><td>145,761</td><td>72,984</td><td class="delta-down">-72,777</td><td style="color:var(--red)">↓49.9%</td></tr>
+          <tr><td>8</td><td>东莞市汇合数据科技有限公司</td><td>高盛强</td><td>81,818</td><td>9,777</td><td class="delta-down">-72,041</td><td style="color:var(--red)">↓88.1%</td></tr>
+          <tr><td>9</td><td>东莞市宇顺五金有限公司</td><td>燕磊</td><td>87,244</td><td>20,947</td><td class="delta-down">-66,297</td><td style="color:var(--red)">↓76.0%</td></tr>
+          <tr><td>10</td><td>东莞敏诺科技有限公司</td><td>赵舒越</td><td>107,635</td><td>44,117</td><td class="delta-down">-63,518</td><td style="color:var(--red)">↓59.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 底部 -->
+<div style="text-align:center;font-size:11px;color:var(--text-mute);margin-top:8px;padding-bottom:16px">
+  东莞市橙辉供应链管理有限公司 · 实时数据大屏 v1.1 &nbsp;|&nbsp; 数据更新：2026-07
+</div>
+
+</div><!-- /main -->
+
+<script>
+// ===== 时钟 =====
+function tick() {
+  const now = new Date();
+  const t = now.toLocaleTimeString('zh-CN',{hour12:false});
+  document.getElementById('live-clock').textContent = t;
+}
+tick(); setInterval(tick, 1000);
+
+// ===== TOP10 月度/季度口径切换 =====
+function top10Switch(mode, el) {
+  document.querySelectorAll('[onclick^="top10Switch"]').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  const lbl = mode === 'month' ? '2026-07 vs 2025-07' : 'FY27Q1 vs FY26Q1';
+  document.getElementById('top10-period-lbl').textContent = lbl;
+  // 数据接入后在此处切换表格内容
+}
+
+// ===== ACP 月度/季度切换 =====
+const ACP = {
+  m: { val:'1,552,421', pct:31.75, target:'4,889,880', yoy:'↓24.28%', gap:'-3,337,459', lbl:'月度完成率', cls:'fill-red', color:'var(--red)' },
+  q: { val:'1,552,421', pct:10.25, target:'15,145,036', yoy:'↓24.28%', gap:'-13,592,615', lbl:'季度完成率', cls:'fill-red', color:'var(--red)' }
+};
+function acpSwitch(mode, el) {
+  document.querySelectorAll('[onclick^="acpSwitch"]').forEach(b => {
+    b.style.background = '#e8edf5'; b.style.color = 'var(--text-sub)';
+  });
+  el.style.background = 'var(--accent)'; el.style.color = '#fff';
+  const d = ACP[mode];
+  document.getElementById('acp-val').textContent = d.val;
+  document.getElementById('acp-pct').textContent = d.pct + '%';
+  document.getElementById('acp-pct').style.color = d.color;
+  document.getElementById('acp-bar').style.width = Math.min(d.pct, 100) + '%';
+  document.getElementById('acp-bar').className = 'kpi-fill ' + d.cls;
+  document.getElementById('acp-target').textContent = d.target;
+  document.getElementById('acp-yoy').textContent = d.yoy;
+  document.getElementById('acp-gap').textContent = d.gap;
+  document.getElementById('acp-period-lbl').textContent = d.lbl;
+}
+
+
+
+/* ================================================================
+ * 数据字段映射清单（路径校验后在此处填入真实值）
+ *
+ * 已确认字段（来自截图 2026-06 月份数据）：
+ * ┌─────────────────────────┬──────────────────────────────────────────────────────────────────┐
+ * │ 字段                    │ 路径                                                             │
+ * ├─────────────────────────┼──────────────────────────────────────────────────────────────────┤
+ * │ 信保月度总实收           │ 激励→业务目标→信保→拍档→月度→总实收                              │
+ * │ 信保月度目标             │ 激励→业务目标→信保→拍档→月度→目标                                │
+ * │ 信保月度完成率           │ 激励→业务目标→信保→拍档→月度→完成率                              │
+ * │ 信保月度同比             │ 激励→业务目标→信保→拍档→月度→同比                                │
+ * │ 信保季度总实收           │ 激励→业务目标→信保→拍档→季度→总实收                              │
+ * │ 信保季度目标             │ 激励→业务目标→信保→拍档→季度→目标                                │
+ * │ 信保季度完成率           │ 激励→业务目标→信保→拍档→季度→完成率                              │
+ * │ 各销售月/季实收+同比     │ 激励→业务目标→信保→拍档销售→各人行                               │
+ * ├─────────────────────────┼──────────────────────────────────────────────────────────────────┤
+ * │ 待校验字段               │                                                                  │
+ * │ ACP收入                 │ ACP业务→佣金及激励→实际佣金（待确认口径）                         │
+ * │ 活跃客户数               │ 客户管理→客户&库容数据→服务中客户数（待确认"活跃"定义）            │
+ * │ 0积分客户列表            │ 信保业务→FY27信保营销活动→签约前存量积分→本财年实收=0              │
+ * │ 各销售月/季目标          │ 激励→业务目标→信保→拍档销售→目标列（待确认是否有个人目标）         │
+ * │ 信保客户变动TOP10        │ 客户管理→客户明细→信保实收GMV→季度环比（路径待校验）               │
+ * └─────────────────────────┴──────────────────────────────────────────────────────────────────┘
+ * ================================================================ */
+</script>
+</body>
+</html>
