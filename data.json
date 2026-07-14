@@ -1,0 +1,36 @@
+{
+  "update_time": "2026-07-14",
+  "month": "2026-07",
+  "xinbao": {
+    "month_val": null,
+    "month_target": null,
+    "month_pct": null,
+    "month_yoy": null,
+    "month_gap": null,
+    "quarter_val": null,
+    "quarter_target": null,
+    "quarter_pct": null,
+    "quarter_yoy": null,
+    "quarter_gap": null
+  },
+  "acp": {
+    "month_val": null,
+    "month_target": null,
+    "month_pct": null,
+    "month_yoy": null,
+    "month_gap": null,
+    "quarter_val": null,
+    "quarter_target": null,
+    "quarter_pct": null,
+    "quarter_gap": null
+  },
+  "active": {
+    "val": 55.0,
+    "baseline": 250,
+    "pct": 22.0,
+    "delta": -195.0
+  },
+  "persons": [],
+  "top20_up": [],
+  "top20_down": []
+}
