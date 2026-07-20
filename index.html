@@ -127,11 +127,11 @@
   .prog-pct { min-width:36px; text-align:right; font-weight:600; font-size:11px; }
 
   /* ===== Ⅳ 排名表 ===== */
-  .rank-table { width:100%; border-collapse:collapse; font-size:12px; }
-  .rank-table th { background:#f5f7fa; color:var(--text-sub); font-weight:500; padding:8px 10px; border-bottom:1px solid var(--border); text-align:center; white-space:nowrap; }
-  .rank-table td { padding:7px 10px; border-bottom:1px solid #f0f4f8; text-align:center; white-space:nowrap; }
-  .rank-table tr:last-child td { border-bottom:none; }
-  .rank-table tr:hover td { background:#f8fafc; }
+  .rank-table, .active-table { width:100%; border-collapse:collapse; font-size:12px; }
+  .rank-table th, .active-table th { background:#f5f7fa; color:var(--text-sub); font-weight:500; padding:8px 10px; border-bottom:1px solid var(--border); text-align:center; white-space:nowrap; }
+  .rank-table td, .active-table td { padding:7px 10px; border-bottom:1px solid #f0f4f8; text-align:center; white-space:nowrap; }
+  .rank-table tr:last-child td, .active-table tr:last-child td { border-bottom:none; }
+  .rank-table tr:hover td, .active-table tr:hover td { background:#f8fafc; }
   .rank-num { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; font-weight:700; font-size:12px; }
   .r1 { background:#fef3c7; color:#92400e; }
   .r2 { background:#e5e7eb; color:#374151; }
@@ -174,7 +174,7 @@
     <span>|</span>
     <span>更新：<span id="live-clock">--:--:--</span></span>
     <span>|</span>
-    <span>生态主管：杨婷婷 &nbsp;|&nbsp; 大区：深莞惠大区</span>
+    <span>生态主管：云贺 &nbsp;|&nbsp; 销售主管：杨婷婷 &nbsp;|&nbsp; 大区：深莞惠大区</span>
   </div>
 </div>
 
@@ -528,6 +528,57 @@
 
 
 <!-- ══════════════════════════════════════════════
+     Ⅲ-B 3万客户数个人明细
+     数据路径：大促及场景运营 → FY27活跃客户 → 拍档销售
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">Ⅲ-B &nbsp;3万客户数 · 个人明细
+    <span class="path-tip" title="大促及场景运营 → FY27活跃客户 → 拍档销售 → 本季3w客户数">取数：大促及场景运营→FY27活跃客户→拍档销售</span>
+  </div>
+
+  <!-- 汇总条 -->
+  <div class="person-summary" id="active-summary-bar">
+    <div class="ps-item">
+      <div class="ps-val" id="active-total-val" style="color:var(--orange)">--</div>
+      <div class="ps-lbl">本季截至今日3万客户数</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="active-baseline-val">--</div>
+      <div class="ps-lbl">同比同期客户数</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="active-pct-bar" style="color:var(--green)">--</div>
+      <div class="ps-lbl">同比完成率</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="active-delta-val">--</div>
+      <div class="ps-lbl">较同比同期差额</div>
+    </div>
+  </div>
+
+  <!-- 个人3万客户明细表 -->
+  <div class="scroll-x">
+  <table class="active-table" id="active-persons-table">
+    <thead>
+      <tr>
+        <th>排名</th>
+        <th>销售</th>
+        <th>本季3w客户数</th>
+        <th>同比季度数</th>
+        <th>同比变化</th>
+        <th>占团队比例</th>
+        <th>进度条</th>
+      </tr>
+    </thead>
+    <tbody id="active-persons-body">
+      <tr><td colspan="7" style="text-align:center;color:var(--text-mute);padding:16px">数据加载中...</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
      Ⅳ 综合师名册（排名榜）
      数据路径：同 Ⅲ，按季度总实收降序排列
 ════════════════════════════════════════════════ -->
@@ -536,7 +587,7 @@
     <span class="path-tip" title="激励 → 业务目标 → 信保 → 拍档销售 → 按季度总实收排序">取数：激励→业务目标→信保→拍档销售（季度降序）</span>
   </div>
   <div class="scroll-x">
-  <table class="rank-table">
+  <table class="rank-table" id="iv-rank-table">
     <thead>
       <tr>
         <th>排名</th>
@@ -777,30 +828,356 @@ function acpSwitch(mode, el) {
 
 
 
-/* ================================================================
- * 数据字段映射清单（路径校验后在此处填入真实值）
- *
- * 已确认字段（来自截图 2026-06 月份数据）：
- * ┌─────────────────────────┬──────────────────────────────────────────────────────────────────┐
- * │ 字段                    │ 路径                                                             │
- * ├─────────────────────────┼──────────────────────────────────────────────────────────────────┤
- * │ 信保月度总实收           │ 激励→业务目标→信保→拍档→月度→总实收                              │
- * │ 信保月度目标             │ 激励→业务目标→信保→拍档→月度→目标                                │
- * │ 信保月度完成率           │ 激励→业务目标→信保→拍档→月度→完成率                              │
- * │ 信保月度同比             │ 激励→业务目标→信保→拍档→月度→同比                                │
- * │ 信保季度总实收           │ 激励→业务目标→信保→拍档→季度→总实收                              │
- * │ 信保季度目标             │ 激励→业务目标→信保→拍档→季度→目标                                │
- * │ 信保季度完成率           │ 激励→业务目标→信保→拍档→季度→完成率                              │
- * │ 各销售月/季实收+同比     │ 激励→业务目标→信保→拍档销售→各人行                               │
- * ├─────────────────────────┼──────────────────────────────────────────────────────────────────┤
- * │ 待校验字段               │                                                                  │
- * │ ACP收入                 │ ACP业务→佣金及激励→实际佣金（待确认口径）                         │
- * │ 活跃客户数               │ 客户管理→客户&库容数据→服务中客户数（待确认"活跃"定义）            │
- * │ 0积分客户列表            │ 信保业务→FY27信保营销活动→签约前存量积分→本财年实收=0              │
- * │ 各销售月/季目标          │ 激励→业务目标→信保→拍档销售→目标列（待确认是否有个人目标）         │
- * │ 信保客户变动TOP10        │ 客户管理→客户明细→信保实收GMV→季度环比（路径待校验）               │
- * └─────────────────────────┴──────────────────────────────────────────────────────────────────┘
- * ================================================================ */
+// ================================================================
+// 动态数据加载 — 从 data.json 读取并渲染到大屏
+// data.json 由 update_dashboard.py 每日自动生成并推送到 GitHub
+// ================================================================
+
+const DATA_URL = 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data.json';
+
+function fmt(n) {
+  if (n === null || n === undefined) return '--';
+  return Number(n).toLocaleString('zh-CN', { maximumFractionDigits: 0 });
+}
+function fmtPct(n) {
+  if (n === null || n === undefined) return '--';
+  return Number(n).toFixed(2) + '%';
+}
+function pctColor(v) {
+  if (v === null || v === undefined) return 'var(--text-mute)';
+  return v >= 80 ? 'var(--green)' : v >= 50 ? 'var(--orange)' : 'var(--red)';
+}
+function pctFillClass(v) {
+  if (v === null || v === undefined) return 'fill-red';
+  return v >= 80 ? 'fill-green' : v >= 50 ? 'fill-orange' : 'fill-red';
+}
+function yoyText(v) {
+  if (v === null || v === undefined) return '--';
+  const n = Number(v);
+  return (n >= 0 ? '↑' : '↓') + Math.abs(n).toFixed(2) + '%';
+}
+function yoyClass(v) {
+  return (Number(v) >= 0) ? 'up' : 'down';
+}
+
+function setText(id, val) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = val;
+}
+function setStyle(id, prop, val) {
+  const el = document.getElementById(id);
+  if (el) el.style[prop] = val;
+}
+function setAttr(id, prop, val) {
+  const el = document.getElementById(id);
+  if (el) el[prop] = val;
+}
+
+function renderXinbao(d) {
+  const x = d.xinbao || {};
+  // 月度
+  setText('xinbao-month-val', fmt(x.month_val));
+  setText('xinbao-month-pct', fmtPct(x.month_pct));
+  setText('xinbao-month-target', fmt(x.month_target));
+  setText('xinbao-month-gap', fmt(x.month_gap));
+  const mpct = x.month_pct || 0;
+  setStyle('xinbao-month-bar', 'width', Math.min(mpct, 100) + '%');
+  setAttr('xinbao-month-bar', 'className', 'kpi-fill ' + pctFillClass(mpct));
+  setStyle('xinbao-month-pct', 'color', pctColor(mpct));
+  const myoyEl = document.getElementById('xinbao-month-yoy');
+  if (myoyEl) { myoyEl.textContent = yoyText(x.month_yoy); myoyEl.className = yoyClass(x.month_yoy); }
+  // 季度
+  setText('xinbao-quarter-val', fmt(x.quarter_val));
+  setText('xinbao-quarter-pct', fmtPct(x.quarter_pct));
+  setText('xinbao-quarter-target', fmt(x.quarter_target));
+  setText('xinbao-quarter-gap', fmt(x.quarter_gap));
+  const qpct = x.quarter_pct || 0;
+  setStyle('xinbao-quarter-bar', 'width', Math.min(qpct, 100) + '%');
+  setAttr('xinbao-quarter-bar', 'className', 'kpi-fill ' + pctFillClass(qpct));
+  setStyle('xinbao-quarter-pct', 'color', pctColor(qpct));
+  const qyoyEl = document.getElementById('xinbao-quarter-yoy');
+  if (qyoyEl) { qyoyEl.textContent = yoyText(x.quarter_yoy); qyoyEl.className = yoyClass(x.quarter_yoy); }
+}
+
+function renderACP(d) {
+  const a = d.acp || {};
+  // 覆盖 JS ACP 对象，使月度/季度切换按钮也用新数据
+  window.ACP = {
+    m: {
+      val: fmt(a.month_val), pct: a.month_pct || 0,
+      target: fmt(a.month_target), yoy: yoyText(a.month_yoy),
+      gap: fmt(a.month_gap), lbl: '月度完成率',
+      cls: pctFillClass(a.month_pct), color: pctColor(a.month_pct)
+    },
+    q: {
+      val: fmt(a.quarter_val), pct: a.quarter_pct || 0,
+      target: fmt(a.quarter_target), yoy: yoyText(a.quarter_yoy),
+      gap: fmt(a.quarter_gap), lbl: '季度完成率',
+      cls: pctFillClass(a.quarter_pct), color: pctColor(a.quarter_pct)
+    }
+  };
+  // 默认渲染月度
+  setText('acp-val', fmt(a.month_val));
+  setText('acp-pct', fmtPct(a.month_pct));
+  setStyle('acp-pct', 'color', pctColor(a.month_pct));
+  setStyle('acp-bar', 'width', Math.min(a.month_pct || 0, 100) + '%');
+  setAttr('acp-bar', 'className', 'kpi-fill ' + pctFillClass(a.month_pct));
+  setText('acp-target', fmt(a.month_target));
+  setText('acp-gap', fmt(a.month_gap));
+  const ayoyEl = document.getElementById('acp-yoy');
+  if (ayoyEl) { ayoyEl.textContent = yoyText(a.month_yoy); ayoyEl.className = yoyClass(a.month_yoy); }
+}
+
+function renderActive(d) {
+  const ac = d.active || {};
+
+  // ── KPI 卡片（顶部汇总）──
+  const displayVal = ac.val !== null && ac.val !== undefined ? ac.val : '--';
+  const displayPct = ac.pct !== null && ac.pct !== undefined ? ac.pct + '%' : '--';
+  setText('active-val', displayVal);
+  setText('active-pct', displayPct);
+  setStyle('active-pct', 'color', (ac.pct || 0) >= 100 ? 'var(--green)' : (ac.pct || 0) >= 80 ? 'var(--orange)' : 'var(--red)');
+  setStyle('active-bar', 'width', Math.min(ac.pct || 0, 100) + '%');
+
+  // ── 汇总条 ──
+  setText('active-total-val', displayVal);
+  setText('active-baseline-val', ac.baseline !== null && ac.baseline !== undefined ? ac.baseline : '--');
+  setText('active-pct-bar', displayPct);
+  setStyle('active-pct-bar', 'color', (ac.pct || 0) >= 100 ? 'var(--green)' : (ac.pct || 0) >= 80 ? 'var(--orange)' : 'var(--red)');
+  const deltaVal = ac.delta !== null && ac.delta !== undefined ? ac.delta : null;
+  const deltaStr = deltaVal !== null ? (deltaVal >= 0 ? '+' + deltaVal : String(deltaVal)) : '--';
+  const deltaColor = deltaVal !== null ? (deltaVal >= 0 ? 'var(--green)' : 'var(--red)') : 'var(--text-mute)';
+  setText('active-delta-val', deltaStr);
+  setStyle('active-delta-val', 'color', deltaColor);
+
+  // ── 个人明细表 ──
+  const persons = ac.persons || {};
+  const personsYoy = ac.persons_yoy || {};
+  const tbody = document.getElementById('active-persons-body');
+  if (!tbody) return;
+
+  const entries = Object.entries(persons)
+    .filter(([name]) => name !== '-')
+    .map(([name, cnt]) => ({ name, cnt, yoy: personsYoy[name] || 0 }))
+    .sort((a, b) => b.cnt - a.cnt);
+
+  if (!entries.length) return;
+
+  const total = entries.reduce((s, e) => s + e.cnt, 0);
+  const maxCnt = Math.max(...entries.map(e => e.cnt));
+
+  const rankCls = (i) => i === 0 ? 'r1' : i === 1 ? 'r2' : i === 2 ? 'r3' : 'rn';
+
+  tbody.innerHTML = entries.map((e, i) => {
+    const diff = e.cnt - e.yoy;
+    const diffStr = diff >= 0 ? `<span class="up">▲${diff}</span>` : `<span class="down">▼${Math.abs(diff)}</span>`;
+    const shareStr = total > 0 ? (e.cnt / total * 100).toFixed(1) + '%' : '--';
+    const barW = maxCnt > 0 ? Math.round(e.cnt / maxCnt * 100) : 0;
+    const barColor = barW >= 80 ? 'var(--green)' : barW >= 50 ? 'var(--orange)' : 'var(--accent)';
+    return `<tr>
+      <td><span class="rank-num ${rankCls(i)}">${i + 1}</span></td>
+      <td><b>${e.name}</b></td>
+      <td style="font-weight:500;color:var(--orange)">${e.cnt}</td>
+      <td style="color:var(--text-sub)">${e.yoy || '--'}</td>
+      <td>${diffStr}</td>
+      <td style="color:var(--text-sub)">${shareStr}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:6px;min-width:120px">
+          <div style="flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden">
+            <div style="height:100%;width:${barW}%;background:${barColor};border-radius:3px"></div>
+          </div>
+          <span style="font-size:11px;color:var(--text-mute);min-width:28px">${barW}%</span>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function renderPersons(d) {
+  const persons = d.persons || [];
+  if (!persons.length) return;
+
+  // 团队汇总
+  const totalMonth = persons.reduce((s, p) => s + (p.month_val || 0), 0);
+  const totalQuarter = persons.reduce((s, p) => s + (p.quarter_val || 0), 0);
+  setText('team-month', fmt(totalMonth));
+  setText('team-quarter', fmt(totalQuarter) || '--');
+
+  // 时间进度（当月已过天数/总天数）
+  const now = new Date();
+  const daysInMonth = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
+  const timePct = Math.round(now.getDate() / daysInMonth * 100);
+
+  // 按月度完成率降序排列
+  const sorted = [...persons].sort((a,b) => (b.month_pct||0) - (a.month_pct||0));
+
+  // 找到人员卡片容器并重新渲染
+  const grid = document.querySelector('.person-grid');
+  if (!grid) return;
+  grid.innerHTML = sorted.map((p, i) => {
+    const pct = p.month_pct || 0;
+    const col = pctColor(pct);
+    const fillCls = pctFillClass(pct);
+    const gap = p.month_gap ? fmt(p.month_gap) : '--';
+    const yoyStr = p.month_yoy !== null && p.month_yoy !== undefined
+      ? `<span class="${yoyClass(p.month_yoy)}">${yoyText(p.month_yoy)}</span>` : '';
+    const ahead = pct >= timePct;
+    const statusText = pct >= timePct
+      ? (pct >= timePct + 20 ? '大幅超时间进度 <span style="color:var(--green)">▲优秀</span>'
+         : '超时间进度 <span style="color:var(--green)">▲领先</span>')
+      : (pct <= timePct - 20 ? '严重落后时间进度 <span style="color:var(--red)">▼危险</span>'
+         : '落后时间进度 <span style="color:var(--red)">▼滞后</span>');
+
+    const roleCls = p.role === '主管' ? 'tag-purple' : p.role === '老板' ? 'tag-green' : 'tag-blue';
+    const cardBg = p.role === '老板' ? 'style="background:#f0fdf4"'
+                 : p.role === '主管' ? 'style="background:#f0f9ff"' : '';
+
+    const qpct = p.quarter_pct || 0;
+    const qcol = pctColor(qpct);
+    const qfill = pctFillClass(qpct);
+    const qgap = p.quarter_gap ? fmt(p.quarter_gap) : '--';
+    return `<div class="person-card" ${cardBg}>
+      <div class="pc-top">
+        <div class="pc-name">${p.name}</div>
+        <div class="pc-role"><span class="tag ${roleCls}">${p.role}</span></div>
+      </div>
+      <div class="pc-metrics">
+        <div class="pc-metric">月度实收<br><b>${fmt(p.month_val)} <span style="font-size:10px">USD</span></b> ${yoyStr}</div>
+        <div class="pc-metric">ACP实收<br><b>${fmt(p.acp_val)} <span style="font-size:10px">USD</span></b></div>
+        <div class="pc-metric">月度目标<br><b>${p.month_target ? fmt(p.month_target) : '--'}</b></div>
+        <div class="pc-metric">月度差额<br><b style="color:${(p.month_gap||0) < 0 ? 'var(--red)':'var(--green)'}">${gap}</b></div>
+      </div>
+      <div class="prog-row">
+        <span style="min-width:48px">月达成</span>
+        <div class="prog-bar"><div class="prog-fill ${fillCls}" style="width:${Math.min(pct,100)}%"></div></div>
+        <span class="prog-pct" style="color:${col}">${pct}%</span>
+      </div>
+      <div class="prog-row">
+        <span style="min-width:48px">时间进度</span>
+        <div class="prog-bar"><div class="prog-fill fill-blue" style="width:${timePct}%"></div></div>
+        <span class="prog-pct" style="color:var(--accent)">${timePct}%</span>
+      </div>
+      <div class="prog-row" style="margin-top:4px">
+        <span style="min-width:48px;color:var(--text-mute)">季达成</span>
+        <div class="prog-bar"><div class="prog-fill ${qfill}" style="width:${Math.min(qpct,100)}%"></div></div>
+        <span class="prog-pct" style="color:${qcol}">${qpct ? qpct+'%' : '--'}</span>
+      </div>
+      <div style="margin-top:4px;font-size:10px;color:var(--text-mute)">
+        季目标 <b>${p.quarter_target ? fmt(p.quarter_target) : '--'}</b> &nbsp;·&nbsp; 季差额 <b style="color:${(p.quarter_gap||0)<0?'var(--red)':'var(--green)'}">${qgap}</b>
+      </div>
+      <div style="margin-top:4px;font-size:10px;color:var(--text-mute)">${d.month} &nbsp;|&nbsp; 月完成率<b style="color:${col}">${pct}%</b> ${statusText}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderRankTable(d) {
+  const persons = d.persons || [];
+  if (!persons.length) return;
+  const tbody = document.querySelector('#iv-rank-table tbody');
+  if (!tbody) return;
+
+  const sorted = [...persons].sort((a,b) => (b.month_pct||0) - (a.month_pct||0));
+  const rankClass = (i) => i===0?'r1':i===1?'r2':i===2?'r3':'rn';
+
+  tbody.innerHTML = sorted.map((p, i) => {
+    const pct  = p.month_pct || 0;
+    const qpct = p.quarter_pct || 0;
+    const col  = pctColor(pct);
+    const qcol = pctColor(qpct);
+    const qfillCls = pctFillClass(qpct);
+    const fillCls = pctFillClass(pct);
+    const roleCls = p.role === '主管' ? 'tag-purple' : p.role === '老板' ? 'tag-green' : 'tag-blue';
+    const yoyStr = p.month_yoy !== null ? `<span class="${yoyClass(p.month_yoy)}">${yoyText(p.month_yoy)}</span>` : '—';
+    const qyoyStr = p.quarter_yoy !== null && p.quarter_yoy !== undefined ? `<span class="${yoyClass(p.quarter_yoy)}">${yoyText(p.quarter_yoy)}</span>` : '—';
+    const qpctStr = p.quarter_pct !== null && p.quarter_pct !== undefined ? `<span style="color:${qcol}">${p.quarter_pct}%</span>` : '<span class="ph">??%</span>';
+    return `<tr>
+      <td><span class="rank-num ${rankClass(i)}">${i+1}</span></td>
+      <td><b>${p.name}</b></td>
+      <td><span class="tag ${roleCls}">${p.role}</span></td>
+      <td>${fmt(p.month_val)}</td>
+      <td>${yoyStr}</td>
+      <td>${p.quarter_val ? fmt(p.quarter_val) : '—'}</td>
+      <td>${qyoyStr}</td>
+      <td>${p.month_target ? fmt(p.month_target) : '--'}</td>
+      <td style="color:${col}">${pct}%</td>
+      <td>${p.quarter_target ? fmt(p.quarter_target) : '<span class="ph">??</span>'}</td>
+      <td>${qpctStr}</td>
+      <td><div class="score-cell"><div class="score-bar"><div class="score-fill ${fillCls}" style="width:${Math.min(pct,100)}%"></div></div><b style="color:${col}">${pct}%</b></div></td>
+    </tr>`;
+  }).join('');
+
+  // 合计行
+  const tfoot = document.querySelector('#iv-rank-table tfoot tr');
+  if (tfoot) {
+    const totalMonth   = persons.reduce((s,p)=>s+(p.month_val||0),0);
+    const totalQuarter = persons.reduce((s,p)=>s+(p.quarter_val||0),0);
+    const totalQTarget = persons.reduce((s,p)=>s+(p.quarter_target||0),0);
+    const totalQPct    = totalQTarget > 0 ? (totalQuarter/totalQTarget*100).toFixed(1)+'%' : '--';
+    if (tfoot.cells[3]) tfoot.cells[3].textContent = fmt(totalMonth);
+    if (tfoot.cells[5]) tfoot.cells[5].textContent = fmt(totalQuarter);
+    if (tfoot.cells[9]) tfoot.cells[9].textContent = fmt(totalQTarget);
+    if (tfoot.cells[10]) tfoot.cells[10].textContent = totalQPct;
+  }
+}
+
+function renderTop20(d) {
+  const upBody   = document.getElementById('top10-up-body');
+  const downBody = document.getElementById('top10-down-body');
+
+  function renderRows(rows, container, isUp) {
+    if (!container || !rows || !rows.length) return;
+    container.innerHTML = rows.map((r, i) => {
+      const deltaStr = isUp ? `+${fmt(r.delta)}` : fmt(r.delta);
+      const deltaCls = isUp ? 'delta-up' : 'delta-down';
+      const yoyEl    = isUp
+        ? `<td class="up">${r.yoy || '--'}</td>`
+        : `<td style="color:var(--red)">${r.yoy || '--'}</td>`;
+      return `<tr>
+        <td>${i+1}</td>
+        <td>${r.name}</td>
+        <td>${r.salesperson || '--'}</td>
+        <td>${fmt(r.last_year)}</td>
+        <td>${fmt(r.this_year)}</td>
+        <td class="${deltaCls}">${deltaStr}</td>
+        ${yoyEl}
+      </tr>`;
+    }).join('');
+  }
+
+  renderRows(d.top20_up,   upBody,   true);
+  renderRows(d.top20_down, downBody, false);
+}
+
+function renderUpdateTime(d) {
+  const footer = document.querySelector('[style*="text-align:center"]');
+  if (footer && d.update_time) {
+    footer.innerHTML = `东莞市橙辉供应链管理有限公司 · 实时数据大屏 v1.3 &nbsp;|&nbsp; 数据更新：${d.update_time}`;
+  }
+}
+
+// ── 主入口：加载 data.json ──
+async function loadDashboardData() {
+  try {
+    // 加上时间戳防止缓存
+    const resp = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    console.log('data.json 加载成功:', data.update_time);
+    renderXinbao(data);
+    renderACP(data);
+    renderActive(data);
+    renderPersons(data);
+    renderRankTable(data);
+    renderTop20(data);
+    renderUpdateTime(data);
+  } catch(e) {
+    console.warn('data.json 加载失败，保留页面原始数据。错误:', e.message);
+  }
+}
+
+// 页面加载完成后拉取数据
+window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
+<!-- build:20260720172029 -->
 </body>
 </html>
