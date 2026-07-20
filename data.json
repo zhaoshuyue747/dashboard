@@ -30,12 +30,33 @@
     "quarter_yoy_pct": -3.43
   },
   "active": {
-    "val": null,
+    "val": 83,
     "cur": 83,
-    "baseline": 250,
-    "pct": 0,
-    "delta": 0,
-    "persons": {}
+    "baseline": 95,
+    "pct": 87.4,
+    "delta": -12.0,
+    "persons": {
+      "高盛强": 18,
+      "赵舒越": 7,
+      "狄鹏": 4,
+      "燕磊": 17,
+      "欧阳杰俊": 6,
+      "杨婷婷": 15,
+      "杨佳玮": 4,
+      "李朝燕": 5,
+      "刘鑫": 7
+    },
+    "persons_yoy": {
+      "高盛强": 37,
+      "赵舒越": 21,
+      "狄鹏": 13,
+      "燕磊": 46,
+      "欧阳杰俊": 41,
+      "杨婷婷": 40,
+      "杨佳玮": 20,
+      "李朝燕": 25,
+      "刘鑫": 27
+    }
   },
   "youbaopin": {
     "youbaopin_val": 41617.0,
@@ -57,7 +78,7 @@
       "acp_target": 352147.0,
       "acp_pct": 77.99,
       "acp_quarter_val": 274629.0,
-      "active_clients": null,
+      "active_clients": 5,
       "youbaopin": 4860,
       "youbaopin_target": 7009,
       "youbaopin_pct": 69.3
@@ -76,7 +97,7 @@
       "acp_target": null,
       "acp_pct": null,
       "acp_quarter_val": null,
-      "active_clients": null,
+      "active_clients": 18,
       "youbaopin": 6115,
       "youbaopin_target": 6564,
       "youbaopin_pct": 93.2
@@ -95,7 +116,7 @@
       "acp_target": 345537.0,
       "acp_pct": 66.59,
       "acp_quarter_val": 230106.0,
-      "active_clients": null,
+      "active_clients": 4,
       "youbaopin": 3309,
       "youbaopin_target": 4492,
       "youbaopin_pct": 73.7
@@ -114,7 +135,7 @@
       "acp_target": 749210.0,
       "acp_pct": 28.06,
       "acp_quarter_val": 210259.0,
-      "active_clients": null,
+      "active_clients": 4,
       "youbaopin": 1572,
       "youbaopin_target": 2295,
       "youbaopin_pct": 68.5
@@ -133,7 +154,7 @@
       "acp_target": 276634.0,
       "acp_pct": 79.83,
       "acp_quarter_val": 220834.0,
-      "active_clients": null,
+      "active_clients": 7,
       "youbaopin": null,
       "youbaopin_target": null,
       "youbaopin_pct": null
@@ -152,7 +173,7 @@
       "acp_target": 1153571.0,
       "acp_pct": 39.18,
       "acp_quarter_val": 451917.0,
-      "active_clients": null,
+      "active_clients": 17,
       "youbaopin": 6180,
       "youbaopin_target": 8137,
       "youbaopin_pct": 75.9
@@ -171,7 +192,7 @@
       "acp_target": 644924.0,
       "acp_pct": 65.32,
       "acp_quarter_val": 421293.0,
-      "active_clients": null,
+      "active_clients": 6,
       "youbaopin": 4019,
       "youbaopin_target": 5077,
       "youbaopin_pct": 79.2
@@ -190,7 +211,7 @@
       "acp_target": 457547.0,
       "acp_pct": 47.28,
       "acp_quarter_val": 216314.0,
-      "active_clients": null,
+      "active_clients": 7,
       "youbaopin": 3667,
       "youbaopin_target": 4807,
       "youbaopin_pct": 76.3
@@ -209,7 +230,7 @@
       "acp_target": 361418.0,
       "acp_pct": 90.33,
       "acp_quarter_val": 326458.0,
-      "active_clients": null,
+      "active_clients": 15,
       "youbaopin": 7123,
       "youbaopin_target": 7206,
       "youbaopin_pct": 98.8
