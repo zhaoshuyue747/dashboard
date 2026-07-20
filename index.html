@@ -127,11 +127,11 @@
   .prog-pct { min-width:36px; text-align:right; font-weight:600; font-size:11px; }
 
   /* ===== Ⅳ 排名表 ===== */
-  .rank-table { width:100%; border-collapse:collapse; font-size:12px; }
-  .rank-table th { background:#f5f7fa; color:var(--text-sub); font-weight:500; padding:8px 10px; border-bottom:1px solid var(--border); text-align:center; white-space:nowrap; }
-  .rank-table td { padding:7px 10px; border-bottom:1px solid #f0f4f8; text-align:center; white-space:nowrap; }
-  .rank-table tr:last-child td { border-bottom:none; }
-  .rank-table tr:hover td { background:#f8fafc; }
+  .rank-table, .active-table { width:100%; border-collapse:collapse; font-size:12px; }
+  .rank-table th, .active-table th { background:#f5f7fa; color:var(--text-sub); font-weight:500; padding:8px 10px; border-bottom:1px solid var(--border); text-align:center; white-space:nowrap; }
+  .rank-table td, .active-table td { padding:7px 10px; border-bottom:1px solid #f0f4f8; text-align:center; white-space:nowrap; }
+  .rank-table tr:last-child td, .active-table tr:last-child td { border-bottom:none; }
+  .rank-table tr:hover td, .active-table tr:hover td { background:#f8fafc; }
   .rank-num { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; font-weight:700; font-size:12px; }
   .r1 { background:#fef3c7; color:#92400e; }
   .r2 { background:#e5e7eb; color:#374151; }
@@ -558,7 +558,7 @@
 
   <!-- 个人3万客户明细表 -->
   <div class="scroll-x">
-  <table class="rank-table" id="active-persons-table">
+  <table class="active-table" id="active-persons-table">
     <thead>
       <tr>
         <th>排名</th>
@@ -587,7 +587,7 @@
     <span class="path-tip" title="激励 → 业务目标 → 信保 → 拍档销售 → 按季度总实收排序">取数：激励→业务目标→信保→拍档销售（季度降序）</span>
   </div>
   <div class="scroll-x">
-  <table class="rank-table">
+  <table class="rank-table" id="iv-rank-table">
     <thead>
       <tr>
         <th>排名</th>
@@ -1061,7 +1061,7 @@ function renderPersons(d) {
 function renderRankTable(d) {
   const persons = d.persons || [];
   if (!persons.length) return;
-  const tbody = document.querySelector('.rank-table tbody');
+  const tbody = document.querySelector('#iv-rank-table tbody');
   if (!tbody) return;
 
   const sorted = [...persons].sort((a,b) => (b.month_pct||0) - (a.month_pct||0));
@@ -1089,7 +1089,7 @@ function renderRankTable(d) {
   }).join('');
 
   // 合计行
-  const tfoot = document.querySelector('.rank-table tfoot tr');
+  const tfoot = document.querySelector('#iv-rank-table tfoot tr');
   if (tfoot) {
     const totalMonth = persons.reduce((s,p)=>s+(p.month_val||0),0);
     tfoot.cells[3].textContent = fmt(totalMonth);
