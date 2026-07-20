@@ -528,6 +528,57 @@
 
 
 <!-- ══════════════════════════════════════════════
+     Ⅲ-B 3万客户数个人明细
+     数据路径：大促及场景运营 → FY27活跃客户 → 拍档销售
+════════════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-title">Ⅲ-B &nbsp;3万客户数 · 个人明细
+    <span class="path-tip" title="大促及场景运营 → FY27活跃客户 → 拍档销售 → 本季3w客户数">取数：大促及场景运营→FY27活跃客户→拍档销售</span>
+  </div>
+
+  <!-- 汇总条 -->
+  <div class="person-summary" id="active-summary-bar">
+    <div class="ps-item">
+      <div class="ps-val" id="active-total-val" style="color:var(--orange)">--</div>
+      <div class="ps-lbl">本季截至今日3万客户数</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="active-baseline-val">--</div>
+      <div class="ps-lbl">同比同期客户数</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="active-pct-bar" style="color:var(--green)">--</div>
+      <div class="ps-lbl">同比完成率</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="active-delta-val">--</div>
+      <div class="ps-lbl">较同比同期差额</div>
+    </div>
+  </div>
+
+  <!-- 个人3万客户明细表 -->
+  <div class="scroll-x">
+  <table class="rank-table" id="active-persons-table">
+    <thead>
+      <tr>
+        <th>排名</th>
+        <th>销售</th>
+        <th>本季3w客户数</th>
+        <th>同比季度数</th>
+        <th>同比变化</th>
+        <th>占团队比例</th>
+        <th>进度条</th>
+      </tr>
+    </thead>
+    <tbody id="active-persons-body">
+      <tr><td colspan="7" style="text-align:center;color:var(--text-mute);padding:16px">数据加载中...</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════
      Ⅳ 综合师名册（排名榜）
      数据路径：同 Ⅲ，按季度总实收降序排列
 ════════════════════════════════════════════════ -->
@@ -879,9 +930,67 @@ function renderACP(d) {
 
 function renderActive(d) {
   const ac = d.active || {};
-  setText('active-val', ac.val !== null && ac.val !== undefined ? ac.val : '--');
-  setText('active-pct', ac.pct !== null && ac.pct !== undefined ? ac.pct + '%' : '--');
+
+  // ── KPI 卡片（顶部汇总）──
+  const displayVal = ac.val !== null && ac.val !== undefined ? ac.val : '--';
+  const displayPct = ac.pct !== null && ac.pct !== undefined ? ac.pct + '%' : '--';
+  setText('active-val', displayVal);
+  setText('active-pct', displayPct);
+  setStyle('active-pct', 'color', (ac.pct || 0) >= 100 ? 'var(--green)' : (ac.pct || 0) >= 80 ? 'var(--orange)' : 'var(--red)');
   setStyle('active-bar', 'width', Math.min(ac.pct || 0, 100) + '%');
+
+  // ── 汇总条 ──
+  setText('active-total-val', displayVal);
+  setText('active-baseline-val', ac.baseline !== null && ac.baseline !== undefined ? ac.baseline : '--');
+  setText('active-pct-bar', displayPct);
+  setStyle('active-pct-bar', 'color', (ac.pct || 0) >= 100 ? 'var(--green)' : (ac.pct || 0) >= 80 ? 'var(--orange)' : 'var(--red)');
+  const deltaVal = ac.delta !== null && ac.delta !== undefined ? ac.delta : null;
+  const deltaStr = deltaVal !== null ? (deltaVal >= 0 ? '+' + deltaVal : String(deltaVal)) : '--';
+  const deltaColor = deltaVal !== null ? (deltaVal >= 0 ? 'var(--green)' : 'var(--red)') : 'var(--text-mute)';
+  setText('active-delta-val', deltaStr);
+  setStyle('active-delta-val', 'color', deltaColor);
+
+  // ── 个人明细表 ──
+  const persons = ac.persons || {};
+  const personsYoy = ac.persons_yoy || {};
+  const tbody = document.getElementById('active-persons-body');
+  if (!tbody) return;
+
+  const entries = Object.entries(persons)
+    .filter(([name]) => name !== '-')
+    .map(([name, cnt]) => ({ name, cnt, yoy: personsYoy[name] || 0 }))
+    .sort((a, b) => b.cnt - a.cnt);
+
+  if (!entries.length) return;
+
+  const total = entries.reduce((s, e) => s + e.cnt, 0);
+  const maxCnt = Math.max(...entries.map(e => e.cnt));
+
+  const rankCls = (i) => i === 0 ? 'r1' : i === 1 ? 'r2' : i === 2 ? 'r3' : 'rn';
+
+  tbody.innerHTML = entries.map((e, i) => {
+    const diff = e.cnt - e.yoy;
+    const diffStr = diff >= 0 ? `<span class="up">▲${diff}</span>` : `<span class="down">▼${Math.abs(diff)}</span>`;
+    const shareStr = total > 0 ? (e.cnt / total * 100).toFixed(1) + '%' : '--';
+    const barW = maxCnt > 0 ? Math.round(e.cnt / maxCnt * 100) : 0;
+    const barColor = barW >= 80 ? 'var(--green)' : barW >= 50 ? 'var(--orange)' : 'var(--accent)';
+    return `<tr>
+      <td><span class="rank-num ${rankCls(i)}">${i + 1}</span></td>
+      <td><b>${e.name}</b></td>
+      <td style="font-weight:500;color:var(--orange)">${e.cnt}</td>
+      <td style="color:var(--text-sub)">${e.yoy || '--'}</td>
+      <td>${diffStr}</td>
+      <td style="color:var(--text-sub)">${shareStr}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:6px;min-width:120px">
+          <div style="flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden">
+            <div style="height:100%;width:${barW}%;background:${barColor};border-radius:3px"></div>
+          </div>
+          <span style="font-size:11px;color:var(--text-mute);min-width:28px">${barW}%</span>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
 }
 
 function renderPersons(d) {
