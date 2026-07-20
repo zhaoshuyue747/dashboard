@@ -543,12 +543,20 @@
       <div class="ps-lbl">本季截至今日3万客户数</div>
     </div>
     <div class="ps-item">
+      <div class="ps-val" id="active-quarter-target" style="color:var(--text-sub)">270</div>
+      <div class="ps-lbl">季度目标客户数</div>
+    </div>
+    <div class="ps-item">
+      <div class="ps-val" id="active-quarter-pct" style="color:var(--red)">--</div>
+      <div class="ps-lbl">季度完成率</div>
+    </div>
+    <div class="ps-item">
       <div class="ps-val" id="active-baseline-val">--</div>
       <div class="ps-lbl">同比同期客户数</div>
     </div>
     <div class="ps-item">
       <div class="ps-val" id="active-pct-bar" style="color:var(--green)">--</div>
-      <div class="ps-lbl">同比完成率</div>
+      <div class="ps-lbl">vs同比完成率</div>
     </div>
     <div class="ps-item">
       <div class="ps-val" id="active-delta-val">--</div>
@@ -566,6 +574,7 @@
         <th>本季3w客户数</th>
         <th>同比季度数</th>
         <th>同比变化</th>
+        <th>vs同比完成率</th>
         <th>占团队比例</th>
         <th>进度条</th>
       </tr>
@@ -941,6 +950,15 @@ function renderActive(d) {
 
   // ── 汇总条 ──
   setText('active-total-val', displayVal);
+
+  // 季度目标完成率
+  const qTarget = ac.quarter_target || 270;
+  const qPct    = ac.quarter_pct !== null && ac.quarter_pct !== undefined
+    ? ac.quarter_pct : (ac.val ? Math.round(ac.val / qTarget * 1000) / 10 : null);
+  setText('active-quarter-target', qTarget);
+  setText('active-quarter-pct', qPct !== null ? qPct + '%' : '--');
+  setStyle('active-quarter-pct', 'color', (qPct||0) >= 80 ? 'var(--green)' : (qPct||0) >= 50 ? 'var(--orange)' : 'var(--red)');
+
   setText('active-baseline-val', ac.baseline !== null && ac.baseline !== undefined ? ac.baseline : '--');
   setText('active-pct-bar', displayPct);
   setStyle('active-pct-bar', 'color', (ac.pct || 0) >= 100 ? 'var(--green)' : (ac.pct || 0) >= 80 ? 'var(--orange)' : 'var(--red)');
@@ -969,10 +987,14 @@ function renderActive(d) {
   const rankCls = (i) => i === 0 ? 'r1' : i === 1 ? 'r2' : i === 2 ? 'r3' : 'rn';
 
   tbody.innerHTML = entries.map((e, i) => {
-    const diff = e.cnt - e.yoy;
+    const diff    = e.cnt - e.yoy;
     const diffStr = diff >= 0 ? `<span class="up">▲${diff}</span>` : `<span class="down">▼${Math.abs(diff)}</span>`;
+    // vs同比完成率
+    const vsYoyPct = e.yoy > 0 ? Math.round(e.cnt / e.yoy * 100) : null;
+    const vsYoyStr = vsYoyPct !== null ? vsYoyPct + '%' : '--';
+    const vsYoyCol = vsYoyPct === null ? 'var(--text-mute)' : vsYoyPct >= 100 ? 'var(--green)' : vsYoyPct >= 70 ? 'var(--orange)' : 'var(--red)';
     const shareStr = total > 0 ? (e.cnt / total * 100).toFixed(1) + '%' : '--';
-    const barW = maxCnt > 0 ? Math.round(e.cnt / maxCnt * 100) : 0;
+    const barW     = maxCnt > 0 ? Math.round(e.cnt / maxCnt * 100) : 0;
     const barColor = barW >= 80 ? 'var(--green)' : barW >= 50 ? 'var(--orange)' : 'var(--accent)';
     return `<tr>
       <td><span class="rank-num ${rankCls(i)}">${i + 1}</span></td>
@@ -980,6 +1002,7 @@ function renderActive(d) {
       <td style="font-weight:500;color:var(--orange)">${e.cnt}</td>
       <td style="color:var(--text-sub)">${e.yoy || '--'}</td>
       <td>${diffStr}</td>
+      <td style="color:${vsYoyCol};font-weight:500">${vsYoyStr}</td>
       <td style="color:var(--text-sub)">${shareStr}</td>
       <td>
         <div style="display:flex;align-items:center;gap:6px;min-width:120px">
@@ -1196,6 +1219,6 @@ async function loadDashboardData() {
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260720174409 -->
+<!-- build:20260720180212 -->
 </body>
 </html>
