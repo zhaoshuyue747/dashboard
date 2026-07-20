@@ -583,8 +583,8 @@
      数据路径：同 Ⅲ，按季度总实收降序排列
 ════════════════════════════════════════════════ -->
 <div class="section">
-  <div class="section-title">Ⅳ &nbsp;综合师名册
-    <span class="path-tip" title="激励 → 业务目标 → 信保 → 拍档销售 → 按季度总实收排序">取数：激励→业务目标→信保→拍档销售（季度降序）</span>
+  <div class="section-title">Ⅳ &nbsp;信保GMV进度
+    <span class="path-tip" title="激励 → 业务目标 → 信保 → 拍档销售 → 月度/季度实收 vs 目标">取数：激励→业务目标→信保→拍档销售</span>
   </div>
   <div class="scroll-x">
   <table class="rank-table" id="iv-rank-table">
@@ -594,14 +594,14 @@
         <th>姓名</th>
         <th>角色</th>
         <th>月度实收(USD)</th>
-        <th>月同比</th>
-        <th>季度实收(USD)</th>
-        <th>季同比</th>
         <th>月度目标(USD)</th>
+        <th style="min-width:160px">月度进度</th>
         <th>月达成率</th>
+        <th>季度实收(USD)</th>
         <th>季度目标(USD)</th>
+        <th style="min-width:160px">季度进度</th>
         <th>季达成率</th>
-        <th>季度得分</th>
+        <th>月同比</th>
       </tr>
     </thead>
     <tbody>
@@ -674,10 +674,10 @@
     <tfoot>
       <tr class="tfoot-row">
         <td colspan="3">合计</td>
-        <td>10,487,604</td><td>—</td>
-        <td class="ph">待汇总</td><td>—</td>
-        <td class="ph">??</td><td class="ph">??%</td>
-        <td class="ph">??</td><td class="ph">??%</td>
+        <td class="ph">--</td><td class="ph">--</td>
+        <td>—</td><td class="ph">--</td>
+        <td class="ph">--</td><td class="ph">--</td>
+        <td>—</td><td class="ph">--</td>
         <td>—</td>
       </tr>
     </tfoot>
@@ -1076,47 +1076,65 @@ function renderRankTable(d) {
   const tbody = document.querySelector('#iv-rank-table tbody');
   if (!tbody) return;
 
+  // 按月度完成率降序排列
   const sorted = [...persons].sort((a,b) => (b.month_pct||0) - (a.month_pct||0));
   const rankClass = (i) => i===0?'r1':i===1?'r2':i===2?'r3':'rn';
 
+  // 进度条 HTML 生成（双层：实收/目标）
+  function progressBar(pct, fillCls) {
+    const w = Math.min(pct || 0, 100);
+    return `<div style="display:flex;align-items:center;gap:6px;min-width:150px">
+      <div style="flex:1;height:8px;background:var(--border,#e5e7eb);border-radius:4px;overflow:hidden">
+        <div style="height:100%;width:${w}%;border-radius:4px" class="${fillCls}"></div>
+      </div>
+      <span style="font-size:11px;min-width:36px;text-align:right;color:var(--text-sub)">${w.toFixed(1)}%</span>
+    </div>`;
+  }
+
   tbody.innerHTML = sorted.map((p, i) => {
-    const pct  = p.month_pct || 0;
-    const qpct = p.quarter_pct || 0;
-    const col  = pctColor(pct);
-    const qcol = pctColor(qpct);
-    const qfillCls = pctFillClass(qpct);
-    const fillCls = pctFillClass(pct);
+    const pct   = p.month_pct   || 0;
+    const qpct  = p.quarter_pct || 0;
+    const col   = pctColor(pct);
+    const qcol  = pctColor(qpct);
+    const mfill = pctFillClass(pct);
+    const qfill = pctFillClass(qpct);
     const roleCls = p.role === '主管' ? 'tag-purple' : p.role === '老板' ? 'tag-green' : 'tag-blue';
-    const yoyStr = p.month_yoy !== null ? `<span class="${yoyClass(p.month_yoy)}">${yoyText(p.month_yoy)}</span>` : '—';
-    const qyoyStr = p.quarter_yoy !== null && p.quarter_yoy !== undefined ? `<span class="${yoyClass(p.quarter_yoy)}">${yoyText(p.quarter_yoy)}</span>` : '—';
-    const qpctStr = p.quarter_pct !== null && p.quarter_pct !== undefined ? `<span style="color:${qcol}">${p.quarter_pct}%</span>` : '<span class="ph">??%</span>';
+    const yoyStr  = p.month_yoy !== null && p.month_yoy !== undefined
+      ? `<span class="${yoyClass(p.month_yoy)}">${yoyText(p.month_yoy)}</span>` : '—';
     return `<tr>
       <td><span class="rank-num ${rankClass(i)}">${i+1}</span></td>
       <td><b>${p.name}</b></td>
       <td><span class="tag ${roleCls}">${p.role}</span></td>
-      <td>${fmt(p.month_val)}</td>
+      <td style="font-weight:500">${fmt(p.month_val)}</td>
+      <td style="color:var(--text-sub)">${p.month_target ? fmt(p.month_target) : '--'}</td>
+      <td>${progressBar(pct, mfill)}</td>
+      <td style="color:${col};font-weight:500">${pct}%</td>
+      <td style="font-weight:500">${p.quarter_val ? fmt(p.quarter_val) : '—'}</td>
+      <td style="color:var(--text-sub)">${p.quarter_target ? fmt(p.quarter_target) : '--'}</td>
+      <td>${progressBar(qpct, qfill)}</td>
+      <td style="color:${qcol};font-weight:500">${qpct ? qpct+'%' : '--'}</td>
       <td>${yoyStr}</td>
-      <td>${p.quarter_val ? fmt(p.quarter_val) : '—'}</td>
-      <td>${qyoyStr}</td>
-      <td>${p.month_target ? fmt(p.month_target) : '--'}</td>
-      <td style="color:${col}">${pct}%</td>
-      <td>${p.quarter_target ? fmt(p.quarter_target) : '<span class="ph">??</span>'}</td>
-      <td>${qpctStr}</td>
-      <td><div class="score-cell"><div class="score-bar"><div class="score-fill ${fillCls}" style="width:${Math.min(pct,100)}%"></div></div><b style="color:${col}">${pct}%</b></div></td>
     </tr>`;
   }).join('');
 
   // 合计行
   const tfoot = document.querySelector('#iv-rank-table tfoot tr');
   if (tfoot) {
-    const totalMonth   = persons.reduce((s,p)=>s+(p.month_val||0),0);
-    const totalQuarter = persons.reduce((s,p)=>s+(p.quarter_val||0),0);
-    const totalQTarget = persons.reduce((s,p)=>s+(p.quarter_target||0),0);
-    const totalQPct    = totalQTarget > 0 ? (totalQuarter/totalQTarget*100).toFixed(1)+'%' : '--';
-    if (tfoot.cells[3]) tfoot.cells[3].textContent = fmt(totalMonth);
-    if (tfoot.cells[5]) tfoot.cells[5].textContent = fmt(totalQuarter);
-    if (tfoot.cells[9]) tfoot.cells[9].textContent = fmt(totalQTarget);
-    if (tfoot.cells[10]) tfoot.cells[10].textContent = totalQPct;
+    const totalMonth    = persons.reduce((s,p) => s+(p.month_val||0), 0);
+    const totalMTarget  = persons.reduce((s,p) => s+(p.month_target||0), 0);
+    const totalMPct     = totalMTarget > 0 ? (totalMonth/totalMTarget*100).toFixed(1)+'%' : '--';
+    const totalQuarter  = persons.reduce((s,p) => s+(p.quarter_val||0), 0);
+    const totalQTarget  = persons.reduce((s,p) => s+(p.quarter_target||0), 0);
+    const totalQPct     = totalQTarget > 0 ? (totalQuarter/totalQTarget*100).toFixed(1)+'%' : '--';
+    const cells = tfoot.cells;
+    if (cells[0]) cells[0].colSpan = 3;
+    if (cells[0]) cells[0].textContent = '合计';
+    if (cells[3]) cells[3].textContent = fmt(totalMonth);
+    if (cells[4]) cells[4].textContent = fmt(totalMTarget);
+    if (cells[6]) cells[6].textContent = totalMPct;
+    if (cells[7]) cells[7].textContent = fmt(totalQuarter);
+    if (cells[8]) cells[8].textContent = fmt(totalQTarget);
+    if (cells[10]) cells[10].textContent = totalQPct;
   }
 }
 
@@ -1178,6 +1196,6 @@ async function loadDashboardData() {
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260720172029 -->
+<!-- build:20260720174409 -->
 </body>
 </html>
