@@ -32,9 +32,11 @@
   "active": {
     "val": 83,
     "cur": 83,
+    "quarter_target": 270,
+    "quarter_pct": 30.7,
     "baseline": 95,
     "pct": 87.4,
-    "delta": -12.0,
+    "delta": -12,
     "persons": {
       "高盛强": 18,
       "赵舒越": 7,
