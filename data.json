@@ -266,5 +266,104 @@
     }
   ],
   "top20_up": [],
-  "top20_down": []
+  "top20_down": [],
+  "customer_analysis": {
+    "update_date": "2026-07-20",
+    "total_clients": 824,
+    "old_clients": {
+      "total": 529,
+      "active_3w": 83,
+      "active_pct": 15.7
+    },
+    "new_clients": {
+      "total": 295,
+      "with_gmv": 134,
+      "convert_pct": 45.4
+    },
+    "lost_warning": {
+      "total": 173,
+      "days_threshold": 90
+    },
+    "tier_current": {
+      "达3w": 83,
+      "2-3w": 33,
+      "1-2w": 69,
+      "0-1w": 383,
+      "未动销": 256
+    },
+    "by_sales": [
+      {
+        "name": "高盛强",
+        "reach_3w": 18,
+        "total": 87,
+        "new": 51,
+        "lost": 17,
+        "gmv": 8019641
+      },
+      {
+        "name": "燕磊",
+        "reach_3w": 17,
+        "total": 122,
+        "new": 39,
+        "lost": 26,
+        "gmv": 1928259
+      },
+      {
+        "name": "杨婷婷",
+        "reach_3w": 15,
+        "total": 56,
+        "new": 3,
+        "lost": 23,
+        "gmv": 1426191
+      },
+      {
+        "name": "刘鑫",
+        "reach_3w": 7,
+        "total": 93,
+        "new": 43,
+        "lost": 18,
+        "gmv": 819015
+      },
+      {
+        "name": "赵舒越",
+        "reach_3w": 7,
+        "total": 100,
+        "new": 32,
+        "lost": 13,
+        "gmv": 1064404
+      },
+      {
+        "name": "欧阳杰俊",
+        "reach_3w": 6,
+        "total": 116,
+        "new": 56,
+        "lost": 33,
+        "gmv": 1083484
+      },
+      {
+        "name": "李朝燕",
+        "reach_3w": 5,
+        "total": 102,
+        "new": 27,
+        "lost": 19,
+        "gmv": 1380366
+      },
+      {
+        "name": "杨佳玮",
+        "reach_3w": 4,
+        "total": 91,
+        "new": 34,
+        "lost": 17,
+        "gmv": 452665
+      },
+      {
+        "name": "狄鹏",
+        "reach_3w": 4,
+        "total": 55,
+        "new": 8,
+        "lost": 7,
+        "gmv": 419191
+      }
+    ]
+  }
 }
