@@ -301,18 +301,18 @@
       <div class="a-block">
         <div class="a-title">指标解析</div>
         <div class="a-line">
-          信保月度实收 <span class="num ph">10,480,651</span> USD，目标 <span class="ph">25,573,303</span> USD，完成率 <span class="hl">40.98%</span>，
-          同比 <span class="ok">↑78.52%</span>；季度完成率 <span class="hl">12.77%</span>，差额 <span class="hl">-71,566,303 USD</span>
+          信保月度实收 <span class="num" id="ana-xb-month-val">--</span> USD，目标 <span id="ana-xb-month-target">--</span> USD，完成率 <span class="hl" id="ana-xb-month-pct">--</span>，
+          同比 <span id="ana-xb-month-yoy">--</span>；季度完成率 <span class="hl" id="ana-xb-quarter-pct">--</span>，差额 <span class="hl" id="ana-xb-quarter-gap">--</span> USD
         </div>
-        <div class="a-line">ACP月度实收 <span class="num">1,552,421</span> USD，目标 4,889,880 USD，完成率 <span class="hl">31.75%</span>，同比 <span class="hl">↓24.28%</span>；季度完成率 <span class="hl">10.25%</span>，差额 <span class="hl">-13,592,615 USD</span></div>
-        <div class="a-line">活跃客户：<span class="num">264家</span>，同期基准250家，完成率 <span class="ok">105.6%</span>，超额 <span class="ok">+14家</span>（口径：季度信保&ACP实收>$3万）</div>
-        <div class="a-line">优爆品数：<span class="ph">待校验路径后填入</span></div>
+        <div class="a-line">ACP月度实收 <span class="num" id="ana-acp-month-val">--</span> USD，目标 <span id="ana-acp-month-target">--</span> USD，完成率 <span class="hl" id="ana-acp-month-pct">--</span>，同比 <span id="ana-acp-month-yoy">--</span>；季度完成率 <span class="hl" id="ana-acp-quarter-pct">--</span>，差额 <span class="hl" id="ana-acp-quarter-gap">--</span> USD</div>
+        <div class="a-line">活跃客户：<span class="num" id="ana-active-val">--</span>家（本季截至今日），季度目标 <span id="ana-active-target">270</span>家，完成率 <span id="ana-active-pct" class="hl">--</span>，流失预警 <span class="hl" id="ana-lost">173</span>家</div>
+        <div class="a-line">优爆品数：<span class="num" id="ana-ybp-val">--</span>个，目标 <span id="ana-ybp-target">--</span>个，达成率 <span class="hl" id="ana-ybp-pct">--</span></div>
       </div>
       <div class="a-block">
         <div class="a-title">近况预测</div>
-        <div class="a-line">按当前日均进度，信保季度预计达 <span class="ph">??万</span>，距目标缺口约 <span class="hl ph">?? USD</span></div>
-        <div class="a-line">活跃客户缺口 <span class="ph">??家</span>，需日均新增 <span class="ph">??家</span> 可完成目标</div>
-
+        <div class="a-line">按当前日均进度，信保季度预计达 <span class="num" id="ana-xb-forecast">--</span> USD，距目标缺口约 <span class="hl" id="ana-xb-forecast-gap">--</span> USD</div>
+        <div class="a-line">3万活跃客户缺口 <span class="hl" id="ana-active-gap">--</span>家，需日均新增 <span class="hl" id="ana-active-daily">--</span>家 可完成目标</div>
+        <div class="a-line">流失预警客户 <span class="hl">173</span>家，建议优先回访同比已达3w但本季未达的客户</div>
       </div>
     </div>
 
@@ -1189,6 +1189,62 @@ function renderUpdateTime(d) {
   }
 }
 
+function renderAnalysis(d) {
+  const xb  = d.xinbao || {};
+  const acp = d.acp    || {};
+  const ac  = d.active || {};
+  const ybp = d.youbaopin || {};
+  const s   = (id, v) => { const el = document.getElementById(id); if (el && v !== undefined && v !== null) el.textContent = v; };
+
+  // 指标解析
+  s('ana-xb-month-val',    fmt(xb.month_val));
+  s('ana-xb-month-target', fmt(xb.month_target));
+  s('ana-xb-month-pct',    fmtPct(xb.month_pct));
+  s('ana-xb-month-yoy',    xb.month_yoy_pct !== undefined ? yoyText(xb.month_yoy_pct) : '--');
+  s('ana-xb-quarter-pct',  fmtPct(xb.quarter_pct));
+  s('ana-xb-quarter-gap',  xb.quarter_gap ? fmt(xb.quarter_gap) : '--');
+
+  s('ana-acp-month-val',    fmt(acp.month_val));
+  s('ana-acp-month-target', fmt(acp.month_target));
+  s('ana-acp-month-pct',    fmtPct(acp.month_pct));
+  s('ana-acp-month-yoy',    acp.month_yoy_pct !== undefined ? yoyText(acp.month_yoy_pct) : '--');
+  s('ana-acp-quarter-pct',  fmtPct(acp.quarter_pct));
+  s('ana-acp-quarter-gap',  acp.quarter_gap ? fmt(acp.quarter_gap) : '--');
+
+  s('ana-active-val',    ac.val);
+  s('ana-active-target', ac.quarter_target || 270);
+  s('ana-active-pct',    ac.quarter_pct ? ac.quarter_pct + '%' : '--');
+
+  s('ana-ybp-val',    ybp.youbaopin_val ? fmt(ybp.youbaopin_val) : '--');
+  s('ana-ybp-target', ybp.youbaopin_target ? fmt(ybp.youbaopin_target) : '--');
+  s('ana-ybp-pct',    ybp.youbaopin_pct ? ybp.youbaopin_pct + '%' : '--');
+
+  // 近况预测（自动计算）
+  const now = new Date();
+  // 季度 FY27Q1：7月1日 ~ 9月30日（共92天）
+  const qStart = new Date(now.getFullYear(), 6, 1);   // 7月1日
+  const qEnd   = new Date(now.getFullYear(), 9, 0);   // 9月30日
+  const qTotal = (qEnd - qStart) / 86400000 + 1;
+  const qPast  = Math.ceil((now - qStart) / 86400000);
+  const qLeft  = qTotal - qPast;
+
+  if (xb.quarter_val && qPast > 0) {
+    const dailyAvg   = xb.quarter_val / qPast;
+    const forecast   = Math.round(dailyAvg * qTotal);
+    const forecastGap = forecast - (xb.quarter_target || 0);
+    s('ana-xb-forecast',     fmt(forecast));
+    s('ana-xb-forecast-gap', fmt(forecastGap));
+    const el = document.getElementById('ana-xb-forecast-gap');
+    if (el) el.style.color = forecastGap >= 0 ? 'var(--green)' : 'var(--red)';
+  }
+
+  const activeTarget = ac.quarter_target || 270;
+  const activeCur    = ac.val || 0;
+  const activeGap    = activeTarget - activeCur;
+  s('ana-active-gap',   activeGap > 0 ? activeGap : 0);
+  s('ana-active-daily', activeGap > 0 && qLeft > 0 ? (activeGap / qLeft).toFixed(1) : '0');
+}
+
 function renderCustomerAnalysis(d) {
   const ca = d.customer_analysis;
   if (!ca) return;
@@ -1221,6 +1277,7 @@ async function loadDashboardData() {
     renderPersons(data);
     renderRankTable(data);
     renderTop20(data);
+    renderAnalysis(data);
     renderCustomerAnalysis(data);
     renderUpdateTime(data);
   } catch(e) {
@@ -1231,6 +1288,6 @@ async function loadDashboardData() {
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260720190427 -->
+<!-- build:20260720221004 -->
 </body>
 </html>
