@@ -319,10 +319,13 @@
     <!-- 右列 -->
     <div class="analysis-col">
       <div class="a-block">
-        <div class="a-title">3方客户分析</div>
-        <div class="a-line">老客户：<span class="ph">待路径确认</span>家，活跃占比 <span class="ph">??%</span></div>
-        <div class="a-line">新客户：本季引入 <span class="ph">??家</span>，已产生收入 <span class="ph">??家</span>，转化率 <span class="ph">??%</span></div>
-        <div class="a-line">流失预警：<span class="hl ph">??家</span>（近 <span class="ph">??</span> 天未下单）需重点跟进</div>
+        <div class="a-title">3方客户分析 <span style="font-size:10px;font-weight:400;color:var(--text-mute)">数据源：客户分析-7月20日.xlsx · 共<span id="ca-total">824</span>家</span></div>
+        <div class="a-line">老客户：<span class="num" id="ca-old-total">529</span>家，活跃（达3w）占比 <span class="ok" id="ca-old-pct">15.7%</span></div>
+        <div class="a-line">新客户：本季引入 <span class="num" id="ca-new-total">295</span>家，已产生GMV <span class="num" id="ca-new-gmv">134</span>家，转化率 <span class="ok" id="ca-new-pct">45.4%</span></div>
+        <div class="a-line">流失预警：<span class="hl" id="ca-lost">173</span>家（同比已达3w，本季未达）需重点跟进</div>
+        <div class="a-line" style="margin-top:6px;font-size:11px;color:var(--text-mute)">
+          本季分层：达3w <b id="ca-t1">83</b> | 2-3w <b id="ca-t2">33</b> | 1-2w <b id="ca-t3">69</b> | 0-1w <b id="ca-t4">383</b> | 未动销 <b id="ca-t5">256</b>
+        </div>
       </div>
       <div class="a-block">
         <div class="a-title">重心问题</div>
@@ -1186,10 +1189,28 @@ function renderUpdateTime(d) {
   }
 }
 
+function renderCustomerAnalysis(d) {
+  const ca = d.customer_analysis;
+  if (!ca) return;
+  const s = (id, v) => { const el = document.getElementById(id); if (el && v !== undefined) el.textContent = v; };
+  s('ca-total',    ca.total_clients);
+  s('ca-old-total', ca.old_clients?.total);
+  s('ca-old-pct',   ca.old_clients?.active_pct + '%');
+  s('ca-new-total', ca.new_clients?.total);
+  s('ca-new-gmv',   ca.new_clients?.with_gmv);
+  s('ca-new-pct',   ca.new_clients?.convert_pct + '%');
+  s('ca-lost',      ca.lost_warning?.total);
+  const t = ca.tier_current || {};
+  s('ca-t1', t['达3w']);
+  s('ca-t2', t['2-3w']);
+  s('ca-t3', t['1-2w']);
+  s('ca-t4', t['0-1w']);
+  s('ca-t5', t['未动销']);
+}
+
 // ── 主入口：加载 data.json ──
 async function loadDashboardData() {
   try {
-    // 加上时间戳防止缓存
     const resp = await fetch(DATA_URL + '?t=' + Date.now());
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const data = await resp.json();
@@ -1200,6 +1221,7 @@ async function loadDashboardData() {
     renderPersons(data);
     renderRankTable(data);
     renderTop20(data);
+    renderCustomerAnalysis(data);
     renderUpdateTime(data);
   } catch(e) {
     console.warn('data.json 加载失败，保留页面原始数据。错误:', e.message);
@@ -1209,6 +1231,6 @@ async function loadDashboardData() {
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260720180622 -->
+<!-- build:20260720190427 -->
 </body>
 </html>
