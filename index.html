@@ -269,15 +269,15 @@
       <div class="kpi-label"><span class="tag tag-orange">活跃客户</span>
         <span class="path-tip" title="大促及场景运营 → FY27活跃客户 → 销售数据 → 公司行">大促及场景运营→FY27活跃客户→销售数据</span>
       </div>
-      <div class="kpi-value"><span id="active-val">264</span><span class="kpi-unit">家</span></div>
+      <div class="kpi-value"><span id="active-val">--</span><span class="kpi-unit">家</span></div>
       <div class="kpi-progress">
         <span style="min-width:60px;font-size:11px;color:var(--text-sub)">同比完成率</span>
-        <div class="kpi-bar"><div class="kpi-fill fill-green" id="active-bar" style="width:100%"></div></div>
-        <span class="kpi-pct" id="active-pct" style="color:var(--green)">105.6%</span>
+        <div class="kpi-bar"><div class="kpi-fill fill-green" id="active-bar" style="width:0%"></div></div>
+        <span class="kpi-pct" id="active-pct" style="color:var(--green)">--%</span>
       </div>
       <div class="kpi-sub">
-        <span>同期基准 <b>250</b> 家</span>
-        <span class="ok">↑超额 14家</span>
+        <span>同比同期 <b id="active-kpi-baseline">--</b> 家</span>
+        <span id="active-kpi-delta">--</span>
         <span>口径：季度信保&ACP实收>$3万</span>
       </div>
     </div>
@@ -940,6 +940,14 @@ function renderActive(d) {
   setText('active-pct', displayPct);
   setStyle('active-pct', 'color', (ac.pct || 0) >= 100 ? 'var(--green)' : (ac.pct || 0) >= 80 ? 'var(--orange)' : 'var(--red)');
   setStyle('active-bar', 'width', Math.min(ac.pct || 0, 100) + '%');
+  // KPI 卡片底部：同比同期 + 超额/差额
+  setText('active-kpi-baseline', ac.baseline !== null && ac.baseline !== undefined ? ac.baseline : '--');
+  const kpiDelta = ac.delta !== null && ac.delta !== undefined ? ac.delta : null;
+  const kpiDeltaEl = document.getElementById('active-kpi-delta');
+  if (kpiDeltaEl && kpiDelta !== null) {
+    kpiDeltaEl.textContent = kpiDelta >= 0 ? '↑超额 ' + kpiDelta + '家' : '↓差额 ' + Math.abs(kpiDelta) + '家';
+    kpiDeltaEl.className = kpiDelta >= 0 ? 'ok' : 'hl';
+  }
 
   // ── 汇总条 ──
   setText('active-total-val', displayVal);
@@ -1288,6 +1296,6 @@ async function loadDashboardData() {
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260723155526 -->
+<!-- build:20260723163644 -->
 </body>
 </html>
