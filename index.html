@@ -158,6 +158,53 @@
   /* 数据路径说明浮层 */
   .path-tip { font-size:10px; color:var(--text-mute); background:#f8fafc; border:1px dashed var(--border); border-radius:4px; padding:2px 7px; cursor:default; }
   .path-tip:hover { background:#eff6ff; color:var(--accent); }
+
+  /* ===== 月份切换栏 ===== */
+  .month-switcher {
+    background:#0d1b3e;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:8px 24px;
+    position:sticky;
+    top:65px;
+    z-index:99;
+  }
+  .month-tab {
+    font-size:13px;
+    font-weight:500;
+    padding:5px 22px;
+    border-radius:20px;
+    cursor:pointer;
+    border:1.5px solid transparent;
+    color:#9db8e0;
+    transition:all .2s;
+    user-select:none;
+    letter-spacing:.5px;
+  }
+  .month-tab:hover { color:#fff; border-color:rgba(255,255,255,0.25); }
+  .month-tab.active {
+    background:var(--accent);
+    color:#fff;
+    border-color:var(--accent);
+    box-shadow:0 2px 8px rgba(22,119,255,.4);
+  }
+  .month-tab.aug { border-color:#f97316; color:#f97316; }
+  .month-tab.aug:hover { background:rgba(249,115,22,.15); }
+  .month-tab.aug.active { background:#f97316; color:#fff; border-color:#f97316; box-shadow:0 2px 8px rgba(249,115,22,.4); }
+  .month-badge {
+    font-size:10px;
+    padding:1px 6px;
+    border-radius:8px;
+    font-weight:600;
+    margin-left:4px;
+    vertical-align:middle;
+  }
+  .badge-live { background:var(--green); color:#fff; }
+  .badge-coming { background:rgba(249,115,22,.2); color:#f97316; border:1px solid #f97316; }
+  .month-divider { color:rgba(255,255,255,0.15); font-size:16px; }
 </style>
 </head>
 <body>
@@ -178,7 +225,22 @@
   </div>
 </div>
 
-<div class="main">
+<!-- ===== 月份切换栏 ===== -->
+<div class="month-switcher">
+  <span style="color:#9db8e0;font-size:12px;margin-right:4px">数据期：</span>
+  <div class="month-tab active" id="tab-jul" onclick="switchMonth('jul', this)">
+    7月&nbsp;2026
+    <span class="month-badge badge-live">实时</span>
+  </div>
+  <span class="month-divider">|</span>
+  <div class="month-tab aug" id="tab-aug" onclick="switchMonth('aug', this)">
+    8月&nbsp;2026
+    <span class="month-badge badge-coming">框架</span>
+  </div>
+  <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:12px" id="month-update-label">数据更新：2026-07-29</span>
+</div>
+
+<div class="main" id="main-content">
 
 <!-- ══════════════════════════════════════════════
      Ⅰ 公司概览
@@ -835,7 +897,15 @@ function acpSwitch(mode, el) {
 // data.json 由 update_dashboard.py 每日自动生成并推送到 GitHub
 // ================================================================
 
-const DATA_URL = 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data.json';
+// 数据源配置
+const DATA_URLS = {
+  jul: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data.json',
+  aug: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_aug.json',
+};
+const DATA_URL = DATA_URLS.jul;  // 向后兼容
+
+// 当前活跃月份
+let currentMonth = 'jul';
 
 function fmt(n) {
   if (n === null || n === undefined) return '--';
@@ -1272,30 +1342,112 @@ function renderCustomerAnalysis(d) {
   s('ca-t5', t['未动销']);
 }
 
+// ── 8月空框架数据（等待真实数据写入）──
+const AUG_PLACEHOLDER = {
+  update_time: '待更新',
+  month: '2026-08',
+  xinbao: {
+    month_val: null, month_target: 25573303, month_pct: null, month_gap: null, month_yoy: null, month_yoy_pct: null,
+    quarter_val: null, quarter_target: 82046954, quarter_pct: null, quarter_gap: null,
+  },
+  acp: {
+    month_val: null, month_target: 4889880, month_pct: null, month_gap: null, month_yoy: null, month_yoy_pct: null,
+    quarter_val: null, quarter_target: 15145036, quarter_pct: null, quarter_gap: null,
+  },
+  active: {
+    val: null, cur: null, baseline: null, quarter_target: 270, pct: null, quarter_pct: null, delta: null,
+    persons: {}, persons_yoy: {}
+  },
+  youbaopin: { youbaopin_val: null, youbaopin_target: 50992, youbaopin_pct: null },
+  persons: [
+    {name:'高盛强',role:'销售',month_val:null,month_target:7936889,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:25635957,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'燕磊',role:'销售',month_val:null,month_target:3784148,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:12222707,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'李朝燕',role:'销售',month_val:null,month_target:1907773,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:6162060,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'杨婷婷',role:'主管',month_val:null,month_target:2804635,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:9058902,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'欧阳杰俊',role:'销售',month_val:null,month_target:3425316,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:11063687,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'赵舒越',role:'销售',month_val:null,month_target:1410397,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:4555548,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'刘鑫',role:'销售',month_val:null,month_target:1474240,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:4761758,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'狄鹏',role:'销售',month_val:null,month_target:1774875,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:5732802,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+    {name:'杨佳玮',role:'销售',month_val:null,month_target:883454,month_pct:null,month_gap:null,month_yoy:null,quarter_val:null,quarter_target:2853533,quarter_pct:null,quarter_gap:null,acp_val:0,active_clients:null,youbaopin:null},
+  ],
+  top20_up: [], top20_down: [],
+  customer_analysis: null,
+};
+
+// ── 月份切换 ──
+function switchMonth(month, el) {
+  currentMonth = month;
+  // 切换 tab 样式
+  document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+
+  if (month === 'aug') {
+    // 8月：渲染空框架（显示目标，实收显示--）
+    renderAll(AUG_PLACEHOLDER);
+    // 显示8月提示横幅
+    showAugBanner(true);
+  } else {
+    // 7月：从 data.json 加载真实数据
+    showAugBanner(false);
+    loadDashboardData();
+  }
+}
+
+function showAugBanner(show) {
+  let banner = document.getElementById('aug-banner');
+  if (show) {
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'aug-banner';
+      banner.style.cssText = 'background:linear-gradient(90deg,#fff7ed,#fffbeb);border:1.5px dashed #f97316;border-radius:8px;padding:10px 18px;margin-bottom:14px;font-size:12px;color:#92400e;display:flex;align-items:center;gap:10px;';
+      banner.innerHTML = '<span style="font-size:18px">🚧</span><div><b>8月数据框架</b> · 目标已预设，实收数据待导入。每日导出 Excel 后运行 update_dashboard.py（选择8月模式）即可自动填入。</div>';
+      document.getElementById('main-content').insertBefore(banner, document.getElementById('main-content').firstChild);
+    }
+    banner.style.display = 'flex';
+  } else {
+    if (banner) banner.style.display = 'none';
+  }
+}
+
+// ── 统一渲染入口 ──
+function renderAll(data) {
+  renderXinbao(data);
+  renderACP(data);
+  renderActive(data);
+  renderPersons(data);
+  renderRankTable(data);
+  renderTop20(data);
+  renderAnalysis(data);
+  if (data.customer_analysis) renderCustomerAnalysis(data);
+  renderUpdateTime(data);
+  // 更新切换栏时间标签
+  const lbl = document.getElementById('month-update-label');
+  if (lbl) lbl.textContent = '数据更新：' + (data.update_time || '--');
+}
+
 // ── 主入口：加载 data.json ──
 async function loadDashboardData() {
   try {
-    const resp = await fetch(DATA_URL + '?t=' + Date.now());
+    const url = DATA_URLS[currentMonth] || DATA_URL;
+    const resp = await fetch(url + '?t=' + Date.now());
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     const data = await resp.json();
-    console.log('data.json 加载成功:', data.update_time);
-    renderXinbao(data);
-    renderACP(data);
-    renderActive(data);
-    renderPersons(data);
-    renderRankTable(data);
-    renderTop20(data);
-    renderAnalysis(data);
-    renderCustomerAnalysis(data);
-    renderUpdateTime(data);
+    console.log('data.json 加载成功:', data.update_time, '月份:', currentMonth);
+    renderAll(data);
   } catch(e) {
-    console.warn('data.json 加载失败，保留页面原始数据。错误:', e.message);
+    if (currentMonth === 'aug') {
+      // 8月文件不存在属正常，渲染空框架
+      console.info('8月data.json尚未创建，展示框架数据');
+      renderAll(AUG_PLACEHOLDER);
+    } else {
+      console.warn('data.json 加载失败，保留页面原始数据。错误:', e.message);
+    }
   }
 }
 
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260723163644 -->
+<!-- build:20260803085414 -->
 </body>
 </html>
