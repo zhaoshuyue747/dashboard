@@ -228,14 +228,14 @@
 <!-- ===== 月份切换栏 ===== -->
 <div class="month-switcher">
   <span style="color:#9db8e0;font-size:12px;margin-right:4px">数据期：</span>
-  <div class="month-tab active" id="tab-jul" onclick="switchMonth('jul', this)">
+  <div class="month-tab" id="tab-jul" onclick="switchMonth('jul', this)">
     7月&nbsp;2026
-    <span class="month-badge badge-live">实时</span>
+    <span class="month-badge" style="background:#6b7280;color:#fff">已固化</span>
   </div>
   <span class="month-divider">|</span>
-  <div class="month-tab aug" id="tab-aug" onclick="switchMonth('aug', this)">
+  <div class="month-tab aug active" id="tab-aug" onclick="switchMonth('aug', this)">
     8月&nbsp;2026
-    <span class="month-badge badge-coming">框架</span>
+    <span class="month-badge badge-live">实时</span>
   </div>
   <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:12px" id="month-update-label">数据更新：2026-07-29</span>
 </div>
@@ -899,13 +899,13 @@ function acpSwitch(mode, el) {
 
 // 数据源配置
 const DATA_URLS = {
-  jul: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data.json',
+  jul: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_jul.json',
   aug: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_aug.json',
 };
 const DATA_URL = DATA_URLS.jul;  // 向后兼容
 
-// 当前活跃月份
-let currentMonth = 'jul';
+// 当前活跃月份（默认显示最新月份）
+let currentMonth = 'aug';
 
 function fmt(n) {
   if (n === null || n === undefined) return '--';
@@ -1381,16 +1381,8 @@ function switchMonth(month, el) {
   document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
 
-  if (month === 'aug') {
-    // 8月：渲染空框架（显示目标，实收显示--）
-    renderAll(AUG_PLACEHOLDER);
-    // 显示8月提示横幅
-    showAugBanner(true);
-  } else {
-    // 7月：从 data.json 加载真实数据
-    showAugBanner(false);
-    loadDashboardData();
-  }
+  showAugBanner(false);
+  loadDashboardData();
 }
 
 function showAugBanner(show) {
@@ -1448,6 +1440,6 @@ async function loadDashboardData() {
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260803085414 -->
+<!-- build:20260803090422 -->
 </body>
 </html>
