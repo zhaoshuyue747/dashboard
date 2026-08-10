@@ -309,7 +309,7 @@
     <span>|</span>
     <span><span class="dot"></span>实时播报中</span>
     <span>|</span>
-    <span>数期：FY27Q1</span>
+    <span>数期：FY27Q2</span>
     <span>|</span>
     <span>更新：<span id="live-clock">--:--:--</span></span>
     <span>|</span>
@@ -369,7 +369,7 @@
 
       <!-- 季度 -->
       <div class="kpi-card" style="border-left:1px solid var(--border)">
-        <div class="kpi-label"><span class="tag tag-purple">信保实收 · 季度</span> <span style="font-size:10px;color:var(--text-mute)">FY27Q1</span></div>
+        <div class="kpi-label"><span class="tag tag-purple">信保实收 · 季度</span> <span style="font-size:10px;color:var(--text-mute)" id="cur-quarter-label">FY27Q2</span></div>
         <div class="kpi-value">
           <span id="xinbao-quarter-val" class="ph">10,480,651</span>
           <span class="kpi-unit">USD</span>
@@ -1015,7 +1015,7 @@ tick(); setInterval(tick, 1000);
 function top10Switch(mode, el) {
   document.querySelectorAll('[onclick^="top10Switch"]').forEach(b => b.classList.remove('active'));
   el.classList.add('active');
-  const lbl = mode === 'month' ? '2026-07 vs 2025-07' : 'FY27Q1 vs FY26Q1';
+  const lbl = mode === 'month' ? '2026-07 vs 2025-07' : 'FY27Q2 vs FY26Q2';
   document.getElementById('top10-period-lbl').textContent = lbl;
   // 数据接入后在此处切换表格内容
 }
@@ -1470,7 +1470,7 @@ function renderAnalysis(d) {
 
   // 近况预测（自动计算）
   const now = new Date();
-  // 季度 FY27Q1：7月1日 ~ 9月30日（共92天）
+  // 季度 FY27Q2：7月1日 ~ 9月30日（共92天）
   const qStart = new Date(now.getFullYear(), 6, 1);   // 7月1日
   const qEnd   = new Date(now.getFullYear(), 9, 0);   // 9月30日
   const qTotal = (qEnd - qStart) / 86400000 + 1;
@@ -1589,6 +1589,9 @@ function renderAll(data) {
   // 更新KPI卡片月份标签（信保月度标题）
   const cml = document.getElementById('cur-month-label');
   if (cml && data.month) cml.textContent = data.month;
+  // 更新KPI卡片季度标签
+  const cql = document.getElementById('cur-quarter-label');
+  if (cql) cql.textContent = 'FY27Q2';
   // 更新团队月度总实收标签
   const tml = document.getElementById('team-month-label');
   if (tml && data.month) tml.textContent = '团队月度总实收 (USD) · ' + data.month;
@@ -1834,6 +1837,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initBreakdown();
 });
 </script>
-<!-- build:20260810094010 -->
+<!-- build:20260810094324 -->
 </body>
 </html>
