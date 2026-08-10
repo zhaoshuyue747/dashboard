@@ -666,6 +666,7 @@
         <th style="min-width:160px">季度进度</th>
         <th>季达成率</th>
         <th>月同比</th>
+        <th>激励状态</th>
       </tr>
     </thead>
     <tbody>
@@ -1160,6 +1161,10 @@ function renderPersons(d) {
         季目标 <b>${p.quarter_target ? fmt(p.quarter_target) : '--'}</b> &nbsp;·&nbsp; 季差额 <b style="color:${(p.quarter_gap||0)<0?'var(--red)':'var(--green)'}">${qgap}</b>
       </div>
       <div style="margin-top:4px;font-size:10px;color:var(--text-mute)">${d.month} &nbsp;|&nbsp; 月完成率<b style="color:${col}">${pct}%</b> ${statusText}</div>
+      ${p.incentive_achieved
+        ? `<div style="margin-top:5px;background:#f0fdf4;border:1px solid #86efac;border-radius:6px;padding:4px 10px;font-size:11px;color:#166534;font-weight:500;text-align:center">✅ 已获当月阿里激励</div>`
+        : (p.incentive_gap ? `<div style="margin-top:5px;background:#fef2f2;border:1px solid #fecaca;border-radius:6px;padding:4px 10px;font-size:11px;color:#991b1b;text-align:center">与激励目标差额 <b>${fmt(Math.abs(p.incentive_gap))}</b> USD</div>` : '')
+      }
     </div>`;
   }).join('');
 }
@@ -1195,6 +1200,20 @@ function renderRankTable(d) {
     const roleCls = p.role === '主管' ? 'tag-purple' : p.role === '老板' ? 'tag-green' : 'tag-blue';
     const yoyStr  = p.month_yoy !== null && p.month_yoy !== undefined
       ? `<span class="${yoyClass(p.month_yoy)}">${yoyText(p.month_yoy)}</span>` : '—';
+    // 激励状态
+    const iv  = p.incentive_val;
+    const it  = p.incentive_target;
+    const iach = p.incentive_achieved;
+    let incentiveCell = '<span style="color:var(--text-mute);font-size:11px">--</span>';
+    if (iv !== null && iv !== undefined && it) {
+      if (iach) {
+        incentiveCell = `<span style="background:#f0fdf4;border:1px solid #86efac;color:#166534;border-radius:12px;padding:2px 10px;font-size:11px;font-weight:500;white-space:nowrap">✅ 已获激励</span>`;
+      } else {
+        const gap = Math.abs(p.incentive_gap || 0);
+        incentiveCell = `<span style="font-size:11px;color:var(--red)">差额<br><b>-${fmt(gap)}</b></span>`;
+      }
+    }
+
     return `<tr>
       <td><span class="rank-num ${rankClass(i)}">${i+1}</span></td>
       <td><b>${p.name}</b></td>
@@ -1208,6 +1227,7 @@ function renderRankTable(d) {
       <td>${progressBar(qpct, qfill)}</td>
       <td style="color:${qcol};font-weight:500">${qpct ? qpct+'%' : '--'}</td>
       <td>${yoyStr}</td>
+      <td style="text-align:center">${incentiveCell}</td>
     </tr>`;
   }).join('');
 
@@ -1440,6 +1460,6 @@ async function loadDashboardData() {
 // 页面加载完成后拉取数据
 window.addEventListener('DOMContentLoaded', loadDashboardData);
 </script>
-<!-- build:20260803090422 -->
+<!-- build:20260810085127 -->
 </body>
 </html>
