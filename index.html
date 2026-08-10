@@ -1624,7 +1624,8 @@ const BD_PASSWORDS = {
   '刘鑫': 'lx394',
   '杨佳玮': 'yjw246',
 };
-const BD_DATA_URL = 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_breakdown.json';
+const BD_DATA_URL = 'data_breakdown.json';  // 同源路径，稳定加载
+const BD_DATA_URL_FALLBACK = 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_breakdown.json';
 let bdUnlockedRole = localStorage.getItem('bd_unlock_role') || null;   // 'admin' 或 销售姓名
 let bdData = null;         // data_breakdown.json 数据
 let bdSelectedSales = null;
@@ -1640,14 +1641,28 @@ async function initBreakdown() {
   }
 }
 
-// 确保数据已加载（未加载则拉取）
+// 确保数据已加载（未加载则拉取，同源失败时尝试跨域备用）
 async function bdEnsureData() {
   if (bdData) return bdData;
+  // 先试同源路径
   try {
     const resp = await fetch(BD_DATA_URL + '?t=' + Date.now());
-    if (resp.ok) bdData = await resp.json();
+    if (resp.ok) {
+      bdData = await resp.json();
+      return bdData;
+    }
   } catch(e) {
-    console.warn('销售指标拆解数据加载失败:', e.message);
+    console.warn('同源数据加载失败，尝试备用地址:', e.message);
+  }
+  // 备用：raw.githubusercontent.com
+  try {
+    const resp2 = await fetch(BD_DATA_URL_FALLBACK + '?t=' + Date.now());
+    if (resp2.ok) {
+      bdData = await resp2.json();
+      return bdData;
+    }
+  } catch(e2) {
+    console.warn('备用数据地址也失败:', e2.message);
   }
   return bdData;
 }
@@ -1728,7 +1743,7 @@ function bdRenderSalesGrid() {
   detail.style.display = 'none';
 
   if (!bdData || !bdData.breakdown) {
-    grid.innerHTML = '<div style="font-size:12px;color:var(--text-mute);padding:16px">数据未加载，请稍后刷新</div>';
+    grid.innerHTML = '<div style="font-size:12px;color:var(--text-mute);padding:16px;text-align:center">⏳ 数据加载中或加载失败，请点击 <b style="color:var(--accent);cursor:pointer" onclick="bdRetry()">重试</b></div>';
     return;
   }
 
@@ -1792,12 +1807,27 @@ function bdBackToList() {
   document.getElementById('bd-detail').style.display = 'none';
 }
 
+// 手动重试加载数据
+async function bdRetry() {
+  bdData = null;
+  const msgEl = document.getElementById('bd-pass-msg');
+  if (msgEl) { msgEl.textContent = '⏳ 正在重新加载数据...'; msgEl.className = 'bd-pass-msg'; }
+  await bdEnsureData();
+  if (bdData && bdData.breakdown) {
+    if (msgEl) { msgEl.textContent = '✅ 数据加载成功'; msgEl.className = 'bd-pass-msg ok'; }
+    bdRenderSalesGrid();
+    if (bdUnlockedRole && bdUnlockedRole !== 'admin') bdSelectSales(bdUnlockedRole);
+  } else {
+    if (msgEl) { msgEl.textContent = '❌ 加载失败，请检查网络后重试'; msgEl.className = 'bd-pass-msg err'; }
+  }
+}
+
 // 页面加载完成后初始化板块
 window.addEventListener('DOMContentLoaded', () => {
   loadDashboardData();
   initBreakdown();
 });
 </script>
-<!-- build:20260810092556 -->
+<!-- build:20260810093316 -->
 </body>
 </html>
