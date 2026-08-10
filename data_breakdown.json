@@ -1,0 +1,5891 @@
+{
+  "update_time": "2026-08-10",
+  "month": "2026-08",
+  "breakdown": {
+    "冉崇明": {
+      "month_target": 786614,
+      "total_month": 219106.0,
+      "total_quarter": 1088622.97,
+      "month_pct": 27.9,
+      "month_gap": -567508.0,
+      "client_count": 90,
+      "active_count": 42,
+      "clients": [
+        {
+          "id": "lcfashion",
+          "name": "东莞市蓝彩服装有限公司",
+          "month_gmv": 45191.0,
+          "quarter_gmv": 215490.49,
+          "last_q_gmv": 482375.16
+        },
+        {
+          "id": "guanyilight88",
+          "name": "东莞市莞益灯饰有限公司",
+          "month_gmv": 38601.0,
+          "quarter_gmv": 233595.68,
+          "last_q_gmv": 473246.17
+        },
+        {
+          "id": "dgslpackaging",
+          "name": "东莞市西兰包装胶袋有限公司",
+          "month_gmv": 25058.0,
+          "quarter_gmv": 60713.4,
+          "last_q_gmv": 245208.04
+        },
+        {
+          "id": "shangen",
+          "name": "东莞市尚恩精密钣金有限公司",
+          "month_gmv": 17363.0,
+          "quarter_gmv": 68270.23,
+          "last_q_gmv": 158757.72
+        },
+        {
+          "id": "poshshine",
+          "name": "东莞市普轩电子科技有限公司",
+          "month_gmv": 15792.0,
+          "quarter_gmv": 29949.7,
+          "last_q_gmv": 29650.89
+        },
+        {
+          "id": "dglanglun",
+          "name": "东莞市朗伦研磨科技有限公司",
+          "month_gmv": 9976.0,
+          "quarter_gmv": 24952.0,
+          "last_q_gmv": 82324.03
+        },
+        {
+          "id": "lionter",
+          "name": "东莞市狼特尔科技有限公司",
+          "month_gmv": 8502.0,
+          "quarter_gmv": 21244.21,
+          "last_q_gmv": 33778.0
+        },
+        {
+          "id": "dgsslkj",
+          "name": "东莞市深力科技有限公司",
+          "month_gmv": 7453.0,
+          "quarter_gmv": 13289.07,
+          "last_q_gmv": 50197.39
+        },
+        {
+          "id": "partnergift",
+          "name": "东莞市拍档礼品有限公司",
+          "month_gmv": 5553.0,
+          "quarter_gmv": 17900.37,
+          "last_q_gmv": 26673.39
+        },
+        {
+          "id": "dghansweld",
+          "name": "东莞市合成鑫机电设备有限公司",
+          "month_gmv": 5055.0,
+          "quarter_gmv": 61286.5,
+          "last_q_gmv": 152442.83
+        },
+        {
+          "id": "cn1519524662vmeq",
+          "name": "东莞市豪派智能科技有限公司",
+          "month_gmv": 4574.0,
+          "quarter_gmv": 19127.33,
+          "last_q_gmv": 10945.78
+        },
+        {
+          "id": "acfc1688",
+          "name": "东莞市安川精细化工有限公司",
+          "month_gmv": 4225.0,
+          "quarter_gmv": 8125.0,
+          "last_q_gmv": 31361.3
+        },
+        {
+          "id": "dciya",
+          "name": "东莞市迪西娅首饰有限公司",
+          "month_gmv": 4191.0,
+          "quarter_gmv": 10370.78,
+          "last_q_gmv": 33118.57
+        },
+        {
+          "id": "miyoumei",
+          "name": "东莞市米优美生物科技有限公司",
+          "month_gmv": 3710.0,
+          "quarter_gmv": 10768.37,
+          "last_q_gmv": 18845.61
+        },
+        {
+          "id": "everwinpack",
+          "name": "东莞市荣泰包装制品有限公司",
+          "month_gmv": 2455.0,
+          "quarter_gmv": 14591.0,
+          "last_q_gmv": 24274.12
+        },
+        {
+          "id": "mingyabag",
+          "name": "东莞市明雅手袋制品有限公司",
+          "month_gmv": 2221.0,
+          "quarter_gmv": 2946.0,
+          "last_q_gmv": 2427.0
+        },
+        {
+          "id": "shirley2017",
+          "name": "东莞保达彩印有限公司",
+          "month_gmv": 2111.0,
+          "quarter_gmv": 8770.39,
+          "last_q_gmv": 18072.34
+        },
+        {
+          "id": "haoruimotor",
+          "name": "东莞市昊锐电机科技有限公司",
+          "month_gmv": 1835.0,
+          "quarter_gmv": 5885.0,
+          "last_q_gmv": 6870.0
+        },
+        {
+          "id": "jikesong",
+          "name": "东莞市吉客送保温科技有限公司",
+          "month_gmv": 1810.0,
+          "quarter_gmv": 8908.98,
+          "last_q_gmv": 4057.13
+        },
+        {
+          "id": "bccosmetic",
+          "name": "东莞蓓辰化妆品有限公司",
+          "month_gmv": 1789.0,
+          "quarter_gmv": 7522.98,
+          "last_q_gmv": 9224.3
+        },
+        {
+          "id": "juyunwujin",
+          "name": "东莞市掬运五金科技有限公司",
+          "month_gmv": 1726.0,
+          "quarter_gmv": 6112.96,
+          "last_q_gmv": 11882.14
+        },
+        {
+          "id": "xinhengchang",
+          "name": "东莞市鑫恒昌精密工具有限公司",
+          "month_gmv": 1425.0,
+          "quarter_gmv": 2001.87,
+          "last_q_gmv": 2784.09
+        },
+        {
+          "id": "shenglite888",
+          "name": "东莞市盛力特五金制品有限公司",
+          "month_gmv": 1415.0,
+          "quarter_gmv": 6259.45,
+          "last_q_gmv": 13102.86
+        },
+        {
+          "id": "knk2024",
+          "name": "凯尼克科技（东莞）有限公司",
+          "month_gmv": 1226.0,
+          "quarter_gmv": 54170.98,
+          "last_q_gmv": 64877.5
+        },
+        {
+          "id": "hrlube",
+          "name": "东莞市辉睿材料科技有限公司",
+          "month_gmv": 1037.0,
+          "quarter_gmv": 3292.0,
+          "last_q_gmv": 1226.2
+        },
+        {
+          "id": "cndgcpxy",
+          "name": "东莞市常平昕源五金厂",
+          "month_gmv": 966.0,
+          "quarter_gmv": 7737.41,
+          "last_q_gmv": 16579.98
+        },
+        {
+          "id": "hzshrcraft",
+          "name": "惠州市昊荣工艺品有限公司",
+          "month_gmv": 911.0,
+          "quarter_gmv": 1978.78,
+          "last_q_gmv": 1897.85
+        },
+        {
+          "id": "cn1511106690",
+          "name": "东莞市蓝博电子科技有限公司",
+          "month_gmv": 730.0,
+          "quarter_gmv": 1290.57,
+          "last_q_gmv": 20778.43
+        },
+        {
+          "id": "dgfbkj",
+          "name": "东莞市富倍科技有限公司",
+          "month_gmv": 550.0,
+          "quarter_gmv": 4114.55,
+          "last_q_gmv": 12979.16
+        },
+        {
+          "id": "yixin202512",
+          "name": "东莞市亿鑫碳纤维有限公司",
+          "month_gmv": 506.0,
+          "quarter_gmv": 3257.0,
+          "last_q_gmv": 16699.0
+        },
+        {
+          "id": "dgairui666",
+          "name": "东莞市艾瑞电子科技有限公司",
+          "month_gmv": 320.0,
+          "quarter_gmv": 338.36,
+          "last_q_gmv": 93.55
+        },
+        {
+          "id": "hengwuman",
+          "name": "东莞市衡梧幔科技有限公司",
+          "month_gmv": 225.0,
+          "quarter_gmv": 413.6,
+          "last_q_gmv": 1827.2
+        },
+        {
+          "id": "dumo123888",
+          "name": "东莞市都茉厨具有限公司",
+          "month_gmv": 198.0,
+          "quarter_gmv": 51278.26,
+          "last_q_gmv": 195529.22
+        },
+        {
+          "id": "mimu88",
+          "name": "米沐国际贸易（东莞）有限公司",
+          "month_gmv": 163.0,
+          "quarter_gmv": 816.51,
+          "last_q_gmv": 7907.15
+        },
+        {
+          "id": "dgchijia",
+          "name": "东莞市弛佳电子有限公司",
+          "month_gmv": 85.0,
+          "quarter_gmv": 85.0,
+          "last_q_gmv": 4842.29
+        },
+        {
+          "id": "dggangyuan",
+          "name": "东莞市港源五金制品有限公司",
+          "month_gmv": 44.0,
+          "quarter_gmv": 810.61,
+          "last_q_gmv": 14601.4
+        },
+        {
+          "id": "tontonpack",
+          "name": "东莞图腾包装技术有限公司",
+          "month_gmv": 30.0,
+          "quarter_gmv": 7919.0,
+          "last_q_gmv": 19244.99
+        },
+        {
+          "id": "petcheer",
+          "name": "东莞市明建实业有限公司",
+          "month_gmv": 28.0,
+          "quarter_gmv": 7838.84,
+          "last_q_gmv": 5192.03
+        },
+        {
+          "id": "jinyugd",
+          "name": "东莞市锦誉光电科技有限公司",
+          "month_gmv": 19.0,
+          "quarter_gmv": 5504.67,
+          "last_q_gmv": 16809.06
+        },
+        {
+          "id": "jiaersaier",
+          "name": "广东佳尔赛尔电器电子有限公司",
+          "month_gmv": 15.0,
+          "quarter_gmv": 687.7,
+          "last_q_gmv": 3286.25
+        },
+        {
+          "id": "jxchengpin",
+          "name": "萍乡市程品科技有限公司",
+          "month_gmv": 14.0,
+          "quarter_gmv": 13.73,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dghengqiang",
+          "name": "东莞市恒强橡胶制品有限公司",
+          "month_gmv": 8.0,
+          "quarter_gmv": 4741.35,
+          "last_q_gmv": 6182.91
+        },
+        {
+          "id": "chenxinyundong",
+          "name": "东莞辰鑫运动器材有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "chicaiprinter",
+          "name": "东莞驰彩科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "customdenimmaker",
+          "name": "东莞市汶洲国际贸易有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgaoxun",
+          "name": "东莞市奥讯塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 1857.06
+        },
+        {
+          "id": "dgbq",
+          "name": "东莞市博强新包装材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 485.18,
+          "last_q_gmv": 40.0
+        },
+        {
+          "id": "dghxcd",
+          "name": "广东虹星新材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 4977.96,
+          "last_q_gmv": 6374.51
+        },
+        {
+          "id": "dgjfdq",
+          "name": "东莞市几凡电器有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 82.2,
+          "last_q_gmv": 202.5
+        },
+        {
+          "id": "dgksjd",
+          "name": "东莞市凯森机电设备科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 85.0
+        },
+        {
+          "id": "dgszxwj",
+          "name": "东莞市众喜五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "eray888",
+          "name": "东莞市一瑞包装制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 184.7,
+          "last_q_gmv": 10239.19
+        },
+        {
+          "id": "huaconn",
+          "name": "东莞市华琴电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jcsj2024",
+          "name": "东莞市佳昌塑胶五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 860.0,
+          "last_q_gmv": 1339.0
+        },
+        {
+          "id": "jiaomei",
+          "name": "东莞娇美塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 27.8,
+          "last_q_gmv": 294.0
+        },
+        {
+          "id": "jinzhiwujin",
+          "name": "东莞市金智精密五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 4930.01
+        },
+        {
+          "id": "kingchroma",
+          "name": "东莞市金彩化工有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 244.78
+        },
+        {
+          "id": "leespromotion",
+          "name": "力施礼品（东莞）有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 3006.6,
+          "last_q_gmv": 1372.4
+        },
+        {
+          "id": "quanhuisujiao",
+          "name": "东莞市全辉塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 18637.9
+        },
+        {
+          "id": "sanxingnewenergy",
+          "name": "东莞市三行新能源科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 4850.0,
+          "last_q_gmv": 4650.0
+        },
+        {
+          "id": "sce888",
+          "name": "东莞市顺承恩科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "shyyds",
+          "name": "东莞市森航新能源科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 6115.0,
+          "last_q_gmv": 9908.0
+        },
+        {
+          "id": "teweiband",
+          "name": "东莞市特为织带技术发展有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 114.0,
+          "last_q_gmv": 1261.8
+        },
+        {
+          "id": "tinwarepack",
+          "name": "东莞市鑫旺制罐有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1285.84,
+          "last_q_gmv": 4314.28
+        },
+        {
+          "id": "tylon0924",
+          "name": "东莞捷胜织带有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1458.0,
+          "last_q_gmv": 2628.0
+        },
+        {
+          "id": "admirer007",
+          "name": "东莞市赞叹者科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 507.88,
+          "last_q_gmv": 357.75
+        },
+        {
+          "id": "changcai128",
+          "name": "东莞市畅彩数码科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2897.0,
+          "last_q_gmv": 4600.5
+        },
+        {
+          "id": "cnbomei",
+          "name": "东莞市博美包装制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 4571.1,
+          "last_q_gmv": 13548.42
+        },
+        {
+          "id": "cnhawkeyes",
+          "name": "东莞市华中五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 5360.0
+        },
+        {
+          "id": "cnwebber",
+          "name": "东莞维格钢至尊办公设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgbaokezhen",
+          "name": "东莞市宝克振电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgcrdz",
+          "name": "东莞市驰锐电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dghouyi",
+          "name": "东莞市厚益运动用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 5371.5,
+          "last_q_gmv": 8490.81
+        },
+        {
+          "id": "dgsfys",
+          "name": "东莞市芬雅洛施电子商务有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1028.04,
+          "last_q_gmv": 3687.6
+        },
+        {
+          "id": "dgshiyao",
+          "name": "东莞实曜电器有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 562.12
+        },
+        {
+          "id": "dgsweixinzhineng",
+          "name": "东莞维新智能装备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2966.0,
+          "last_q_gmv": 6343.16
+        },
+        {
+          "id": "dgtyzg",
+          "name": "东莞市同源制罐有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 62.5
+        },
+        {
+          "id": "dgzhpaper",
+          "name": "东莞市展宏纸制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 69.0
+        },
+        {
+          "id": "fengluoxb",
+          "name": "东莞市丰洛旅行用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 14748.62,
+          "last_q_gmv": 98167.72
+        },
+        {
+          "id": "frchoby",
+          "name": "东莞市福瑞达模型有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 13157.67,
+          "last_q_gmv": 21299.47
+        },
+        {
+          "id": "gdjingyi",
+          "name": "东莞市精尔益塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hotpressing",
+          "name": "东莞市毅琼塑料制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 950.0,
+          "last_q_gmv": 13561.17
+        },
+        {
+          "id": "huaxinlei",
+          "name": "东莞市易初泰精密科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 51.0,
+          "last_q_gmv": 18833.03
+        },
+        {
+          "id": "mxgreat",
+          "name": "东莞市磁天下电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 95.4,
+          "last_q_gmv": 17049.69
+        },
+        {
+          "id": "ruilimagnet",
+          "name": "东莞市瑞力磁能科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "sgxny",
+          "name": "东莞市深莞新能源科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 4358.5,
+          "last_q_gmv": 3202.0
+        },
+        {
+          "id": "starcube",
+          "name": "惠州市星立方纸制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 102.3,
+          "last_q_gmv": 1046.0
+        },
+        {
+          "id": "tgmould",
+          "name": "东莞市天之弓模具塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 43.01
+        },
+        {
+          "id": "xcoso",
+          "name": "东莞市祥合源电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 58.8
+        },
+        {
+          "id": "xiwanyu1688",
+          "name": "东莞市禧万云健康产业科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        }
+      ]
+    },
+    "狄鹏": {
+      "month_target": 1145089,
+      "total_month": 12701.0,
+      "total_quarter": 635771.42,
+      "month_pct": 1.1,
+      "month_gap": -1132388.0,
+      "client_count": 17,
+      "active_count": 7,
+      "clients": [
+        {
+          "id": "haiyi1688",
+          "name": "东莞海一五金制品有限公司",
+          "month_gmv": 6855.0,
+          "quarter_gmv": 14900.0,
+          "last_q_gmv": 2927.0
+        },
+        {
+          "id": "dghomesili",
+          "name": "东莞市合美硅品科技有限公司",
+          "month_gmv": 2463.0,
+          "quarter_gmv": 12377.4,
+          "last_q_gmv": 21103.82
+        },
+        {
+          "id": "ouli01",
+          "name": "东莞市欧力电子科技有限公司",
+          "month_gmv": 2025.0,
+          "quarter_gmv": 17511.87,
+          "last_q_gmv": 15880.08
+        },
+        {
+          "id": "keystation",
+          "name": "东莞市图米禾信科技有限公司",
+          "month_gmv": 904.0,
+          "quarter_gmv": 3496.16,
+          "last_q_gmv": 7949.86
+        },
+        {
+          "id": "dgrjcy",
+          "name": "东莞市瑞杰磁业有限公司",
+          "month_gmv": 324.0,
+          "quarter_gmv": 918.7,
+          "last_q_gmv": 2216.0
+        },
+        {
+          "id": "jinghua2023",
+          "name": "湖北晶华电子科技有限公司",
+          "month_gmv": 70.0,
+          "quarter_gmv": 70.09,
+          "last_q_gmv": 1412.2
+        },
+        {
+          "id": "softwarelicensekey",
+          "name": "东莞市图米禾信科技有限公司",
+          "month_gmv": 60.0,
+          "quarter_gmv": 120.0,
+          "last_q_gmv": 160.0
+        },
+        {
+          "id": "admair",
+          "name": "东莞市净诺环境科技股份有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 584867.01,
+          "last_q_gmv": 143607.7
+        },
+        {
+          "id": "cnjixie",
+          "name": "东莞市汇通自动化设备科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cnlinyi",
+          "name": "东莞市林壹服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "lottox",
+          "name": "东莞市珞图新材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 4345.0
+        },
+        {
+          "id": "mfsy",
+          "name": "东莞市铭福实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 849.09,
+          "last_q_gmv": 2524.08
+        },
+        {
+          "id": "af66666",
+          "name": "东莞市谢岗爱妃硅胶制品厂",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "citto",
+          "name": "东莞市西图家居有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dcgroup01",
+          "name": "佰特餐具用品（广州）有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 661.1,
+          "last_q_gmv": 159.03
+        },
+        {
+          "id": "dgsjls",
+          "name": "东莞市嘉莱盛电器有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 725.0
+        },
+        {
+          "id": "vivati2025",
+          "name": "东莞市钛生万物饰品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        }
+      ]
+    },
+    "欧阳杰俊": {
+      "month_target": 3648380,
+      "total_month": 312482.0,
+      "total_quarter": 2462502.41,
+      "month_pct": 8.6,
+      "month_gap": -3335898.0,
+      "client_count": 117,
+      "active_count": 66,
+      "clients": [
+        {
+          "id": "visionpp",
+          "name": "东莞市远景纸品有限公司",
+          "month_gmv": 91607.0,
+          "quarter_gmv": 256342.84,
+          "last_q_gmv": 175727.15
+        },
+        {
+          "id": "dgydlight",
+          "name": "东莞市沅达世纪照明科技有限公司",
+          "month_gmv": 53288.0,
+          "quarter_gmv": 153446.35,
+          "last_q_gmv": 221297.85
+        },
+        {
+          "id": "hsdbag888",
+          "name": "深圳市豪盛达包装制品有限公司",
+          "month_gmv": 24619.0,
+          "quarter_gmv": 157334.26,
+          "last_q_gmv": 444086.5
+        },
+        {
+          "id": "dgkunteng",
+          "name": "东莞市焜腾科技有限公司",
+          "month_gmv": 23554.0,
+          "quarter_gmv": 65287.63,
+          "last_q_gmv": 190797.13
+        },
+        {
+          "id": "dgmingxing",
+          "name": "东莞市玉煌电子科技有限公司",
+          "month_gmv": 9767.0,
+          "quarter_gmv": 64199.46,
+          "last_q_gmv": 219002.0
+        },
+        {
+          "id": "astoflitech",
+          "name": "东莞市艾施特科技有限公司",
+          "month_gmv": 7759.0,
+          "quarter_gmv": 57257.75,
+          "last_q_gmv": 112515.12
+        },
+        {
+          "id": "renchuan",
+          "name": "东莞市羽西实业有限公司",
+          "month_gmv": 7343.0,
+          "quarter_gmv": 25669.86,
+          "last_q_gmv": 45734.32
+        },
+        {
+          "id": "verenadesign",
+          "name": "东莞市维丽纳首饰智造有限公司",
+          "month_gmv": 7199.0,
+          "quarter_gmv": 60189.74,
+          "last_q_gmv": 242902.59
+        },
+        {
+          "id": "kinstin",
+          "name": "东莞市金点玻璃科技有限公司",
+          "month_gmv": 5202.0,
+          "quarter_gmv": 7169.8,
+          "last_q_gmv": 8799.0
+        },
+        {
+          "id": "lasergift",
+          "name": "东莞励德工艺品制造有限公司",
+          "month_gmv": 5007.0,
+          "quarter_gmv": 11729.71,
+          "last_q_gmv": 80752.18
+        },
+        {
+          "id": "szmastersun",
+          "name": "深圳市万朗光电有限公司",
+          "month_gmv": 4879.0,
+          "quarter_gmv": 43980.26,
+          "last_q_gmv": 68866.9
+        },
+        {
+          "id": "dgqingyu",
+          "name": "东莞市清宇运动器材有限公司",
+          "month_gmv": 4752.0,
+          "quarter_gmv": 17354.0,
+          "last_q_gmv": 35650.69
+        },
+        {
+          "id": "doeasydosuccess",
+          "name": "为易成科技（东莞）有限公司",
+          "month_gmv": 4671.0,
+          "quarter_gmv": 42093.9,
+          "last_q_gmv": 131265.4
+        },
+        {
+          "id": "szsjygyp",
+          "name": "深圳市简悦工艺品有限公司",
+          "month_gmv": 4650.0,
+          "quarter_gmv": 8908.65,
+          "last_q_gmv": 10400.24
+        },
+        {
+          "id": "langyu1688",
+          "name": "东莞市普瑞根金属制品有限公司",
+          "month_gmv": 3465.0,
+          "quarter_gmv": 6256.07,
+          "last_q_gmv": 10455.21
+        },
+        {
+          "id": "gdsohoopc",
+          "name": "广东迅扬科技股份有限公司",
+          "month_gmv": 3186.0,
+          "quarter_gmv": 38025.68,
+          "last_q_gmv": 44117.66
+        },
+        {
+          "id": "yunchuang888",
+          "name": "广东省圆创饰品有限公司",
+          "month_gmv": 2820.0,
+          "quarter_gmv": 10020.0,
+          "last_q_gmv": 40437.59
+        },
+        {
+          "id": "dydc168",
+          "name": "东莞鼎一电池有限公司",
+          "month_gmv": 2760.0,
+          "quarter_gmv": 2759.7,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cn1542518117mons",
+          "name": "精梭灯箱（东莞）有限公司",
+          "month_gmv": 2698.0,
+          "quarter_gmv": 5383.22,
+          "last_q_gmv": 90129.76
+        },
+        {
+          "id": "ty628",
+          "name": "东莞市拓源有机玻璃制品有限公司",
+          "month_gmv": 2688.0,
+          "quarter_gmv": 13026.9,
+          "last_q_gmv": 64036.13
+        },
+        {
+          "id": "minchun",
+          "name": "东莞市茗创优尚电子科技有限公司",
+          "month_gmv": 2624.0,
+          "quarter_gmv": 135953.18,
+          "last_q_gmv": 459250.88
+        },
+        {
+          "id": "cn1562927476ngkr",
+          "name": "东莞市华亿锂新能源科技有限公司",
+          "month_gmv": 2429.0,
+          "quarter_gmv": 9909.31,
+          "last_q_gmv": 23727.37
+        },
+        {
+          "id": "kingdkey",
+          "name": "东莞市金泽祺礼品科技有限公司",
+          "month_gmv": 2393.0,
+          "quarter_gmv": 16049.02,
+          "last_q_gmv": 43924.29
+        },
+        {
+          "id": "didifish",
+          "name": "东莞市羽西实业有限公司",
+          "month_gmv": 2218.0,
+          "quarter_gmv": 3899.28,
+          "last_q_gmv": 3543.22
+        },
+        {
+          "id": "juhaipower",
+          "name": "东莞市聚海电子科技有限公司",
+          "month_gmv": 2202.0,
+          "quarter_gmv": 10070.84,
+          "last_q_gmv": 18410.52
+        },
+        {
+          "id": "hairtoolspro",
+          "name": "江西省胜明电子科技有限公司",
+          "month_gmv": 2196.0,
+          "quarter_gmv": 384056.93,
+          "last_q_gmv": 706130.0
+        },
+        {
+          "id": "moyuse1688",
+          "name": "东莞市韫誉家居有限公司",
+          "month_gmv": 2018.0,
+          "quarter_gmv": 21191.55,
+          "last_q_gmv": 48308.03
+        },
+        {
+          "id": "hxaccessories",
+          "name": "东莞灏鑫饰品有限公司",
+          "month_gmv": 1846.0,
+          "quarter_gmv": 34042.97,
+          "last_q_gmv": 68051.64
+        },
+        {
+          "id": "fifiguo",
+          "name": "东莞市菲拓缝纫制品有限公司",
+          "month_gmv": 1804.0,
+          "quarter_gmv": 17969.37,
+          "last_q_gmv": 36697.16
+        },
+        {
+          "id": "homotone",
+          "name": "东莞欢木堂美妆工具有限公司",
+          "month_gmv": 1773.0,
+          "quarter_gmv": 3514.51,
+          "last_q_gmv": 6787.98
+        },
+        {
+          "id": "broadwayppb",
+          "name": "东莞市如你道包装制品有限公司",
+          "month_gmv": 1770.0,
+          "quarter_gmv": 55170.81,
+          "last_q_gmv": 116380.89
+        },
+        {
+          "id": "hexutech",
+          "name": "广东禾旭科技有限公司",
+          "month_gmv": 1616.0,
+          "quarter_gmv": 19671.4,
+          "last_q_gmv": 211339.57
+        },
+        {
+          "id": "lifepo4",
+          "name": "深圳市刘氏太阳能铁锂能源有限公司",
+          "month_gmv": 1400.0,
+          "quarter_gmv": 122980.0,
+          "last_q_gmv": 175846.0
+        },
+        {
+          "id": "dgwwtj",
+          "name": "东莞市威旺烫金材料有限公司",
+          "month_gmv": 1217.0,
+          "quarter_gmv": 2773.11,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "vtimewatch",
+          "name": "东莞市玮时钟表首饰有限公司",
+          "month_gmv": 1168.0,
+          "quarter_gmv": 3741.05,
+          "last_q_gmv": 16731.4
+        },
+        {
+          "id": "genjet0802888",
+          "name": "东莞市景捷机械科技有限公司",
+          "month_gmv": 1004.0,
+          "quarter_gmv": 1004.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "etondisplay",
+          "name": "深圳市宏晶进出口有限公司",
+          "month_gmv": 878.0,
+          "quarter_gmv": 5625.71,
+          "last_q_gmv": 2155.4
+        },
+        {
+          "id": "tuoyujingmi",
+          "name": "东莞市拓宇精密五金有限公司",
+          "month_gmv": 850.0,
+          "quarter_gmv": 6192.96,
+          "last_q_gmv": 37564.03
+        },
+        {
+          "id": "txindegift",
+          "name": "东莞市塘厦先达饰品厂",
+          "month_gmv": 838.0,
+          "quarter_gmv": 6044.0,
+          "last_q_gmv": 6944.32
+        },
+        {
+          "id": "dgmaoyuan",
+          "name": "东莞市茂源运动用品有限公司",
+          "month_gmv": 788.0,
+          "quarter_gmv": 32058.58,
+          "last_q_gmv": 41837.05
+        },
+        {
+          "id": "romada",
+          "name": "容美达海绵制品（东莞）有限公司",
+          "month_gmv": 719.0,
+          "quarter_gmv": 1230.2,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "miwei6688",
+          "name": "东莞市米薇运动用品有限公司",
+          "month_gmv": 702.0,
+          "quarter_gmv": 7167.68,
+          "last_q_gmv": 16146.77
+        },
+        {
+          "id": "dgyj001",
+          "name": "东莞市云居户外用品有限公司",
+          "month_gmv": 554.0,
+          "quarter_gmv": 8359.0,
+          "last_q_gmv": 18950.73
+        },
+        {
+          "id": "hongmu2026",
+          "name": "东莞市泓木金属科技有限公司",
+          "month_gmv": 552.0,
+          "quarter_gmv": 934.92,
+          "last_q_gmv": 892.78
+        },
+        {
+          "id": "finebag",
+          "name": "东莞市精致箱包进出口有限公司",
+          "month_gmv": 512.0,
+          "quarter_gmv": 4902.61,
+          "last_q_gmv": 2551.6
+        },
+        {
+          "id": "macodisplay",
+          "name": "东莞市马可孛罗视觉设计有限公司",
+          "month_gmv": 429.0,
+          "quarter_gmv": 6787.51,
+          "last_q_gmv": 10729.58
+        },
+        {
+          "id": "junsendisplay",
+          "name": "东莞市骏森展示制品有限责任公司",
+          "month_gmv": 425.0,
+          "quarter_gmv": 545.0,
+          "last_q_gmv": 185.0
+        },
+        {
+          "id": "qingqing1688",
+          "name": "东莞市莞城青青服装辅料经营部(个体工商户)",
+          "month_gmv": 380.0,
+          "quarter_gmv": 1677.2,
+          "last_q_gmv": 2022.0
+        },
+        {
+          "id": "dgtongs",
+          "name": "东莞市通盛金属科技有限公司",
+          "month_gmv": 365.0,
+          "quarter_gmv": 2697.88,
+          "last_q_gmv": 8795.29
+        },
+        {
+          "id": "dgheto",
+          "name": "东莞市恒越实业有限公司",
+          "month_gmv": 360.0,
+          "quarter_gmv": 128275.11,
+          "last_q_gmv": 410258.02
+        },
+        {
+          "id": "dgyitan",
+          "name": "东莞市黄江伊碳汽车饰品厂(个体工商户)",
+          "month_gmv": 360.0,
+          "quarter_gmv": 3292.2,
+          "last_q_gmv": 3358.95
+        },
+        {
+          "id": "guangyue99",
+          "name": "东莞市广越包装制品有限公司",
+          "month_gmv": 320.0,
+          "quarter_gmv": 880.54,
+          "last_q_gmv": 705.0
+        },
+        {
+          "id": "qiangshi888",
+          "name": "东莞市强势网络科技有限公司",
+          "month_gmv": 308.0,
+          "quarter_gmv": 4038.3,
+          "last_q_gmv": 6081.51
+        },
+        {
+          "id": "zornher888",
+          "name": "东莞市佐赫智能科技有限公司",
+          "month_gmv": 298.0,
+          "quarter_gmv": 3041.92,
+          "last_q_gmv": 1286.08
+        },
+        {
+          "id": "cnbaohuaxin",
+          "name": "广东宝华欣科技有限公司",
+          "month_gmv": 291.0,
+          "quarter_gmv": 28412.36,
+          "last_q_gmv": 69623.89
+        },
+        {
+          "id": "fuxinxsf",
+          "name": "东莞市富新电子有限公司",
+          "month_gmv": 273.0,
+          "quarter_gmv": 314.1,
+          "last_q_gmv": 604.31
+        },
+        {
+          "id": "dgstcsj",
+          "name": "东莞市顺泰昌塑胶有限公司",
+          "month_gmv": 111.0,
+          "quarter_gmv": 1280.07,
+          "last_q_gmv": 6719.96
+        },
+        {
+          "id": "wycarcharger",
+          "name": "东莞市闻沂科技有限公司",
+          "month_gmv": 106.0,
+          "quarter_gmv": 335.0,
+          "last_q_gmv": 334.0
+        },
+        {
+          "id": "jinyifen2023",
+          "name": "东莞市金奕丰高分子材料有限公司",
+          "month_gmv": 90.0,
+          "quarter_gmv": 7196.91,
+          "last_q_gmv": 37615.25
+        },
+        {
+          "id": "cccyc",
+          "name": "广东创点智能科技有限公司",
+          "month_gmv": 87.0,
+          "quarter_gmv": 92760.28,
+          "last_q_gmv": 238423.62
+        },
+        {
+          "id": "cnpindinghardware",
+          "name": "东莞市品顶五金机械有限公司",
+          "month_gmv": 72.0,
+          "quarter_gmv": 72.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hongsimai",
+          "name": "广东红斯迈科技有限公司",
+          "month_gmv": 70.0,
+          "quarter_gmv": 17529.95,
+          "last_q_gmv": 11180.49
+        },
+        {
+          "id": "dgxy1688",
+          "name": "东莞市星耀体育用品有限公司",
+          "month_gmv": 68.0,
+          "quarter_gmv": 68.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "xinxundianzi",
+          "name": "东莞市新训电子科技有限公司",
+          "month_gmv": 41.0,
+          "quarter_gmv": 996.97,
+          "last_q_gmv": 2991.88
+        },
+        {
+          "id": "cdpang",
+          "name": "广东创点智能科技有限公司",
+          "month_gmv": 28.0,
+          "quarter_gmv": 580.03,
+          "last_q_gmv": 22911.42
+        },
+        {
+          "id": "zhengqiangda1688",
+          "name": "东莞市塘厦正强达新材料厂（个体工商户）",
+          "month_gmv": 15.0,
+          "quarter_gmv": 69.02,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "adswj",
+          "name": "东莞市清溪艾德森五金制品厂（个体工商户）",
+          "month_gmv": 0,
+          "quarter_gmv": 4606.0,
+          "last_q_gmv": 4638.0
+        },
+        {
+          "id": "altiusglobal",
+          "name": "奢香国际供应链（深圳）有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "aotudongguan",
+          "name": "广东省尚社电器有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 3870.72,
+          "last_q_gmv": 2680.56
+        },
+        {
+          "id": "cn1576031088hyvk",
+          "name": "东莞新融创碳纤维有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 10250.5,
+          "last_q_gmv": 44.9
+        },
+        {
+          "id": "cngaris",
+          "name": "广东格瑞斯精密五金科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 49.0,
+          "last_q_gmv": 46.0
+        },
+        {
+          "id": "dgdmlz",
+          "name": "东莞市大美实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 80340.0,
+          "last_q_gmv": 120608.5
+        },
+        {
+          "id": "dghonghu1688",
+          "name": "东莞市鸿鹄塑胶科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dghygj",
+          "name": "东莞华研国际贸易有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 160.0
+        },
+        {
+          "id": "dgjiezhi",
+          "name": "东莞市捷致模具科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 324.94,
+          "last_q_gmv": 1355.27
+        },
+        {
+          "id": "dglansu",
+          "name": "东莞市澜速实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1350.0,
+          "last_q_gmv": 9351.02
+        },
+        {
+          "id": "dgligang",
+          "name": "东莞市力罡五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 700.42,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgrisheng",
+          "name": "东莞市日盛印刷有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 408.0,
+          "last_q_gmv": 660.0
+        },
+        {
+          "id": "dgsmjm",
+          "name": "塑美精密技术(东莞)有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 99.98,
+          "last_q_gmv": 10.0
+        },
+        {
+          "id": "dgxlcf",
+          "name": "东莞信连创富新能源科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 3027.86,
+          "last_q_gmv": 3517.91
+        },
+        {
+          "id": "dgzidong",
+          "name": "东莞紫东创新科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 819.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgzxtech",
+          "name": "东莞市长安智祥五金工具经营部（个体工商户）",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "guangdongshangke",
+          "name": "广东尚科智能装备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "haruid",
+          "name": "东莞市华瑞达五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jierixun",
+          "name": "东莞市捷日讯电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 2873.68
+        },
+        {
+          "id": "jtdzkj",
+          "name": "东莞市九腾电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "minglewe",
+          "name": "东莞明歌智能科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 262.0,
+          "last_q_gmv": 11631.8
+        },
+        {
+          "id": "pinmi",
+          "name": "东莞市品米电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 156.33,
+          "last_q_gmv": 187636.04
+        },
+        {
+          "id": "risingtextile",
+          "name": "东莞市瑞昇纺织品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 504.5,
+          "last_q_gmv": 1171.66
+        },
+        {
+          "id": "shuchanglong",
+          "name": "蜀昌隆防伪科技(东莞)有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 265.0
+        },
+        {
+          "id": "teshungroup",
+          "name": "东莞市特顺皮具实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 230.0,
+          "last_q_gmv": 80086.5
+        },
+        {
+          "id": "twxpz",
+          "name": "深圳市芯品质科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 7720.0,
+          "last_q_gmv": 26970.0
+        },
+        {
+          "id": "waytex",
+          "name": "东莞汇达塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "wtxcl1688",
+          "name": "东莞市沃泰新材料科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "xintengdongjixie",
+          "name": "东莞市新腾东机械设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 23107.02,
+          "last_q_gmv": 236580.88
+        },
+        {
+          "id": "xinyy",
+          "name": "东莞市新扬翊精密钣金制造有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "yumengtech",
+          "name": "成都雨萌科技有限公司深圳分公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "zhuomg",
+          "name": "东莞市凤岗卓铭塑胶模具加工厂",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "andylotse",
+          "name": "东莞市酉悠电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 796.5,
+          "last_q_gmv": 850.0
+        },
+        {
+          "id": "cngreatmat",
+          "name": "广东伟的新材料股份有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dghaozheng",
+          "name": "东莞市晧政新能源科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dghyst",
+          "name": "东莞市红云五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 293.89,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgsamtznkj",
+          "name": "东莞市奥迈拓智能科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 6000.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgymr",
+          "name": "东莞市瑶玛瑞服装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgyuhuang",
+          "name": "东莞市玉煌电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 21611.2,
+          "last_q_gmv": 11860.7
+        },
+        {
+          "id": "gdkyd",
+          "name": "广东快裕达自动化科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "haoke888",
+          "name": "东莞市浩克运动器材有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 944.93,
+          "last_q_gmv": 1026.9
+        },
+        {
+          "id": "lsbattery",
+          "name": "东莞市刘氏锂电科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 20360.0,
+          "last_q_gmv": 50074.0
+        },
+        {
+          "id": "qixinplastic",
+          "name": "东莞市奇新塑胶五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 11494.1
+        },
+        {
+          "id": "sunvast",
+          "name": "深圳市深华视光电有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 1306.0
+        },
+        {
+          "id": "taisubaby",
+          "name": "东莞市台塑婴童用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "tongyingsheng",
+          "name": "东莞市同盈盛五金塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 10760.0,
+          "last_q_gmv": 16832.0
+        },
+        {
+          "id": "topchefmixer",
+          "name": "广东顶厨智能家居科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1890.5,
+          "last_q_gmv": 1143523.5
+        },
+        {
+          "id": "ueelectronic",
+          "name": "东莞市石龙富华电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 220.0,
+          "last_q_gmv": 340.0
+        },
+        {
+          "id": "xinmaihui",
+          "name": "东莞市鑫麦汇电子商务有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "xinyuefhcl",
+          "name": "馨悦(东莞市)复合材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 2081.84
+        },
+        {
+          "id": "zhishengcncparts",
+          "name": "惠州市致盛五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 2153.5
+        }
+      ]
+    },
+    "燕磊": {
+      "month_target": 3784178,
+      "total_month": 1010908.0,
+      "total_quarter": 5850764.64,
+      "month_pct": 26.7,
+      "month_gap": -2773270.0,
+      "client_count": 128,
+      "active_count": 63,
+      "clients": [
+        {
+          "id": "szrichpack",
+          "name": "深圳瑞奇包装用品有限公司",
+          "month_gmv": 231574.0,
+          "quarter_gmv": 803180.89,
+          "last_q_gmv": 1047133.29
+        },
+        {
+          "id": "vasin010",
+          "name": "广东华文新材料科技有限公司",
+          "month_gmv": 137679.0,
+          "quarter_gmv": 823209.97,
+          "last_q_gmv": 1315098.81
+        },
+        {
+          "id": "dgwanze",
+          "name": "东莞市万泽家居用品有限公司",
+          "month_gmv": 84412.0,
+          "quarter_gmv": 191411.48,
+          "last_q_gmv": 336765.3
+        },
+        {
+          "id": "lydpoweradapter",
+          "name": "广东联运达电子有限公司",
+          "month_gmv": 65047.0,
+          "quarter_gmv": 121718.5,
+          "last_q_gmv": 97922.61
+        },
+        {
+          "id": "yusunmetal",
+          "name": "东莞市宇顺五金有限公司",
+          "month_gmv": 53054.0,
+          "quarter_gmv": 216534.5,
+          "last_q_gmv": 499518.3
+        },
+        {
+          "id": "cnhugedg",
+          "name": "东莞市汇捷皮具制品有限公司",
+          "month_gmv": 48572.0,
+          "quarter_gmv": 51727.26,
+          "last_q_gmv": 189679.42
+        },
+        {
+          "id": "dgtengyue8",
+          "name": "东莞市腾跃木制品有限公司",
+          "month_gmv": 46646.0,
+          "quarter_gmv": 52502.1,
+          "last_q_gmv": 138389.84
+        },
+        {
+          "id": "dgqiaoshou",
+          "name": "东莞市巧手服饰有限公司",
+          "month_gmv": 31393.0,
+          "quarter_gmv": 95691.2,
+          "last_q_gmv": 191882.24
+        },
+        {
+          "id": "ruifeiyoga",
+          "name": "东莞市瑞飞服装有限公司",
+          "month_gmv": 31352.0,
+          "quarter_gmv": 143062.25,
+          "last_q_gmv": 683021.9
+        },
+        {
+          "id": "novosili",
+          "name": "东莞市新硅域科技有限公司",
+          "month_gmv": 28803.0,
+          "quarter_gmv": 60894.77,
+          "last_q_gmv": 129598.84
+        },
+        {
+          "id": "hhpower",
+          "name": "东莞市欢欢能源科技有限公司",
+          "month_gmv": 27638.0,
+          "quarter_gmv": 337171.61,
+          "last_q_gmv": 270211.22
+        },
+        {
+          "id": "cnhuayi999",
+          "name": "东莞市华亿汽车配件有限公司",
+          "month_gmv": 26672.0,
+          "quarter_gmv": 115442.2,
+          "last_q_gmv": 229905.87
+        },
+        {
+          "id": "baofengclothing",
+          "name": "东莞市瑞晟服装有限公司",
+          "month_gmv": 24283.0,
+          "quarter_gmv": 89443.93,
+          "last_q_gmv": 80590.4
+        },
+        {
+          "id": "jinbaoma",
+          "name": "东莞金保马科技有限公司",
+          "month_gmv": 16935.0,
+          "quarter_gmv": 105771.64,
+          "last_q_gmv": 221069.16
+        },
+        {
+          "id": "dgruifei",
+          "name": "东莞市瑞飞服装有限公司",
+          "month_gmv": 15661.0,
+          "quarter_gmv": 101729.03,
+          "last_q_gmv": 245130.41
+        },
+        {
+          "id": "gduf888",
+          "name": "广东悦飞电子科技有限公司",
+          "month_gmv": 14363.0,
+          "quarter_gmv": 33635.83,
+          "last_q_gmv": 61912.65
+        },
+        {
+          "id": "anyikang",
+          "name": "东莞市安益康科技有限公司",
+          "month_gmv": 12186.0,
+          "quarter_gmv": 47881.32,
+          "last_q_gmv": 72151.55
+        },
+        {
+          "id": "chinawinwin",
+          "name": "东莞市永昌美工艺品有限公司",
+          "month_gmv": 11285.0,
+          "quarter_gmv": 76662.58,
+          "last_q_gmv": 437381.27
+        },
+        {
+          "id": "dghaiyang88",
+          "name": "东莞市企石海扬皮具制品厂",
+          "month_gmv": 9214.0,
+          "quarter_gmv": 19265.91,
+          "last_q_gmv": 46806.78
+        },
+        {
+          "id": "dghekang",
+          "name": "东莞市合康服装辅料有限公司",
+          "month_gmv": 7864.0,
+          "quarter_gmv": 65385.48,
+          "last_q_gmv": 195376.94
+        },
+        {
+          "id": "dghongjun",
+          "name": "东莞市宏俊包装制品有限公司",
+          "month_gmv": 7831.0,
+          "quarter_gmv": 16512.11,
+          "last_q_gmv": 55316.53
+        },
+        {
+          "id": "faradyi",
+          "name": "东莞市法拉棣科技有限公司",
+          "month_gmv": 7472.0,
+          "quarter_gmv": 78839.4,
+          "last_q_gmv": 110495.3
+        },
+        {
+          "id": "haruisports",
+          "name": "东莞市三英手袋有限公司",
+          "month_gmv": 5840.0,
+          "quarter_gmv": 59914.0,
+          "last_q_gmv": 278063.36
+        },
+        {
+          "id": "jcxtech2020",
+          "name": "东莞市嘉晨兴电子科技有限公司",
+          "month_gmv": 4935.0,
+          "quarter_gmv": 23034.15,
+          "last_q_gmv": 5462.86
+        },
+        {
+          "id": "houdaheadwear",
+          "name": "东莞市厚达帽服有限公司",
+          "month_gmv": 4739.0,
+          "quarter_gmv": 33673.75,
+          "last_q_gmv": 66148.25
+        },
+        {
+          "id": "teditonlock",
+          "name": "中山市天地通安防科技有限公司",
+          "month_gmv": 4454.0,
+          "quarter_gmv": 30310.49,
+          "last_q_gmv": 116653.92
+        },
+        {
+          "id": "petpek168",
+          "name": "东莞市派派可宠物用品有限公司",
+          "month_gmv": 4449.0,
+          "quarter_gmv": 4795.98,
+          "last_q_gmv": 3486.19
+        },
+        {
+          "id": "dslabel",
+          "name": "东莞市东森标牌制品有限公司",
+          "month_gmv": 3811.0,
+          "quarter_gmv": 9976.34,
+          "last_q_gmv": 18354.69
+        },
+        {
+          "id": "gdbaiya",
+          "name": "东莞市百亚硅胶制品有限公司",
+          "month_gmv": 3568.0,
+          "quarter_gmv": 18918.22,
+          "last_q_gmv": 32642.41
+        },
+        {
+          "id": "glimwall",
+          "name": "东莞市锦垣国际时装有限公司",
+          "month_gmv": 3087.0,
+          "quarter_gmv": 9211.1,
+          "last_q_gmv": 7527.0
+        },
+        {
+          "id": "love1688",
+          "name": "东莞市爱褶衣服装有限公司",
+          "month_gmv": 2642.0,
+          "quarter_gmv": 16390.64,
+          "last_q_gmv": 12808.01
+        },
+        {
+          "id": "cn1519765943hshq",
+          "name": "东莞市佑情诚实业有限公司",
+          "month_gmv": 2580.0,
+          "quarter_gmv": 8640.93,
+          "last_q_gmv": 32250.02
+        },
+        {
+          "id": "yfeibags",
+          "name": "耀飞制造科技（东莞）有限公司",
+          "month_gmv": 2405.0,
+          "quarter_gmv": 2405.0,
+          "last_q_gmv": 2945.58
+        },
+        {
+          "id": "dghaoheng",
+          "name": "广东昊恒新材料有限公司",
+          "month_gmv": 2093.0,
+          "quarter_gmv": 13179.92,
+          "last_q_gmv": 48432.32
+        },
+        {
+          "id": "bailigarment",
+          "name": "东莞市百莉服饰有限公司",
+          "month_gmv": 2089.0,
+          "quarter_gmv": 5094.0,
+          "last_q_gmv": 20339.4
+        },
+        {
+          "id": "cn1566157804pqne",
+          "name": "上海荣运来机械有限公司",
+          "month_gmv": 1995.0,
+          "quarter_gmv": 14022.6,
+          "last_q_gmv": 27740.29
+        },
+        {
+          "id": "creditdg",
+          "name": "科迪科技(东莞市)有限公司",
+          "month_gmv": 1871.0,
+          "quarter_gmv": 8660.06,
+          "last_q_gmv": 36356.79
+        },
+        {
+          "id": "gdbohong",
+          "name": "东莞市驳宏机械设备有限公司",
+          "month_gmv": 1737.0,
+          "quarter_gmv": 8145.42,
+          "last_q_gmv": 52383.0
+        },
+        {
+          "id": "tediton",
+          "name": "东莞市天地通智能科技有限公司",
+          "month_gmv": 1665.0,
+          "quarter_gmv": 3553.62,
+          "last_q_gmv": 7344.11
+        },
+        {
+          "id": "dgllsy",
+          "name": "东莞市沥来实业有限公司",
+          "month_gmv": 1621.0,
+          "quarter_gmv": 19790.93,
+          "last_q_gmv": 95626.5
+        },
+        {
+          "id": "cngzwinwin",
+          "name": "东莞市永昌美工艺品有限公司",
+          "month_gmv": 1545.0,
+          "quarter_gmv": 43463.61,
+          "last_q_gmv": 47907.58
+        },
+        {
+          "id": "dgzilin",
+          "name": "东莞市梓琳贸易有限公司",
+          "month_gmv": 1320.0,
+          "quarter_gmv": 5157.56,
+          "last_q_gmv": 20070.9
+        },
+        {
+          "id": "jinbaoma02",
+          "name": "东莞金保马科技有限公司",
+          "month_gmv": 1227.0,
+          "quarter_gmv": 22208.62,
+          "last_q_gmv": 16880.9
+        },
+        {
+          "id": "lgsmkj",
+          "name": "东莞市乐鸽数码科技有限公司",
+          "month_gmv": 1213.0,
+          "quarter_gmv": 1358.3,
+          "last_q_gmv": 886.67
+        },
+        {
+          "id": "fancytins",
+          "name": "东莞市众从制罐有限公司",
+          "month_gmv": 1122.0,
+          "quarter_gmv": 6211.1,
+          "last_q_gmv": 1602.06
+        },
+        {
+          "id": "dgshengqi",
+          "name": "东莞市盛祺照明科技有限公司",
+          "month_gmv": 1035.0,
+          "quarter_gmv": 2568.17,
+          "last_q_gmv": 16348.12
+        },
+        {
+          "id": "aswsometrade",
+          "name": "东莞绝妙贸易有限公司",
+          "month_gmv": 915.0,
+          "quarter_gmv": 8503.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "yongfangelec",
+          "name": "东莞市永方电子科技有限公司",
+          "month_gmv": 890.0,
+          "quarter_gmv": 337327.17,
+          "last_q_gmv": 552834.05
+        },
+        {
+          "id": "xileicn",
+          "name": "东莞市西蕾电子科技有限公司",
+          "month_gmv": 790.0,
+          "quarter_gmv": 2762.01,
+          "last_q_gmv": 7995.09
+        },
+        {
+          "id": "mengmasextoy",
+          "name": "东莞市梦马电子科技有限公司",
+          "month_gmv": 786.0,
+          "quarter_gmv": 869.73,
+          "last_q_gmv": 6089.0
+        },
+        {
+          "id": "polysmartsgd",
+          "name": "东莞市智慧袋包装制品有限公司",
+          "month_gmv": 755.0,
+          "quarter_gmv": 11605.2,
+          "last_q_gmv": 36736.57
+        },
+        {
+          "id": "strongmachine",
+          "name": "东莞实创机械有限公司",
+          "month_gmv": 677.0,
+          "quarter_gmv": 1778.33,
+          "last_q_gmv": 14338.16
+        },
+        {
+          "id": "dgxxwjdz",
+          "name": "东莞市贤祥五金电子科技有限公司",
+          "month_gmv": 632.0,
+          "quarter_gmv": 54455.74,
+          "last_q_gmv": 254749.79
+        },
+        {
+          "id": "dgyl888",
+          "name": "东莞市优络电子有限公司",
+          "month_gmv": 453.0,
+          "quarter_gmv": 503.53,
+          "last_q_gmv": 247.01
+        },
+        {
+          "id": "xiaolongpacking",
+          "name": "东莞晓龙包装实业有限公司",
+          "month_gmv": 446.0,
+          "quarter_gmv": 61323.63,
+          "last_q_gmv": 233938.48
+        },
+        {
+          "id": "dgrhgj",
+          "name": "东莞市睿辉硅橡胶制品有限公司",
+          "month_gmv": 435.0,
+          "quarter_gmv": 1325.97,
+          "last_q_gmv": 2503.62
+        },
+        {
+          "id": "oyiu2026",
+          "name": "深圳市偶友贸易有限公司",
+          "month_gmv": 319.0,
+          "quarter_gmv": 1592.43,
+          "last_q_gmv": 4849.26
+        },
+        {
+          "id": "zhengtian326",
+          "name": "东莞市正田金属制品有限公司",
+          "month_gmv": 250.0,
+          "quarter_gmv": 459.92,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "yusundice",
+          "name": "东莞市宇顺五金有限公司",
+          "month_gmv": 217.0,
+          "quarter_gmv": 1274.36,
+          "last_q_gmv": 7245.19
+        },
+        {
+          "id": "lizicrafts",
+          "name": "东莞市丽姿工艺品有限公司",
+          "month_gmv": 164.0,
+          "quarter_gmv": 33497.14,
+          "last_q_gmv": 23245.35
+        },
+        {
+          "id": "aidicase",
+          "name": "东莞市艾迪箱包有限公司",
+          "month_gmv": 136.0,
+          "quarter_gmv": 3893.89,
+          "last_q_gmv": 1734.82
+        },
+        {
+          "id": "dgtengyue99",
+          "name": "东莞市腾越海绵制品有限公司",
+          "month_gmv": 58.0,
+          "quarter_gmv": 2664.26,
+          "last_q_gmv": 9588.53
+        },
+        {
+          "id": "packagingkitty",
+          "name": "东莞市青洋包装制品有限公司",
+          "month_gmv": 6.0,
+          "quarter_gmv": 11062.5,
+          "last_q_gmv": 107273.0
+        },
+        {
+          "id": "cnbuyasia",
+          "name": "东莞市志亚贸易有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cncampertent",
+          "name": "东莞市露营者户外用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 133382.8,
+          "last_q_gmv": 26575.18
+        },
+        {
+          "id": "dgfoison",
+          "name": "东莞成丰包装机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 965.0
+        },
+        {
+          "id": "dgjohnson1688",
+          "name": "东莞市江胜实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgrjsm",
+          "name": "东莞市瑞京工贸有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgxlzy",
+          "name": "东莞市兴利纸业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgzhuoyi168",
+          "name": "东莞市卓毅工艺品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1304.44,
+          "last_q_gmv": 75.51
+        },
+        {
+          "id": "dk2023",
+          "name": "东莞市迪柯精密五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 28824.19,
+          "last_q_gmv": 188764.21
+        },
+        {
+          "id": "eliteenergy",
+          "name": "东莞市易利特新能源有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 15645.8,
+          "last_q_gmv": 18783.5
+        },
+        {
+          "id": "fengcaiglitter",
+          "name": "东莞市丰彩新材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hhfoutdoorgroup",
+          "name": "昊鸿电气科技(湖北)有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hibenmetal",
+          "name": "东莞市恒滨金属制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 561.59,
+          "last_q_gmv": 1620.19
+        },
+        {
+          "id": "hnwangcheng",
+          "name": "湖南旺成科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "huagon888",
+          "name": "东莞市铧光自动化机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jcjacp1",
+          "name": "东莞市金长玖塑胶原料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jomwag",
+          "name": "东莞市鑫莲商贸有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 58.8,
+          "last_q_gmv": 26.0
+        },
+        {
+          "id": "kamanina",
+          "name": "东莞市泰旺灯饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1039.8,
+          "last_q_gmv": 1800.45
+        },
+        {
+          "id": "kanifeg",
+          "name": "东莞市丽德电器有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2741.87,
+          "last_q_gmv": 437.64
+        },
+        {
+          "id": "lebofushi",
+          "name": "东莞市乐博服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2005.25,
+          "last_q_gmv": 11024.01
+        },
+        {
+          "id": "ledstrobelights",
+          "name": "东莞市叁伟光电有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 2206.8
+        },
+        {
+          "id": "lingfeng2025",
+          "name": "江西凌峰新材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "lukaxin",
+          "name": "东莞市噜咔星服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 870.0,
+          "last_q_gmv": 3781.73
+        },
+        {
+          "id": "mimo2026",
+          "name": "东莞市寮步咪摸电子商务工作室（个体工商户）",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "newdommay",
+          "name": "东莞市新多美科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2262.57,
+          "last_q_gmv": 1017.7
+        },
+        {
+          "id": "palos88",
+          "name": "东莞市帕洛斯机电有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 19320.86,
+          "last_q_gmv": 23175.2
+        },
+        {
+          "id": "sanjuplastics",
+          "name": "东莞市三聚塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 35.1,
+          "last_q_gmv": 299.2
+        },
+        {
+          "id": "selloutwow",
+          "name": "尚睿科技股份有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 951102.21,
+          "last_q_gmv": 748524.65
+        },
+        {
+          "id": "shiqianty",
+          "name": "东莞市世谦体育用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 555.94,
+          "last_q_gmv": 4517.8
+        },
+        {
+          "id": "sixing0769",
+          "name": "广东思行智造科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 18970.0,
+          "last_q_gmv": 152882.0
+        },
+        {
+          "id": "vasin0711",
+          "name": "东莞市华星胶粘制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 4398.2
+        },
+        {
+          "id": "william2025",
+          "name": "东莞市森火科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 3864.5
+        },
+        {
+          "id": "xuyue520",
+          "name": "东莞市旭悦五金塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 113.57,
+          "last_q_gmv": 57672.16
+        },
+        {
+          "id": "ydydzn",
+          "name": "东莞市一点一度智能科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "yikuo168",
+          "name": "深圳市移扩科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 3672.0,
+          "last_q_gmv": 16247.0
+        },
+        {
+          "id": "yingweipeijian",
+          "name": "东莞市盈威灯饰配件有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 922.0,
+          "last_q_gmv": 50.0
+        },
+        {
+          "id": "zhongxin6688",
+          "name": "东莞市众鑫高分子材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 265.84,
+          "last_q_gmv": 657.88
+        },
+        {
+          "id": "zlnm",
+          "name": "东莞市众力纳米陶瓷科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "zmhardware",
+          "name": "东莞市兆铭金属制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 273.0
+        },
+        {
+          "id": "chengyijingmi",
+          "name": "东莞程益精密工业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "chiapao",
+          "name": "东莞家宝生活用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "chinasiliconerubber",
+          "name": "东莞市盛道硅橡胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 4628.89
+        },
+        {
+          "id": "cnlirongdg",
+          "name": "东莞市立荣饰品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cnsaintj",
+          "name": "东莞市常平圣杰电器店（个体工商户）",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgchuangcheng",
+          "name": "东莞市创成电子材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 25.1,
+          "last_q_gmv": 3258.0
+        },
+        {
+          "id": "dgdaqin8",
+          "name": "东莞市大秦皮具有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 7127.08
+        },
+        {
+          "id": "dgflorafaux",
+          "name": "东莞市真艺植造工艺品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 709.62,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dghlsd",
+          "name": "东莞市华隆手袋包装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dglrlight",
+          "name": "东莞市联润灯饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 34.58
+        },
+        {
+          "id": "gudesen",
+          "name": "东莞市固德森贸易有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hcdgcn",
+          "name": "东莞市汇诚家居科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hengdazszy",
+          "name": "东莞市恒达再生资源利用有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hhfgroup",
+          "name": "昊鸿电气科技(湖北)有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jiayullc",
+          "name": "东莞市佳誉电器有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "lihaipacking",
+          "name": "东莞市利海包装新技术有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 4280.0
+        },
+        {
+          "id": "mayilon",
+          "name": "东莞市麦仪龙电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 34.32,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "muston",
+          "name": "东莞市桥头美盛通商贸行（个体工商户）",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 420.0
+        },
+        {
+          "id": "qishengdg",
+          "name": "东莞市启晟自动化科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2330.0,
+          "last_q_gmv": 10371.5
+        },
+        {
+          "id": "sanxingpaper",
+          "name": "东莞市三新纸品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 436.1,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "sanyingbags",
+          "name": "东莞市三英手袋有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 108156.7,
+          "last_q_gmv": 272502.93
+        },
+        {
+          "id": "uavbattery",
+          "name": "深圳联华新创科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 106.5,
+          "last_q_gmv": 1839.07
+        },
+        {
+          "id": "venia2022",
+          "name": "东莞市为尼贸易有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 257.57,
+          "last_q_gmv": 11870.19
+        },
+        {
+          "id": "vienjewellery",
+          "name": "东莞维恩首饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 927.57,
+          "last_q_gmv": 1917.79
+        },
+        {
+          "id": "vivipack",
+          "name": "东莞市申远包装制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "vtmedical",
+          "name": "东莞市信成医疗器械科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 657.75,
+          "last_q_gmv": 4045.22
+        },
+        {
+          "id": "yiyicloth",
+          "name": "东莞市衣一服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 211.5,
+          "last_q_gmv": 0
+        }
+      ]
+    },
+    "刘鑫": {
+      "month_target": 1989560,
+      "total_month": 556764.0,
+      "total_quarter": 2240949.09,
+      "month_pct": 28.0,
+      "month_gap": -1432796.0,
+      "client_count": 95,
+      "active_count": 61,
+      "clients": [
+        {
+          "id": "dgsophianee",
+          "name": "东莞市同恩进出口有限公司",
+          "month_gmv": 265937.0,
+          "quarter_gmv": 350937.38,
+          "last_q_gmv": 362015.33
+        },
+        {
+          "id": "dgtoca",
+          "name": "东莞市顶线电子有限公司",
+          "month_gmv": 51733.0,
+          "quarter_gmv": 107569.92,
+          "last_q_gmv": 203769.12
+        },
+        {
+          "id": "dgjff",
+          "name": "东莞市聚非凡科技发展有限公司",
+          "month_gmv": 18706.0,
+          "quarter_gmv": 53651.87,
+          "last_q_gmv": 108460.81
+        },
+        {
+          "id": "syltgmachinery",
+          "name": "东莞市班墨机械有限公司",
+          "month_gmv": 18694.0,
+          "quarter_gmv": 63403.08,
+          "last_q_gmv": 244360.65
+        },
+        {
+          "id": "zhenxinauto",
+          "name": "东莞市振欣汽车用品有限公司",
+          "month_gmv": 18579.0,
+          "quarter_gmv": 105909.91,
+          "last_q_gmv": 276665.86
+        },
+        {
+          "id": "wanbailong",
+          "name": "广州万百隆营养科技有限公司",
+          "month_gmv": 17067.0,
+          "quarter_gmv": 68732.76,
+          "last_q_gmv": 159267.84
+        },
+        {
+          "id": "dgleduo",
+          "name": "东莞市乐多服饰有限公司",
+          "month_gmv": 16889.0,
+          "quarter_gmv": 54273.01,
+          "last_q_gmv": 88623.12
+        },
+        {
+          "id": "gnfortuneled",
+          "name": "东莞市同恩进出口有限公司",
+          "month_gmv": 15780.0,
+          "quarter_gmv": 212306.69,
+          "last_q_gmv": 220146.36
+        },
+        {
+          "id": "zxl861201",
+          "name": "东莞市玲之秀服饰有限公司",
+          "month_gmv": 9907.0,
+          "quarter_gmv": 197698.71,
+          "last_q_gmv": 225323.12
+        },
+        {
+          "id": "myroyal",
+          "name": "东莞市梦烨首饰有限公司",
+          "month_gmv": 7988.0,
+          "quarter_gmv": 20772.6,
+          "last_q_gmv": 64929.93
+        },
+        {
+          "id": "cnryosport",
+          "name": "东莞市睿颖户外运动用品有限公司",
+          "month_gmv": 7705.0,
+          "quarter_gmv": 48068.73,
+          "last_q_gmv": 114804.17
+        },
+        {
+          "id": "gnagro",
+          "name": "东莞市同恩进出口有限公司",
+          "month_gmv": 7120.0,
+          "quarter_gmv": 41665.44,
+          "last_q_gmv": 167460.16
+        },
+        {
+          "id": "tiandian",
+          "name": "上海天点服饰有限公司",
+          "month_gmv": 7041.0,
+          "quarter_gmv": 30385.75,
+          "last_q_gmv": 68688.54
+        },
+        {
+          "id": "jiayijia88",
+          "name": "广东加一佳服装有限公司",
+          "month_gmv": 6625.0,
+          "quarter_gmv": 90792.35,
+          "last_q_gmv": 187485.6
+        },
+        {
+          "id": "banmotechnology",
+          "name": "东莞斑墨机械科技有限公司",
+          "month_gmv": 6468.0,
+          "quarter_gmv": 40539.75,
+          "last_q_gmv": 9470.0
+        },
+        {
+          "id": "junjinclothing01",
+          "name": "东莞市浚金服饰有限公司",
+          "month_gmv": 6077.0,
+          "quarter_gmv": 15879.5,
+          "last_q_gmv": 10309.12
+        },
+        {
+          "id": "dgynjx",
+          "name": "东莞优能机械设备有限公司",
+          "month_gmv": 4734.0,
+          "quarter_gmv": 12954.0,
+          "last_q_gmv": 25106.0
+        },
+        {
+          "id": "xinouligei",
+          "name": "广东欧力给新材料科技有限公司",
+          "month_gmv": 4529.0,
+          "quarter_gmv": 50256.28,
+          "last_q_gmv": 141815.38
+        },
+        {
+          "id": "xianghongrubber",
+          "name": "东莞市祥泓橡塑制品有限公司",
+          "month_gmv": 4326.0,
+          "quarter_gmv": 13525.0,
+          "last_q_gmv": 7881.02
+        },
+        {
+          "id": "dgslysp",
+          "name": "东莞市蓝云饰品有限公司",
+          "month_gmv": 4089.0,
+          "quarter_gmv": 5277.96,
+          "last_q_gmv": 8406.04
+        },
+        {
+          "id": "dgchuen",
+          "name": "东莞市楚恩服饰有限公司",
+          "month_gmv": 3964.0,
+          "quarter_gmv": 16492.4,
+          "last_q_gmv": 16304.5
+        },
+        {
+          "id": "cn1541559746mznm",
+          "name": "东莞市博格达塑胶五金制品有限公司",
+          "month_gmv": 3456.0,
+          "quarter_gmv": 44291.29,
+          "last_q_gmv": 120214.74
+        },
+        {
+          "id": "maiami",
+          "name": "东莞市麦阿密服饰有限公司",
+          "month_gmv": 3227.0,
+          "quarter_gmv": 15227.84,
+          "last_q_gmv": 45433.61
+        },
+        {
+          "id": "feikemachine",
+          "name": "广东飞彬机械集团有限公司",
+          "month_gmv": 3130.0,
+          "quarter_gmv": 287524.47,
+          "last_q_gmv": 887810.87
+        },
+        {
+          "id": "icojewelry",
+          "name": "东莞市艾珂首饰有限公司",
+          "month_gmv": 3029.0,
+          "quarter_gmv": 3386.57,
+          "last_q_gmv": 11975.4
+        },
+        {
+          "id": "dgguanyi",
+          "name": "东莞市冠一塑料容器有限公司",
+          "month_gmv": 2525.0,
+          "quarter_gmv": 5050.0,
+          "last_q_gmv": 3082.0
+        },
+        {
+          "id": "mhbzzp",
+          "name": "东莞市明泓包装制品有限公司",
+          "month_gmv": 2405.0,
+          "quarter_gmv": 20004.95,
+          "last_q_gmv": 62847.24
+        },
+        {
+          "id": "junchengyw",
+          "name": "广东君成印刷科技有限公司",
+          "month_gmv": 2404.0,
+          "quarter_gmv": 9039.5,
+          "last_q_gmv": 34710.43
+        },
+        {
+          "id": "dgroudi",
+          "name": "东莞市柔迪制衣有限公司",
+          "month_gmv": 2197.0,
+          "quarter_gmv": 2859.48,
+          "last_q_gmv": 445.32
+        },
+        {
+          "id": "jldigital",
+          "name": "东莞市锦龙数码技术有限公司",
+          "month_gmv": 2122.0,
+          "quarter_gmv": 11525.11,
+          "last_q_gmv": 43719.5
+        },
+        {
+          "id": "zeshengappearl",
+          "name": "东莞市泽晟服饰有限公司",
+          "month_gmv": 2046.0,
+          "quarter_gmv": 3601.86,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "ymrlicenseplate",
+          "name": "东莞市宇梦锐汽车用品有限公司",
+          "month_gmv": 2023.0,
+          "quarter_gmv": 5197.0,
+          "last_q_gmv": 17859.6
+        },
+        {
+          "id": "jingeer",
+          "name": "东莞市金格尔首饰饰品有限公司",
+          "month_gmv": 2016.0,
+          "quarter_gmv": 9918.53,
+          "last_q_gmv": 22022.2
+        },
+        {
+          "id": "fongray",
+          "name": "东莞市烽瑞贸易有限公司",
+          "month_gmv": 2016.0,
+          "quarter_gmv": 4289.25,
+          "last_q_gmv": 8544.55
+        },
+        {
+          "id": "boyuejewelcn",
+          "name": "东莞市博越玩具有限公司",
+          "month_gmv": 1977.0,
+          "quarter_gmv": 7172.49,
+          "last_q_gmv": 23453.72
+        },
+        {
+          "id": "sionde",
+          "name": "东莞市赛昂德汽车零部件有限公司",
+          "month_gmv": 1509.0,
+          "quarter_gmv": 3895.64,
+          "last_q_gmv": 9895.68
+        },
+        {
+          "id": "dgbuan",
+          "name": "东莞市布岸服饰有限公司",
+          "month_gmv": 1464.0,
+          "quarter_gmv": 14459.75,
+          "last_q_gmv": 50828.25
+        },
+        {
+          "id": "wxx17671074168",
+          "name": "东莞思迈云电子商务服务有限公司",
+          "month_gmv": 1433.0,
+          "quarter_gmv": 4225.15,
+          "last_q_gmv": 15982.11
+        },
+        {
+          "id": "fzecnc",
+          "name": "东莞市方泽五金制品有限公司",
+          "month_gmv": 1200.0,
+          "quarter_gmv": 1200.0,
+          "last_q_gmv": 770.0
+        },
+        {
+          "id": "dongguantianyu",
+          "name": "广东天昱机械设备有限公司",
+          "month_gmv": 1133.0,
+          "quarter_gmv": 10271.05,
+          "last_q_gmv": 13582.13
+        },
+        {
+          "id": "hyxpaperproduct",
+          "name": "鸿意兴印刷科技(东莞)有限公司",
+          "month_gmv": 1080.0,
+          "quarter_gmv": 2045.0,
+          "last_q_gmv": 388.0
+        },
+        {
+          "id": "qq619535",
+          "name": "东莞市澳以克服装有限公司",
+          "month_gmv": 1070.0,
+          "quarter_gmv": 6069.5,
+          "last_q_gmv": 14085.0
+        },
+        {
+          "id": "luoyaqi",
+          "name": "东莞市洛娅琪服饰有限公司",
+          "month_gmv": 1020.0,
+          "quarter_gmv": 7328.6,
+          "last_q_gmv": 8611.0
+        },
+        {
+          "id": "xiongchuan88",
+          "name": "东莞市雄川智能科技有限公司",
+          "month_gmv": 1013.0,
+          "quarter_gmv": 10869.59,
+          "last_q_gmv": 4596.0
+        },
+        {
+          "id": "fuliterbox",
+          "name": "东莞市福丽特纸品有限公司",
+          "month_gmv": 965.0,
+          "quarter_gmv": 5251.0,
+          "last_q_gmv": 2733.0
+        },
+        {
+          "id": "cnwonderfires",
+          "name": "东莞市悠乐厨户外休闲用品有限公司",
+          "month_gmv": 916.0,
+          "quarter_gmv": 11282.27,
+          "last_q_gmv": 38848.1
+        },
+        {
+          "id": "dgmystyle",
+          "name": "东莞市铭烨服饰有限公司",
+          "month_gmv": 738.0,
+          "quarter_gmv": 2986.9,
+          "last_q_gmv": 1725.0
+        },
+        {
+          "id": "forest520sl",
+          "name": "东莞市深霖电子科技有限公司",
+          "month_gmv": 699.0,
+          "quarter_gmv": 1313.97,
+          "last_q_gmv": 415.49
+        },
+        {
+          "id": "ainifashion",
+          "name": "艾妮（东莞市）服饰有限公司",
+          "month_gmv": 608.0,
+          "quarter_gmv": 11647.03,
+          "last_q_gmv": 53558.72
+        },
+        {
+          "id": "lingzhixiu",
+          "name": "东莞市玲之秀服饰有限公司",
+          "month_gmv": 576.0,
+          "quarter_gmv": 15697.31,
+          "last_q_gmv": 109839.93
+        },
+        {
+          "id": "dgtufeng",
+          "name": "东莞市图丰橡胶有限公司",
+          "month_gmv": 534.0,
+          "quarter_gmv": 850.02,
+          "last_q_gmv": 7537.31
+        },
+        {
+          "id": "shengd168",
+          "name": "东莞市笙动服饰有限公司",
+          "month_gmv": 380.0,
+          "quarter_gmv": 440.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgtiancai",
+          "name": "东莞市添彩烫画有限公司",
+          "month_gmv": 308.0,
+          "quarter_gmv": 1465.03,
+          "last_q_gmv": 1005.73
+        },
+        {
+          "id": "letaron",
+          "name": "广东擎洲光电科技股份有限公司",
+          "month_gmv": 261.0,
+          "quarter_gmv": 651.16,
+          "last_q_gmv": 1533.34
+        },
+        {
+          "id": "jh13071306429",
+          "name": "东莞市晶鸿外贸服饰有限公司",
+          "month_gmv": 261.0,
+          "quarter_gmv": 6588.08,
+          "last_q_gmv": 12171.51
+        },
+        {
+          "id": "luckinsilicone",
+          "name": "东莞莱易塑胶制品有限公司",
+          "month_gmv": 254.0,
+          "quarter_gmv": 30083.29,
+          "last_q_gmv": 14271.52
+        },
+        {
+          "id": "dgkaer",
+          "name": "东莞市卡尔智能科技有限公司",
+          "month_gmv": 212.0,
+          "quarter_gmv": 211.96,
+          "last_q_gmv": 1207.26
+        },
+        {
+          "id": "cndltextile",
+          "name": "东莞市东利纺织品有限公司",
+          "month_gmv": 190.0,
+          "quarter_gmv": 619.01,
+          "last_q_gmv": 1683.24
+        },
+        {
+          "id": "metourgarment",
+          "name": "东莞市米途服饰有限公司",
+          "month_gmv": 176.0,
+          "quarter_gmv": 530.24,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cheesenova",
+          "name": "宇宙星河国际贸易(东莞市)有限公司",
+          "month_gmv": 150.0,
+          "quarter_gmv": 150.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "sanmau",
+          "name": "东莞市生茂特种织造科技有限公司",
+          "month_gmv": 83.0,
+          "quarter_gmv": 410.0,
+          "last_q_gmv": 11400.49
+        },
+        {
+          "id": "amandadg",
+          "name": "东莞市阿漫达包装制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 13899.45,
+          "last_q_gmv": 27241.4
+        },
+        {
+          "id": "cncsheetmetal",
+          "name": "东莞市超能铖机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgdizhen",
+          "name": "东莞市蒂臻旅行用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgrysp",
+          "name": "东莞市荣熠饰品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgwsc",
+          "name": "东莞市韦氏创电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 9228.0,
+          "last_q_gmv": 9790.0
+        },
+        {
+          "id": "dgxypackaging",
+          "name": "东莞市大岭山翔裕包装店",
+          "month_gmv": 0,
+          "quarter_gmv": 3919.0,
+          "last_q_gmv": 7785.12
+        },
+        {
+          "id": "feikemachinery",
+          "name": "广东飞彬机械集团有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 7080.0,
+          "last_q_gmv": 89358.56
+        },
+        {
+          "id": "fs00751",
+          "name": "东莞市铂伦服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hefeng1018",
+          "name": "东莞市合丰模型有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 302.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hfylabels",
+          "name": "东莞市鸿福源包装设计印刷制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2510.0,
+          "last_q_gmv": 8257.0
+        },
+        {
+          "id": "huaqiangxl",
+          "name": "东莞市湘凌电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jiayupack",
+          "name": "东莞市嘉裕包装科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jingone",
+          "name": "东莞市精一电线电缆机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "lanxicn",
+          "name": "东莞市澜西时装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 5445.0
+        },
+        {
+          "id": "mssyapparel",
+          "name": "东莞市籽书商贸有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 400.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "mtjingmi",
+          "name": "东莞美特精密机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 175.0,
+          "last_q_gmv": 10129.24
+        },
+        {
+          "id": "qmxdrybag01",
+          "name": "东莞启明星户外用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 5184.0,
+          "last_q_gmv": 15801.8
+        },
+        {
+          "id": "senc6688",
+          "name": "东莞市森川服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 450.0,
+          "last_q_gmv": 996.0
+        },
+        {
+          "id": "wulifashion",
+          "name": "东莞市虎门乌栗服装工作室(个体工商户)",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "zhuoyuda",
+          "name": "东莞市卓誉达化学材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "aromatecjinyi",
+          "name": "东莞锦逸包装制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 3630.0,
+          "last_q_gmv": 8489.0
+        },
+        {
+          "id": "changjin37",
+          "name": "东莞市长锦印刷材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cndgdecai",
+          "name": "东莞市德才电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 7973.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgachem",
+          "name": "东莞市亿洲胶粘制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgbinrong",
+          "name": "东莞市彬蓉服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgcahxwj",
+          "name": "东莞市长安汇喜五金配件商行",
+          "month_gmv": 0,
+          "quarter_gmv": 29.76,
+          "last_q_gmv": 9900.0
+        },
+        {
+          "id": "dghmjq",
+          "name": "东莞市虎门季晴服装厂",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 76.61
+        },
+        {
+          "id": "dgnayifushi",
+          "name": "东莞市纳艺服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgwdf",
+          "name": "东莞市万德福工艺制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "fulinplastic",
+          "name": "东莞市富霖塑胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "hongliangshanchu",
+          "name": "宏量国际供应链(广东)有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 4870.0,
+          "last_q_gmv": 49610.0
+        },
+        {
+          "id": "mimiwenchuang",
+          "name": "东莞市咪咪文化有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 575.9,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "rivonsports",
+          "name": "东莞市锐风运动用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 2673.5
+        },
+        {
+          "id": "xindeclothing",
+          "name": "东莞市鑫德服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        }
+      ]
+    },
+    "杨佳玮": {
+      "month_target": 877049,
+      "total_month": 176660.0,
+      "total_quarter": 1009950.02,
+      "month_pct": 20.1,
+      "month_gap": -700389.0,
+      "client_count": 89,
+      "active_count": 53,
+      "clients": [
+        {
+          "id": "cn13480476345",
+          "name": "东莞市聚伊服饰有限公司",
+          "month_gmv": 20110.0,
+          "quarter_gmv": 53017.0,
+          "last_q_gmv": 36565.5
+        },
+        {
+          "id": "angleclothes",
+          "name": "东莞市虎门艾上时装厂",
+          "month_gmv": 16244.0,
+          "quarter_gmv": 61953.82,
+          "last_q_gmv": 123576.11
+        },
+        {
+          "id": "jecci",
+          "name": "东莞景行五金有限公司",
+          "month_gmv": 15692.0,
+          "quarter_gmv": 18656.86,
+          "last_q_gmv": 28164.01
+        },
+        {
+          "id": "ppdeer",
+          "name": "东莞市紫鹿服饰有限公司",
+          "month_gmv": 12265.0,
+          "quarter_gmv": 55708.9,
+          "last_q_gmv": 6924.0
+        },
+        {
+          "id": "mingpaigarment",
+          "name": "东莞市名派服饰有限公司",
+          "month_gmv": 9678.0,
+          "quarter_gmv": 66661.86,
+          "last_q_gmv": 114135.2
+        },
+        {
+          "id": "zkjewelry",
+          "name": "东莞市长安中楷饰品厂",
+          "month_gmv": 9417.0,
+          "quarter_gmv": 44646.36,
+          "last_q_gmv": 42932.22
+        },
+        {
+          "id": "yuanyugarment",
+          "name": "东莞市渊羽服饰有限公司",
+          "month_gmv": 7305.0,
+          "quarter_gmv": 37019.98,
+          "last_q_gmv": 83482.94
+        },
+        {
+          "id": "dgtkacc",
+          "name": "东莞致凯服装辅料有限公司",
+          "month_gmv": 7052.0,
+          "quarter_gmv": 40771.91,
+          "last_q_gmv": 74185.82
+        },
+        {
+          "id": "dgmeiling",
+          "name": "东莞市美灵服饰有限公司",
+          "month_gmv": 6000.0,
+          "quarter_gmv": 11930.0,
+          "last_q_gmv": 5604.7
+        },
+        {
+          "id": "cnwinhsin",
+          "name": "东莞市伟灏鑫电子有限公司",
+          "month_gmv": 5784.0,
+          "quarter_gmv": 58923.34,
+          "last_q_gmv": 142265.56
+        },
+        {
+          "id": "sihaijewelry",
+          "name": "东莞奇尚珠宝有限公司",
+          "month_gmv": 5352.0,
+          "quarter_gmv": 17518.89,
+          "last_q_gmv": 81068.94
+        },
+        {
+          "id": "liqiaoclothing",
+          "name": "东莞立侨服饰有限公司",
+          "month_gmv": 5330.0,
+          "quarter_gmv": 27058.19,
+          "last_q_gmv": 40186.91
+        },
+        {
+          "id": "cn15017015350",
+          "name": "东莞市聚伟服饰有限公司",
+          "month_gmv": 5000.0,
+          "quarter_gmv": 5000.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "fengrongjewelry",
+          "name": "东莞市伊特侬饰品有限公司",
+          "month_gmv": 4908.0,
+          "quarter_gmv": 29441.26,
+          "last_q_gmv": 66850.77
+        },
+        {
+          "id": "jinyuanjewelrydg",
+          "name": "东莞市金源饰品有限公司",
+          "month_gmv": 4564.0,
+          "quarter_gmv": 49844.96,
+          "last_q_gmv": 54619.33
+        },
+        {
+          "id": "fushifa",
+          "name": "东莞市福仕发塑胶制品有限公司",
+          "month_gmv": 4290.0,
+          "quarter_gmv": 16421.93,
+          "last_q_gmv": 15647.07
+        },
+        {
+          "id": "megagarment",
+          "name": "东莞市迈佳服饰有限公司",
+          "month_gmv": 3941.0,
+          "quarter_gmv": 34557.7,
+          "last_q_gmv": 97100.1
+        },
+        {
+          "id": "cndghualin",
+          "name": "广东煜铭盛精密制造有限公司",
+          "month_gmv": 3579.0,
+          "quarter_gmv": 14041.89,
+          "last_q_gmv": 42815.86
+        },
+        {
+          "id": "cn1543149381cpnv",
+          "name": "东莞市斯波阿斯享受体育用品有限公司",
+          "month_gmv": 2770.0,
+          "quarter_gmv": 7172.0,
+          "last_q_gmv": 8943.0
+        },
+        {
+          "id": "xinyi16888",
+          "name": "东莞市新熠电子有限公司",
+          "month_gmv": 2560.0,
+          "quarter_gmv": 14273.52,
+          "last_q_gmv": 7466.3
+        },
+        {
+          "id": "sunnysport",
+          "name": "东莞市尚丽科技有限公司",
+          "month_gmv": 2546.0,
+          "quarter_gmv": 46140.62,
+          "last_q_gmv": 86466.41
+        },
+        {
+          "id": "lhwyled",
+          "name": "东莞市伟川业科技有限公司",
+          "month_gmv": 2111.0,
+          "quarter_gmv": 9855.08,
+          "last_q_gmv": 12700.19
+        },
+        {
+          "id": "zhongyidingsheng",
+          "name": "东莞市中壹鼎盛工业有限公司",
+          "month_gmv": 1975.0,
+          "quarter_gmv": 25935.22,
+          "last_q_gmv": 78325.56
+        },
+        {
+          "id": "chinghua88",
+          "name": "东莞市佳栓实业有限公司",
+          "month_gmv": 1961.0,
+          "quarter_gmv": 6357.78,
+          "last_q_gmv": 10223.92
+        },
+        {
+          "id": "dgycfs",
+          "name": "东莞市杨宸服饰有限公司",
+          "month_gmv": 1822.0,
+          "quarter_gmv": 14839.88,
+          "last_q_gmv": 12063.52
+        },
+        {
+          "id": "cn13556688521",
+          "name": "东莞市诺曼依坊服装有限公司",
+          "month_gmv": 1684.0,
+          "quarter_gmv": 4224.41,
+          "last_q_gmv": 10198.0
+        },
+        {
+          "id": "cn1529254167wizv",
+          "name": "东莞市迷你树电脑制造有限公司",
+          "month_gmv": 1632.0,
+          "quarter_gmv": 51679.66,
+          "last_q_gmv": 32831.81
+        },
+        {
+          "id": "huiyingjewelry",
+          "name": "东莞市惠盈饰品有限公司",
+          "month_gmv": 1590.0,
+          "quarter_gmv": 10203.84,
+          "last_q_gmv": 12221.52
+        },
+        {
+          "id": "ankedesign",
+          "name": "东莞市安柯产品设计有限公司",
+          "month_gmv": 1247.0,
+          "quarter_gmv": 7077.0,
+          "last_q_gmv": 40260.8
+        },
+        {
+          "id": "perfumanee",
+          "name": "东莞市臻媄科技有限公司",
+          "month_gmv": 1198.0,
+          "quarter_gmv": 1267.5,
+          "last_q_gmv": 45234.17
+        },
+        {
+          "id": "goldixjewelry",
+          "name": "东莞市金缘饰品有限公司",
+          "month_gmv": 1124.0,
+          "quarter_gmv": 9469.02,
+          "last_q_gmv": 9955.9
+        },
+        {
+          "id": "cn1519798956gswl",
+          "name": "东莞市兰瑞服饰有限公司",
+          "month_gmv": 861.0,
+          "quarter_gmv": 2016.0,
+          "last_q_gmv": 2214.1
+        },
+        {
+          "id": "stonejewel",
+          "name": "东莞市盛涛贸易有限公司",
+          "month_gmv": 755.0,
+          "quarter_gmv": 5213.0,
+          "last_q_gmv": 5604.0
+        },
+        {
+          "id": "bestpeople",
+          "name": "东莞市柏杰晟环保科技有限公司",
+          "month_gmv": 599.0,
+          "quarter_gmv": 9548.35,
+          "last_q_gmv": 39662.61
+        },
+        {
+          "id": "jasminedisplay",
+          "name": "东莞加士明展示用品有限公司",
+          "month_gmv": 430.0,
+          "quarter_gmv": 38374.02,
+          "last_q_gmv": 22591.85
+        },
+        {
+          "id": "dgjifeng88",
+          "name": "东莞市季风服饰有限公司",
+          "month_gmv": 394.0,
+          "quarter_gmv": 3031.2,
+          "last_q_gmv": 17922.57
+        },
+        {
+          "id": "mypackingcn",
+          "name": "东莞市盟跃包装制品有限公司",
+          "month_gmv": 378.0,
+          "quarter_gmv": 3858.0,
+          "last_q_gmv": 80.0
+        },
+        {
+          "id": "dglincai",
+          "name": "东莞琳彩金属饰品有限公司",
+          "month_gmv": 334.0,
+          "quarter_gmv": 4686.0,
+          "last_q_gmv": 6061.87
+        },
+        {
+          "id": "aimihealth",
+          "name": "艾米健康科技（广东）有限公司",
+          "month_gmv": 325.0,
+          "quarter_gmv": 18569.05,
+          "last_q_gmv": 30036.09
+        },
+        {
+          "id": "requan",
+          "name": "东莞市热拳服饰有限公司",
+          "month_gmv": 270.0,
+          "quarter_gmv": 1908.91,
+          "last_q_gmv": 13510.14
+        },
+        {
+          "id": "dgshangan",
+          "name": "东莞市上岸服饰有限公司",
+          "month_gmv": 265.0,
+          "quarter_gmv": 1472.0,
+          "last_q_gmv": 245.0
+        },
+        {
+          "id": "runnertextile",
+          "name": "东莞市润奈纺织品有限公司",
+          "month_gmv": 230.0,
+          "quarter_gmv": 14075.21,
+          "last_q_gmv": 17605.2
+        },
+        {
+          "id": "xinmengxing",
+          "name": "广东新盟兴科技有限公司",
+          "month_gmv": 218.0,
+          "quarter_gmv": 2034.24,
+          "last_q_gmv": 1183.33
+        },
+        {
+          "id": "qsfsyxgs",
+          "name": "东莞市权氏服饰有限公司",
+          "month_gmv": 200.0,
+          "quarter_gmv": 1533.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "ensoul666",
+          "name": "东莞市茵索服饰有限公司",
+          "month_gmv": 187.0,
+          "quarter_gmv": 2271.64,
+          "last_q_gmv": 11229.14
+        },
+        {
+          "id": "dgshysp",
+          "name": "东莞市鸿阳饰品有限公司",
+          "month_gmv": 114.0,
+          "quarter_gmv": 4516.8,
+          "last_q_gmv": 7736.14
+        },
+        {
+          "id": "janolyn",
+          "name": "东莞市嘉诺林国际商贸有限公司",
+          "month_gmv": 111.0,
+          "quarter_gmv": 293.12,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "ddxlmy",
+          "name": "东莞市鑫罗贸易有限公司",
+          "month_gmv": 105.0,
+          "quarter_gmv": 545.5,
+          "last_q_gmv": 144.5
+        },
+        {
+          "id": "dgzhanya",
+          "name": "展亚国际食品（东莞）有限公司",
+          "month_gmv": 52.0,
+          "quarter_gmv": 2217.0,
+          "last_q_gmv": 5364.1
+        },
+        {
+          "id": "denentech",
+          "name": "东莞市德能智恩电子科技有限公司",
+          "month_gmv": 50.0,
+          "quarter_gmv": 624.45,
+          "last_q_gmv": 3590.5
+        },
+        {
+          "id": "zhujiaqi150220",
+          "name": "东莞木木风贸易有限公司",
+          "month_gmv": 34.0,
+          "quarter_gmv": 216.17,
+          "last_q_gmv": 1045.94
+        },
+        {
+          "id": "cvhzc",
+          "name": "东莞市长华轴承有限公司",
+          "month_gmv": 11.0,
+          "quarter_gmv": 5395.49,
+          "last_q_gmv": 14716.01
+        },
+        {
+          "id": "miousp",
+          "name": "东莞市米欧饰品有限公司",
+          "month_gmv": 6.0,
+          "quarter_gmv": 61.09,
+          "last_q_gmv": 433.57
+        },
+        {
+          "id": "baolai88",
+          "name": "东莞市宝铼金属科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 771.0
+        },
+        {
+          "id": "bluetigerhk",
+          "name": "东莞市蓝虎电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 297.0,
+          "last_q_gmv": 17623.83
+        },
+        {
+          "id": "cn1576126012ruej",
+          "name": "东莞市虎门紫荆解忧服装店（个体工商户）",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 30.23
+        },
+        {
+          "id": "dgchiao",
+          "name": "东莞市驰澳服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 135.0,
+          "last_q_gmv": 436.0
+        },
+        {
+          "id": "dghuayin",
+          "name": "东莞市华盈机电有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgjifu",
+          "name": "东莞市腾嘉塑胶五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgshuyao",
+          "name": "东莞舒瑶服装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 104.83,
+          "last_q_gmv": 1408.34
+        },
+        {
+          "id": "dgyinbo",
+          "name": "东莞市银帛服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "gdrhine",
+          "name": "莱卡测量科技（东莞）有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "globaltrendapparel",
+          "name": "东莞市寰潮服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 240.0,
+          "last_q_gmv": 1213.04
+        },
+        {
+          "id": "jxjewelry888",
+          "name": "东莞市匠芯饰品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 348.0,
+          "last_q_gmv": 5016.92
+        },
+        {
+          "id": "liannan",
+          "name": "东莞市联南纸品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 1950.0
+        },
+        {
+          "id": "ounuoli",
+          "name": "东莞市欧诺里服装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 4331.76,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "rocgarment",
+          "name": "东莞市瑞盛服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 105.0,
+          "last_q_gmv": 40.0
+        },
+        {
+          "id": "shunyingclothing",
+          "name": "东莞市顺盈服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 475.0
+        },
+        {
+          "id": "tongzhuangjs",
+          "name": "东莞市铜庄金属材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "yinde888",
+          "name": "东莞市胤德服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 35.0
+        },
+        {
+          "id": "zhingbang",
+          "name": "东莞市智邦新材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "ztbpacking",
+          "name": "东莞市周泰宝包装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "beautysoap",
+          "name": "东莞市美香日用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 7560.0,
+          "last_q_gmv": 8867.25
+        },
+        {
+          "id": "cnnaturaltouch",
+          "name": "东莞市南塘秋服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 10102.1,
+          "last_q_gmv": 14984.29
+        },
+        {
+          "id": "cnzhik928",
+          "name": "东莞志科锂电科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgcunshang",
+          "name": "东莞市村上精密科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1324.0,
+          "last_q_gmv": 7235.84
+        },
+        {
+          "id": "dgfymc",
+          "name": "东莞市富盈铭创科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1623.5,
+          "last_q_gmv": 34228.89
+        },
+        {
+          "id": "dghwwj",
+          "name": "东莞市桦威五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dglanrui",
+          "name": "东莞市岚锐自动化设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dglgdcnc",
+          "name": "东莞市刘公岛数控设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 3017.0
+        },
+        {
+          "id": "gdbailong",
+          "name": "广东佰隆实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 585.0,
+          "last_q_gmv": 7892.0
+        },
+        {
+          "id": "gdforevertextile",
+          "name": "广东永恒纺织科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 266.61,
+          "last_q_gmv": 30.5
+        },
+        {
+          "id": "jiexiangdg",
+          "name": "东莞市杰翔服装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "maybear",
+          "name": "东莞市美灿熊贸易有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 710.0,
+          "last_q_gmv": 7054.24
+        },
+        {
+          "id": "parkopv",
+          "name": "东莞市派科光电科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 6273.0,
+          "last_q_gmv": 6770.7
+        },
+        {
+          "id": "sh916816",
+          "name": "东莞市晟豪服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "summerstars",
+          "name": "东莞市夏之星服装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1813.6,
+          "last_q_gmv": 4620.09
+        },
+        {
+          "id": "xydiecasting",
+          "name": "东莞祥宇金属制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 14217.01
+        },
+        {
+          "id": "zhongxinwang2025",
+          "name": "东莞市众鑫旺箱包有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 8310.27
+        }
+      ]
+    },
+    "赵舒越": {
+      "month_target": 1256248,
+      "total_month": 469418.0,
+      "total_quarter": 2358872.39,
+      "month_pct": 37.4,
+      "month_gap": -786830.0,
+      "client_count": 61,
+      "active_count": 40,
+      "clients": [
+        {
+          "id": "cngoldjyx2",
+          "name": "东莞市晋源祥塑胶五金电子有限公司",
+          "month_gmv": 176560.0,
+          "quarter_gmv": 352613.9,
+          "last_q_gmv": 603188.5
+        },
+        {
+          "id": "djxflin",
+          "name": "东莞市兴风林有机玻璃制品有限公司",
+          "month_gmv": 93193.0,
+          "quarter_gmv": 590396.36,
+          "last_q_gmv": 802619.03
+        },
+        {
+          "id": "jscarbonfiber",
+          "name": "东莞市盛东碳纤维科技有限公司",
+          "month_gmv": 41776.0,
+          "quarter_gmv": 151690.92,
+          "last_q_gmv": 319444.09
+        },
+        {
+          "id": "kaimengelectronics",
+          "name": "东莞市凯盟电子科技有限公司",
+          "month_gmv": 19601.0,
+          "quarter_gmv": 25646.97,
+          "last_q_gmv": 30696.01
+        },
+        {
+          "id": "sinyagloble",
+          "name": "东莞市小雅实业有限公司",
+          "month_gmv": 15680.0,
+          "quarter_gmv": 50407.34,
+          "last_q_gmv": 44918.91
+        },
+        {
+          "id": "xinhaounderwear",
+          "name": "东莞市欣皓服饰有限公司",
+          "month_gmv": 13295.0,
+          "quarter_gmv": 15153.7,
+          "last_q_gmv": 117635.0
+        },
+        {
+          "id": "lvhepackaging",
+          "name": "安徽绿禾包装有限公司",
+          "month_gmv": 11835.0,
+          "quarter_gmv": 16172.0,
+          "last_q_gmv": 4294.0
+        },
+        {
+          "id": "wonledlight",
+          "name": "东莞市明品光电照明有限公司",
+          "month_gmv": 11481.0,
+          "quarter_gmv": 42582.51,
+          "last_q_gmv": 30470.65
+        },
+        {
+          "id": "memo666",
+          "name": "东莞市米墨科技有限公司",
+          "month_gmv": 10600.0,
+          "quarter_gmv": 36370.27,
+          "last_q_gmv": 64938.72
+        },
+        {
+          "id": "fangjia888",
+          "name": "东莞市方嘉科技有限公司",
+          "month_gmv": 8163.0,
+          "quarter_gmv": 25189.0,
+          "last_q_gmv": 60066.0
+        },
+        {
+          "id": "yongnkids",
+          "name": "东莞市永奇玩具科技有限公司",
+          "month_gmv": 8001.0,
+          "quarter_gmv": 71884.89,
+          "last_q_gmv": 211677.99
+        },
+        {
+          "id": "dggoldjyx",
+          "name": "东莞市晋源祥塑胶五金电子有限公司",
+          "month_gmv": 7067.0,
+          "quarter_gmv": 14888.21,
+          "last_q_gmv": 11636.21
+        },
+        {
+          "id": "jkbms0329",
+          "name": "东莞市极空科技有限公司",
+          "month_gmv": 6979.0,
+          "quarter_gmv": 29448.35,
+          "last_q_gmv": 107435.94
+        },
+        {
+          "id": "doonjiey99",
+          "name": "广东省东技科技有限公司",
+          "month_gmv": 6942.0,
+          "quarter_gmv": 14559.05,
+          "last_q_gmv": 41272.37
+        },
+        {
+          "id": "dgbaiteng",
+          "name": "东莞市佰腾塑胶五金制品有限公司",
+          "month_gmv": 6251.0,
+          "quarter_gmv": 118402.31,
+          "last_q_gmv": 161239.32
+        },
+        {
+          "id": "pmbestways",
+          "name": "东莞市佰腾塑胶五金制品有限公司",
+          "month_gmv": 4862.0,
+          "quarter_gmv": 137638.89,
+          "last_q_gmv": 788765.95
+        },
+        {
+          "id": "didamachine",
+          "name": "东莞强烈机械工程有限公司",
+          "month_gmv": 4216.0,
+          "quarter_gmv": 41363.71,
+          "last_q_gmv": 44295.95
+        },
+        {
+          "id": "sinopospaper",
+          "name": "惠州市思诺纸制品有限公司",
+          "month_gmv": 3251.0,
+          "quarter_gmv": 14825.3,
+          "last_q_gmv": 48430.29
+        },
+        {
+          "id": "cnqianlima",
+          "name": "广东派迪茵体育股份有限公司",
+          "month_gmv": 2938.0,
+          "quarter_gmv": 20434.4,
+          "last_q_gmv": 46539.1
+        },
+        {
+          "id": "huibaotoy",
+          "name": "东莞惠宝木制工艺制品有限公司",
+          "month_gmv": 2467.0,
+          "quarter_gmv": 3957.2,
+          "last_q_gmv": 18419.38
+        },
+        {
+          "id": "sm2026",
+          "name": "东莞市松铭电子科技有限公司",
+          "month_gmv": 2165.0,
+          "quarter_gmv": 17419.88,
+          "last_q_gmv": 55436.26
+        },
+        {
+          "id": "dgjianting",
+          "name": "东莞坚挺机械设备有限公司",
+          "month_gmv": 2085.0,
+          "quarter_gmv": 33955.8,
+          "last_q_gmv": 28666.9
+        },
+        {
+          "id": "oemcnc88",
+          "name": "东莞市君成翔五金制造有限公司",
+          "month_gmv": 1835.0,
+          "quarter_gmv": 50827.77,
+          "last_q_gmv": 104751.89
+        },
+        {
+          "id": "lshine",
+          "name": "深圳市龙煋光电科技有限公司",
+          "month_gmv": 1143.0,
+          "quarter_gmv": 1143.0,
+          "last_q_gmv": 5544.0
+        },
+        {
+          "id": "yuanfujueyuan",
+          "name": "东莞市源福绝缘材料有限公司",
+          "month_gmv": 1052.0,
+          "quarter_gmv": 3083.64,
+          "last_q_gmv": 2356.46
+        },
+        {
+          "id": "xinliu37",
+          "name": "鑫流商贸(东莞)有限责任公司",
+          "month_gmv": 1046.0,
+          "quarter_gmv": 2052.8,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "zxjmwj",
+          "name": "东莞市志喜精密五金有限公司",
+          "month_gmv": 915.0,
+          "quarter_gmv": 2330.0,
+          "last_q_gmv": 3070.9
+        },
+        {
+          "id": "boruizxm",
+          "name": "东莞市博睿塑料科技有限公司",
+          "month_gmv": 781.0,
+          "quarter_gmv": 980.89,
+          "last_q_gmv": 978.05
+        },
+        {
+          "id": "dgbkjm",
+          "name": "东莞市伯科精密成型技术有限公司",
+          "month_gmv": 633.0,
+          "quarter_gmv": 6449.45,
+          "last_q_gmv": 27175.57
+        },
+        {
+          "id": "dgkaiente",
+          "name": "东莞市凯恩特实业有限公司",
+          "month_gmv": 575.0,
+          "quarter_gmv": 629.0,
+          "last_q_gmv": 1526.4
+        },
+        {
+          "id": "easypower168",
+          "name": "广东晶格新能源科技有限公司",
+          "month_gmv": 323.0,
+          "quarter_gmv": 1138.57,
+          "last_q_gmv": 11732.32
+        },
+        {
+          "id": "minnocare",
+          "name": "东莞敏诺科技有限公司",
+          "month_gmv": 319.0,
+          "quarter_gmv": 208886.32,
+          "last_q_gmv": 294834.7
+        },
+        {
+          "id": "cnhappysouvenirs",
+          "name": "东莞市哈比工艺礼品有限公司",
+          "month_gmv": 300.0,
+          "quarter_gmv": 112756.12,
+          "last_q_gmv": 135178.14
+        },
+        {
+          "id": "lyzn668",
+          "name": "东莞市联友智能科技有限公司",
+          "month_gmv": 298.0,
+          "quarter_gmv": 773.76,
+          "last_q_gmv": 22450.64
+        },
+        {
+          "id": "cndgjaiyi",
+          "name": "东莞市杰一电器有限公司",
+          "month_gmv": 277.0,
+          "quarter_gmv": 944.37,
+          "last_q_gmv": 3807.35
+        },
+        {
+          "id": "dgkndz",
+          "name": "东莞市柯能电子科技有限公司",
+          "month_gmv": 236.0,
+          "quarter_gmv": 236.0,
+          "last_q_gmv": 15122.05
+        },
+        {
+          "id": "funplaygroup",
+          "name": "东莞市乐玩益智玩具有限公司",
+          "month_gmv": 143.0,
+          "quarter_gmv": 6752.14,
+          "last_q_gmv": 39416.52
+        },
+        {
+          "id": "dgbead",
+          "name": "东莞市必德电子科技有限公司",
+          "month_gmv": 80.0,
+          "quarter_gmv": 80.0,
+          "last_q_gmv": 441.6
+        },
+        {
+          "id": "cngoldjyx",
+          "name": "东莞市晋源祥塑胶五金电子有限公司",
+          "month_gmv": 39.0,
+          "quarter_gmv": 102192.44,
+          "last_q_gmv": 393814.05
+        },
+        {
+          "id": "dzzkkj",
+          "name": "东莞市德洲智控科技有限公司",
+          "month_gmv": 15.0,
+          "quarter_gmv": 963.33,
+          "last_q_gmv": 1065.66
+        },
+        {
+          "id": "babycarecn",
+          "name": "东莞市贝贝凯婴童用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 28.0
+        },
+        {
+          "id": "cn1557946336bkue",
+          "name": "上海西骞自动化科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 414.0
+        },
+        {
+          "id": "dgjunli",
+          "name": "东莞市君立电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2658.5,
+          "last_q_gmv": 13212.0
+        },
+        {
+          "id": "dgkaspar",
+          "name": "卡斯帕尔智能装备（东莞）有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 3650.0
+        },
+        {
+          "id": "dgshuasensujiaowujin",
+          "name": "东莞市华森塑胶五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 145.11,
+          "last_q_gmv": 10180.25
+        },
+        {
+          "id": "dgyite",
+          "name": "东莞市逸特电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 590.0,
+          "last_q_gmv": 2838.21
+        },
+        {
+          "id": "emheatercm",
+          "name": "东莞易盟一特电气设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 6732.06
+        },
+        {
+          "id": "hoohahk",
+          "name": "东莞市虎哈电工机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jiaruilong",
+          "name": "深圳市嘉瑞隆科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 1588.91
+        },
+        {
+          "id": "nious",
+          "name": "东莞市尼欧家居装饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 13823.1,
+          "last_q_gmv": 10251.83
+        },
+        {
+          "id": "rakj",
+          "name": "东莞市荣安科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "szdanhui",
+          "name": "广东丹晖供应链管理有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "xintongkeji",
+          "name": "东莞市新通五金塑胶科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "83632409",
+          "name": "东莞市宏昇印刷有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2248.0,
+          "last_q_gmv": 32148.78
+        },
+        {
+          "id": "dgxinyimei",
+          "name": "东莞市欣益美户外运动用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 20.9,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "feetoolighter",
+          "name": "广东飞拓自动化技术有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "haihengwsh1688",
+          "name": "东莞市海恒包装材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 12100.0,
+          "last_q_gmv": 5800.0
+        },
+        {
+          "id": "jiaguandg",
+          "name": "东莞市佳冠运动器材有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 26.22,
+          "last_q_gmv": 190.38
+        },
+        {
+          "id": "ly180602",
+          "name": "东莞市锂友科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 40.0,
+          "last_q_gmv": 193.0
+        },
+        {
+          "id": "veition",
+          "name": "东莞市唯想实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "zegene",
+          "name": "深圳市喆锦科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        }
+      ]
+    },
+    "李朝燕": {
+      "month_target": 1907773,
+      "total_month": 163211.0,
+      "total_quarter": 2101010.69,
+      "month_pct": 8.6,
+      "month_gap": -1744562.0,
+      "client_count": 102,
+      "active_count": 52,
+      "clients": [
+        {
+          "id": "vscoo",
+          "name": "东莞市纱美特服饰有限公司",
+          "month_gmv": 14444.0,
+          "quarter_gmv": 272696.95,
+          "last_q_gmv": 165491.6
+        },
+        {
+          "id": "bazestation",
+          "name": "东莞市基本站服饰有限公司",
+          "month_gmv": 13258.0,
+          "quarter_gmv": 48285.1,
+          "last_q_gmv": 92885.0
+        },
+        {
+          "id": "kinsunpacking",
+          "name": "金顺新材料科技(广东)有限公司",
+          "month_gmv": 12790.0,
+          "quarter_gmv": 543845.32,
+          "last_q_gmv": 1629565.08
+        },
+        {
+          "id": "survivalbracelet",
+          "name": "东莞市乐道户外用品有限公司",
+          "month_gmv": 10563.0,
+          "quarter_gmv": 29627.87,
+          "last_q_gmv": 17307.4
+        },
+        {
+          "id": "ridepoint",
+          "name": "东莞市骑点体育用品有限公司",
+          "month_gmv": 9790.0,
+          "quarter_gmv": 83944.78,
+          "last_q_gmv": 117773.52
+        },
+        {
+          "id": "cxcftex",
+          "name": "东莞市成轩纺织品科技有限公司",
+          "month_gmv": 8556.0,
+          "quarter_gmv": 12983.99,
+          "last_q_gmv": 8111.57
+        },
+        {
+          "id": "yilifang",
+          "name": "东莞市伊丽方服饰有限公司",
+          "month_gmv": 8185.0,
+          "quarter_gmv": 48191.0,
+          "last_q_gmv": 163429.63
+        },
+        {
+          "id": "ycm122888",
+          "name": "东莞市语蝉鸣电子科技有限公司",
+          "month_gmv": 7561.0,
+          "quarter_gmv": 21364.69,
+          "last_q_gmv": 89426.32
+        },
+        {
+          "id": "muyunjewelry",
+          "name": "东莞市慕云饰品有限公司",
+          "month_gmv": 6383.0,
+          "quarter_gmv": 35146.46,
+          "last_q_gmv": 181767.0
+        },
+        {
+          "id": "chengfenjewelry",
+          "name": "东莞市承芬饰品有限公司",
+          "month_gmv": 5363.0,
+          "quarter_gmv": 28550.3,
+          "last_q_gmv": 34009.19
+        },
+        {
+          "id": "marshall800",
+          "name": "辉耀家居用品(东莞)有限公司",
+          "month_gmv": 5324.0,
+          "quarter_gmv": 17239.27,
+          "last_q_gmv": 15086.32
+        },
+        {
+          "id": "siyueoutdoorsports",
+          "name": "东莞斯跃户外运动用品有限公司",
+          "month_gmv": 4374.0,
+          "quarter_gmv": 21048.77,
+          "last_q_gmv": 41512.0
+        },
+        {
+          "id": "odian2017",
+          "name": "东莞市欧典饰品有限公司",
+          "month_gmv": 3961.0,
+          "quarter_gmv": 12276.07,
+          "last_q_gmv": 50141.22
+        },
+        {
+          "id": "globalindustrial6",
+          "name": "东莞每天科技有限公司",
+          "month_gmv": 3830.0,
+          "quarter_gmv": 14781.56,
+          "last_q_gmv": 36164.74
+        },
+        {
+          "id": "yzxpatch",
+          "name": "东莞市衣之星服饰有限公司",
+          "month_gmv": 3793.0,
+          "quarter_gmv": 28546.5,
+          "last_q_gmv": 66035.32
+        },
+        {
+          "id": "cnzhongchi",
+          "name": "东莞市中驰五金有限公司",
+          "month_gmv": 3708.0,
+          "quarter_gmv": 17538.87,
+          "last_q_gmv": 19824.28
+        },
+        {
+          "id": "keyshome",
+          "name": "东莞市蒙德度亚科技有限公司",
+          "month_gmv": 3454.0,
+          "quarter_gmv": 23081.4,
+          "last_q_gmv": 40314.6
+        },
+        {
+          "id": "masterdiesel",
+          "name": "广东锋业汽车科技有限公司",
+          "month_gmv": 3375.0,
+          "quarter_gmv": 52653.81,
+          "last_q_gmv": 62050.0
+        },
+        {
+          "id": "dgchuangzhi",
+          "name": "东莞市创智机械有限公司",
+          "month_gmv": 3056.0,
+          "quarter_gmv": 17224.37,
+          "last_q_gmv": 77347.6
+        },
+        {
+          "id": "dgjingtai88",
+          "name": "东莞景钛科技有限公司",
+          "month_gmv": 3020.0,
+          "quarter_gmv": 20250.84,
+          "last_q_gmv": 39585.39
+        },
+        {
+          "id": "dghourongwujin",
+          "name": "东莞市万江厚荣五金制造厂（个体工商户）",
+          "month_gmv": 2935.0,
+          "quarter_gmv": 3115.0,
+          "last_q_gmv": 2504.0
+        },
+        {
+          "id": "dgpinchao",
+          "name": "东莞市品超电子有限公司",
+          "month_gmv": 2571.0,
+          "quarter_gmv": 34148.68,
+          "last_q_gmv": 91702.71
+        },
+        {
+          "id": "dgxiangqin",
+          "name": "东莞市祥勤按摩器材科技有限公司",
+          "month_gmv": 2551.0,
+          "quarter_gmv": 9291.4,
+          "last_q_gmv": 16136.68
+        },
+        {
+          "id": "midapacking",
+          "name": "东莞市美达包装制品有限公司",
+          "month_gmv": 2143.0,
+          "quarter_gmv": 10159.88,
+          "last_q_gmv": 11298.85
+        },
+        {
+          "id": "youyang2008",
+          "name": "东莞市优杨电子科技有限公司",
+          "month_gmv": 1801.0,
+          "quarter_gmv": 6472.09,
+          "last_q_gmv": 7755.24
+        },
+        {
+          "id": "greenlandfs",
+          "name": "东莞格林兰服饰有限公司",
+          "month_gmv": 1745.0,
+          "quarter_gmv": 4174.5,
+          "last_q_gmv": 9198.0
+        },
+        {
+          "id": "sondatech",
+          "name": "深圳市桑安电子科技有限责任公司",
+          "month_gmv": 1550.0,
+          "quarter_gmv": 1550.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cndcplug",
+          "name": "东莞市大江电子有限公司",
+          "month_gmv": 1466.0,
+          "quarter_gmv": 5786.06,
+          "last_q_gmv": 55350.77
+        },
+        {
+          "id": "heyifangzhi",
+          "name": "东莞和亿纺织有限公司",
+          "month_gmv": 1401.0,
+          "quarter_gmv": 2025.92,
+          "last_q_gmv": 4975.65
+        },
+        {
+          "id": "kinsprint1128",
+          "name": "东莞景印包装制品有限公司",
+          "month_gmv": 1220.0,
+          "quarter_gmv": 28884.8,
+          "last_q_gmv": 45832.4
+        },
+        {
+          "id": "zuohangsilicone",
+          "name": "东莞市佐航电子科技有限公司",
+          "month_gmv": 1108.0,
+          "quarter_gmv": 2220.58,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "sfreflective",
+          "name": "东莞超尚反光材料有限公司",
+          "month_gmv": 917.0,
+          "quarter_gmv": 6953.44,
+          "last_q_gmv": 36736.63
+        },
+        {
+          "id": "dida2023",
+          "name": "东莞市滴达服饰有限公司",
+          "month_gmv": 795.0,
+          "quarter_gmv": 18898.05,
+          "last_q_gmv": 24947.4
+        },
+        {
+          "id": "wetechlamp",
+          "name": "东莞市天展照明有限公司",
+          "month_gmv": 692.0,
+          "quarter_gmv": 11884.21,
+          "last_q_gmv": 13828.5
+        },
+        {
+          "id": "lanwinelec",
+          "name": "东莞市览胜电子科技有限公司",
+          "month_gmv": 654.0,
+          "quarter_gmv": 2090.22,
+          "last_q_gmv": 8819.84
+        },
+        {
+          "id": "yxfjmwj",
+          "name": "东莞市裕鑫丰精密五金有限公司",
+          "month_gmv": 621.0,
+          "quarter_gmv": 3106.94,
+          "last_q_gmv": 1213.99
+        },
+        {
+          "id": "zssilicone",
+          "name": "东莞市展胜橡塑科技有限公司",
+          "month_gmv": 620.0,
+          "quarter_gmv": 5614.6,
+          "last_q_gmv": 1410.58
+        },
+        {
+          "id": "dgsdw",
+          "name": "东莞市衫的王商贸有限公司",
+          "month_gmv": 582.0,
+          "quarter_gmv": 1067.0,
+          "last_q_gmv": 1308.0
+        },
+        {
+          "id": "zycoil",
+          "name": "东莞市雷宝电子有限公司",
+          "month_gmv": 497.0,
+          "quarter_gmv": 513.99,
+          "last_q_gmv": 4078.5
+        },
+        {
+          "id": "dgsonic",
+          "name": "东莞市燊艺服饰有限公司",
+          "month_gmv": 454.0,
+          "quarter_gmv": 1024.5,
+          "last_q_gmv": 3709.0
+        },
+        {
+          "id": "lzydg",
+          "name": "东莞市路真宇五金制品有限公司",
+          "month_gmv": 391.0,
+          "quarter_gmv": 436.2,
+          "last_q_gmv": 8056.0
+        },
+        {
+          "id": "luhanscape",
+          "name": "东莞市麓瀚科技有限公司",
+          "month_gmv": 330.0,
+          "quarter_gmv": 165403.2,
+          "last_q_gmv": 22007.66
+        },
+        {
+          "id": "quanxing2",
+          "name": "东莞市泉兴纺织品有限公司",
+          "month_gmv": 265.0,
+          "quarter_gmv": 895.0,
+          "last_q_gmv": 4751.9
+        },
+        {
+          "id": "dgjinlisi",
+          "name": "东莞市劲力斯润滑科技有限公司",
+          "month_gmv": 213.0,
+          "quarter_gmv": 856.76,
+          "last_q_gmv": 7263.91
+        },
+        {
+          "id": "denimfabric",
+          "name": "佛山市经纬寰宇纺织有限公司",
+          "month_gmv": 179.0,
+          "quarter_gmv": 4143.41,
+          "last_q_gmv": 1863.98
+        },
+        {
+          "id": "idial",
+          "name": "东莞市艾黛儿服饰有限公司",
+          "month_gmv": 177.0,
+          "quarter_gmv": 3579.02,
+          "last_q_gmv": 8052.0
+        },
+        {
+          "id": "dgfuheng",
+          "name": "东莞市富恒橡塑制品有限公司",
+          "month_gmv": 169.0,
+          "quarter_gmv": 729.93,
+          "last_q_gmv": 1803.43
+        },
+        {
+          "id": "kefinefabric",
+          "name": "东莞市可纺贸易有限公司",
+          "month_gmv": 108.0,
+          "quarter_gmv": 411.97,
+          "last_q_gmv": 345.56
+        },
+        {
+          "id": "bomanjewelry",
+          "name": "东莞市铂曼饰品有限公司",
+          "month_gmv": 93.0,
+          "quarter_gmv": 1243.85,
+          "last_q_gmv": 8498.61
+        },
+        {
+          "id": "haidike",
+          "name": "东莞市海帝克自动化设备有限公司",
+          "month_gmv": 85.0,
+          "quarter_gmv": 85.0,
+          "last_q_gmv": 11738.5
+        },
+        {
+          "id": "greencraft88",
+          "name": "东莞市格瑞工艺品有限公司",
+          "month_gmv": 65.0,
+          "quarter_gmv": 7831.92,
+          "last_q_gmv": 17655.89
+        },
+        {
+          "id": "dgsbst",
+          "name": "东莞市倍思特科技有限公司",
+          "month_gmv": 25.0,
+          "quarter_gmv": 1939.0,
+          "last_q_gmv": 11568.42
+        },
+        {
+          "id": "cn1519157165erap",
+          "name": "东莞市泰恩斯线缆有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 709.52,
+          "last_q_gmv": 4984.46
+        },
+        {
+          "id": "cncatp",
+          "name": "东莞市长安拓浦五金制品经营部(个体工商户)",
+          "month_gmv": 0,
+          "quarter_gmv": 119.24,
+          "last_q_gmv": 63.08
+        },
+        {
+          "id": "cnellarose",
+          "name": "东莞市久正工艺礼品实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 13430.6,
+          "last_q_gmv": 12651.77
+        },
+        {
+          "id": "cnzhctpaper",
+          "name": "广州铸煌商贸有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 586.1
+        },
+        {
+          "id": "creationcraft",
+          "name": "东莞翱翔工艺品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 40.0
+        },
+        {
+          "id": "creativepowerltd",
+          "name": "东莞市科瑞迪家居用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 9394.29,
+          "last_q_gmv": 10966.06
+        },
+        {
+          "id": "dgchuangzhan",
+          "name": "东莞市创展机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgguangling",
+          "name": "东莞市广领光电科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 308.0,
+          "last_q_gmv": 5151.25
+        },
+        {
+          "id": "dglianqin",
+          "name": "东莞市联勤实业发展有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 35.68,
+          "last_q_gmv": 480.66
+        },
+        {
+          "id": "dgmiaoteng",
+          "name": "东莞市淼腾服装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1264.0,
+          "last_q_gmv": 11108.4
+        },
+        {
+          "id": "dgshengxiang",
+          "name": "东莞市胜祥五金商贸有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 5718.0,
+          "last_q_gmv": 1490.0
+        },
+        {
+          "id": "dgybdzkj",
+          "name": "东莞市永博电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "globalindustrialcn",
+          "name": "东莞市孟达五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "guangdonganwang",
+          "name": "广东安旺自动化设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 212.0
+        },
+        {
+          "id": "hanmingfashion",
+          "name": "东莞市瀚铭服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 52.5,
+          "last_q_gmv": 552.0
+        },
+        {
+          "id": "maidaexport",
+          "name": "东莞麦达电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 894.3,
+          "last_q_gmv": 17910.36
+        },
+        {
+          "id": "nbcldg",
+          "name": "东莞市纳百川电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 297.6,
+          "last_q_gmv": 1156.21
+        },
+        {
+          "id": "purebrush",
+          "name": "东莞市普华饰品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "sanzhongindustry",
+          "name": "东莞三众电器科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 40.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "vitalupa",
+          "name": "东莞市跃己服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 590.0
+        },
+        {
+          "id": "xiaochenfashion",
+          "name": "东莞市逸菲服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 3789.01
+        },
+        {
+          "id": "xionghaoprinting",
+          "name": "东莞市雄浩包装制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "zhceiling",
+          "name": "广州知海实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 178.73,
+          "last_q_gmv": 7661.54
+        },
+        {
+          "id": "ankerga",
+          "name": "东莞市安之康服装辅料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cn116369215",
+          "name": "东莞市博超电业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 2095.0
+        },
+        {
+          "id": "cnsjjgifts",
+          "name": "东莞水金金礼品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 6791.0,
+          "last_q_gmv": 29063.13
+        },
+        {
+          "id": "deexan",
+          "name": "广东帝轩铝业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 99.0,
+          "last_q_gmv": 80.0
+        },
+        {
+          "id": "dgguangzhikeji",
+          "name": "东莞市光至科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 8648.0,
+          "last_q_gmv": 10229.88
+        },
+        {
+          "id": "dgjinshun",
+          "name": "金顺新材料科技（广东）有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 305320.0,
+          "last_q_gmv": 309205.0
+        },
+        {
+          "id": "dgkxr6988",
+          "name": "东莞市凯鑫瑞科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2650.16,
+          "last_q_gmv": 144198.7
+        },
+        {
+          "id": "dglhc5288",
+          "name": "东莞市绿和创电子材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 98.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgsupai",
+          "name": "东莞市速派研磨科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 339.05
+        },
+        {
+          "id": "dgycl",
+          "name": "东莞市亿昌隆服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 307.95,
+          "last_q_gmv": 2471.3
+        },
+        {
+          "id": "dgyuanyou",
+          "name": "东莞市缘由服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 1985.3
+        },
+        {
+          "id": "dhelitejewelry",
+          "name": "东莞市嘉丽特饰品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 75.31,
+          "last_q_gmv": 7383.56
+        },
+        {
+          "id": "dongguananfeng",
+          "name": "东莞市安丰户外用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 19663.0
+        },
+        {
+          "id": "famidoc",
+          "name": "广东医脉科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 117.0,
+          "last_q_gmv": 627.63
+        },
+        {
+          "id": "gdjuncheng",
+          "name": "东莞市骏诚精密五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1670.75,
+          "last_q_gmv": 1350.45
+        },
+        {
+          "id": "guanding168",
+          "name": "东莞市寮步冠鼎家具工艺制品厂（个体工商户）",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 1294.48
+        },
+        {
+          "id": "hkequipment",
+          "name": "广东宏凯光缆设备科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 800.0,
+          "last_q_gmv": 358890.25
+        },
+        {
+          "id": "honghua88888",
+          "name": "东莞市鸿华环保设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 7109.29,
+          "last_q_gmv": 16618.47
+        },
+        {
+          "id": "jiawanze",
+          "name": "东莞市嘉万泽服装有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 8570.0,
+          "last_q_gmv": 52781.01
+        },
+        {
+          "id": "kzjm",
+          "name": "东莞市凯洲精密智造有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "suhone",
+          "name": "东莞市首弘宇硅胶制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 12709.36,
+          "last_q_gmv": 28357.65
+        },
+        {
+          "id": "suncentercn",
+          "name": "东莞赛森特流体控制设备有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 15539.0,
+          "last_q_gmv": 6121.18
+        },
+        {
+          "id": "thefashionking",
+          "name": "东莞市尚王服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 140.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "xinxuhong",
+          "name": "东莞市鑫旭宏实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2108.37,
+          "last_q_gmv": 45477.98
+        },
+        {
+          "id": "yaanfuhe",
+          "name": "东莞市亚安复合材料有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "yixiou",
+          "name": "东莞市艺西欧电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 4646.0
+        },
+        {
+          "id": "youkong8889",
+          "name": "东莞市虎门友控纺织品经营部",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        }
+      ]
+    },
+    "杨婷婷": {
+      "month_target": 2778394,
+      "total_month": 510943.0,
+      "total_quarter": 2994003.85,
+      "month_pct": 18.4,
+      "month_gap": -2267451.0,
+      "client_count": 54,
+      "active_count": 37,
+      "clients": [
+        {
+          "id": "elice0216",
+          "name": "广东吉盛科实业有限公司",
+          "month_gmv": 163636.0,
+          "quarter_gmv": 556692.59,
+          "last_q_gmv": 346213.03
+        },
+        {
+          "id": "dgshengxi",
+          "name": "东莞市晟熙服饰有限公司",
+          "month_gmv": 43692.0,
+          "quarter_gmv": 264996.87,
+          "last_q_gmv": 428523.18
+        },
+        {
+          "id": "zdcell",
+          "name": "东莞市中达电子科技有限公司",
+          "month_gmv": 40985.0,
+          "quarter_gmv": 166720.63,
+          "last_q_gmv": 454241.07
+        },
+        {
+          "id": "gdjsk",
+          "name": "广东吉盛科实业有限公司",
+          "month_gmv": 33565.0,
+          "quarter_gmv": 98916.48,
+          "last_q_gmv": 327311.79
+        },
+        {
+          "id": "rainbowwing",
+          "name": "东莞市原创风服饰有限公司",
+          "month_gmv": 29201.0,
+          "quarter_gmv": 176378.89,
+          "last_q_gmv": 333527.8
+        },
+        {
+          "id": "xavier2267",
+          "name": "东莞市鑫成诺金属制品有限公司",
+          "month_gmv": 21969.0,
+          "quarter_gmv": 87743.42,
+          "last_q_gmv": 172578.61
+        },
+        {
+          "id": "haixiangtape",
+          "name": "东莞市海翔胶粘制品有限公司",
+          "month_gmv": 19247.0,
+          "quarter_gmv": 170848.92,
+          "last_q_gmv": 303695.72
+        },
+        {
+          "id": "holygarment",
+          "name": "东莞汇黎服饰有限公司",
+          "month_gmv": 16834.0,
+          "quarter_gmv": 116520.42,
+          "last_q_gmv": 162047.32
+        },
+        {
+          "id": "dgmegagifts",
+          "name": "东莞市尚佳橡塑制品有限公司",
+          "month_gmv": 12794.0,
+          "quarter_gmv": 59853.51,
+          "last_q_gmv": 158085.07
+        },
+        {
+          "id": "dgsunli",
+          "name": "广东顺力智能物流装备股份有限公司",
+          "month_gmv": 11233.0,
+          "quarter_gmv": 53433.0,
+          "last_q_gmv": 108977.48
+        },
+        {
+          "id": "dgridong",
+          "name": "东莞市日东智能装备有限公司",
+          "month_gmv": 10486.0,
+          "quarter_gmv": 155866.0,
+          "last_q_gmv": 365962.0
+        },
+        {
+          "id": "dgguofengsp",
+          "name": "东莞市国丰制造有限公司",
+          "month_gmv": 10219.0,
+          "quarter_gmv": 103987.22,
+          "last_q_gmv": 547517.7
+        },
+        {
+          "id": "retaysign",
+          "name": "东莞市睿泰广告有限公司",
+          "month_gmv": 9940.0,
+          "quarter_gmv": 65292.52,
+          "last_q_gmv": 76395.59
+        },
+        {
+          "id": "zdkycn",
+          "name": "中达科研(广东)新能源技术有限公司",
+          "month_gmv": 9841.0,
+          "quarter_gmv": 10292.54,
+          "last_q_gmv": 37676.14
+        },
+        {
+          "id": "wespc",
+          "name": "魏氏鹏程（东莞）科技有限公司",
+          "month_gmv": 9603.0,
+          "quarter_gmv": 32419.95,
+          "last_q_gmv": 66085.82
+        },
+        {
+          "id": "idealcharge",
+          "name": "东莞市快智充电子科技有限公司",
+          "month_gmv": 8245.0,
+          "quarter_gmv": 35881.3,
+          "last_q_gmv": 76578.46
+        },
+        {
+          "id": "novebeauty",
+          "name": "深圳市诺芙科技有限公司",
+          "month_gmv": 8040.0,
+          "quarter_gmv": 127111.65,
+          "last_q_gmv": 416329.34
+        },
+        {
+          "id": "guangshengkeji",
+          "name": "东莞市广胜精密机械科技有限公司",
+          "month_gmv": 6842.0,
+          "quarter_gmv": 16963.93,
+          "last_q_gmv": 34283.3
+        },
+        {
+          "id": "ksenda",
+          "name": "东莞市启盛达科技有限公司",
+          "month_gmv": 6371.0,
+          "quarter_gmv": 43173.14,
+          "last_q_gmv": 88370.06
+        },
+        {
+          "id": "gxluosi",
+          "name": "东莞固祥金属制品有限公司",
+          "month_gmv": 5672.0,
+          "quarter_gmv": 20569.97,
+          "last_q_gmv": 43681.89
+        },
+        {
+          "id": "eyeshare0617",
+          "name": "东莞市帆宇贸易有限公司",
+          "month_gmv": 5340.0,
+          "quarter_gmv": 22480.9,
+          "last_q_gmv": 29448.65
+        },
+        {
+          "id": "lovedouble",
+          "name": "东莞市恋双服饰有限公司",
+          "month_gmv": 4254.0,
+          "quarter_gmv": 25345.07,
+          "last_q_gmv": 98434.21
+        },
+        {
+          "id": "qiaojitechnology",
+          "name": "东莞乔吉科技有限公司",
+          "month_gmv": 4216.0,
+          "quarter_gmv": 12204.13,
+          "last_q_gmv": 55828.79
+        },
+        {
+          "id": "dgmhsd",
+          "name": "东莞市铭鸿时代科技有限公司",
+          "month_gmv": 3363.0,
+          "quarter_gmv": 7048.4,
+          "last_q_gmv": 25731.66
+        },
+        {
+          "id": "gaoya1616",
+          "name": "东莞市高雅厨具有限公司",
+          "month_gmv": 3298.0,
+          "quarter_gmv": 49341.5,
+          "last_q_gmv": 86344.95
+        },
+        {
+          "id": "cn1524389924ttdm",
+          "name": "东莞市信诺皮革有限公司",
+          "month_gmv": 2506.0,
+          "quarter_gmv": 131585.18,
+          "last_q_gmv": 498327.48
+        },
+        {
+          "id": "carpettape",
+          "name": "东莞市海翔胶粘制品有限公司",
+          "month_gmv": 2330.0,
+          "quarter_gmv": 31749.0,
+          "last_q_gmv": 156958.15
+        },
+        {
+          "id": "dgdonghui",
+          "name": "东莞市东慧纸业有限公司",
+          "month_gmv": 2163.0,
+          "quarter_gmv": 2258.0,
+          "last_q_gmv": 860.0
+        },
+        {
+          "id": "yuechiclothing",
+          "name": "东莞市悦驰服饰有限公司",
+          "month_gmv": 1133.0,
+          "quarter_gmv": 8095.39,
+          "last_q_gmv": 2660.0
+        },
+        {
+          "id": "lianxingxb",
+          "name": "东莞市联兴箱包配件有限公司",
+          "month_gmv": 994.0,
+          "quarter_gmv": 1846.64,
+          "last_q_gmv": 2119.46
+        },
+        {
+          "id": "dgguofeng",
+          "name": "东莞市国丰制造有限公司",
+          "month_gmv": 917.0,
+          "quarter_gmv": 106238.23,
+          "last_q_gmv": 219913.34
+        },
+        {
+          "id": "cnyoungelephant",
+          "name": "东莞市亚象包装有限公司",
+          "month_gmv": 698.0,
+          "quarter_gmv": 4363.1,
+          "last_q_gmv": 8616.69
+        },
+        {
+          "id": "speed888",
+          "name": "东莞市鸿速达电子有限公司",
+          "month_gmv": 575.0,
+          "quarter_gmv": 1175.0,
+          "last_q_gmv": 33066.91
+        },
+        {
+          "id": "may8721120",
+          "name": "东莞市恒达金属制品有限公司",
+          "month_gmv": 351.0,
+          "quarter_gmv": 77446.19,
+          "last_q_gmv": 156869.96
+        },
+        {
+          "id": "dghyxsy",
+          "name": "东莞市好印象实业有限公司",
+          "month_gmv": 193.0,
+          "quarter_gmv": 1867.2,
+          "last_q_gmv": 464934.61
+        },
+        {
+          "id": "dgsyq",
+          "name": "东莞市阳琦电子有限公司",
+          "month_gmv": 122.0,
+          "quarter_gmv": 1016.32,
+          "last_q_gmv": 19417.25
+        },
+        {
+          "id": "tianyu76",
+          "name": "东莞天誉智能科技有限公司",
+          "month_gmv": 75.0,
+          "quarter_gmv": 75.0,
+          "last_q_gmv": 210.0
+        },
+        {
+          "id": "cnwillxi",
+          "name": "东莞维正电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 12087.8,
+          "last_q_gmv": 96616.7
+        },
+        {
+          "id": "dgkunde",
+          "name": "东莞市坤德实业投资有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 430.0,
+          "last_q_gmv": 2214.2
+        },
+        {
+          "id": "dgmeisenwei",
+          "name": "东莞市美森威五金有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 19353.91,
+          "last_q_gmv": 56919.68
+        },
+        {
+          "id": "dgsoeyi",
+          "name": "东莞市硕一五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 991.6,
+          "last_q_gmv": 62212.58
+        },
+        {
+          "id": "dgsunmagnet",
+          "name": "东莞市日升磁材有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 2142.0,
+          "last_q_gmv": 16028.0
+        },
+        {
+          "id": "dgyoumingclothing",
+          "name": "东莞市祐铭供应链管理有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 4758.65,
+          "last_q_gmv": 30255.3
+        },
+        {
+          "id": "dgzhiding",
+          "name": "东莞市致鼎电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 5875.32
+        },
+        {
+          "id": "dgzjdz",
+          "name": "东莞市致敬电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 57.5,
+          "last_q_gmv": 1467.93
+        },
+        {
+          "id": "donghuipaper",
+          "name": "东莞市东慧纸业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "shouxin8641",
+          "name": "东莞市首信五金制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 11980.8,
+          "last_q_gmv": 22692.8
+        },
+        {
+          "id": "xinbinming",
+          "name": "东莞市鑫彬洺散热风扇有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 34.26,
+          "last_q_gmv": 5775.67
+        },
+        {
+          "id": "youmingclothing",
+          "name": "东莞市祐铭供应链管理有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 1717.9,
+          "last_q_gmv": 3196.5
+        },
+        {
+          "id": "cicileather",
+          "name": "东莞汐兮皮革制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 29119.54,
+          "last_q_gmv": 293104.01
+        },
+        {
+          "id": "dgflysun",
+          "name": "东莞市飞尚运动用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 57419.69,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dghongtu",
+          "name": "东莞市宏图仪器有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 10475.17
+        },
+        {
+          "id": "flysunoutdoors",
+          "name": "东莞市飞尚运动用品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 16331.91
+        },
+        {
+          "id": "westely",
+          "name": "能控（广州）机械有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 6112.0,
+          "last_q_gmv": 19027.0
+        }
+      ]
+    },
+    "高盛强": {
+      "month_target": 7228442,
+      "total_month": 3804799.0,
+      "total_quarter": 18598017.900000002,
+      "month_pct": 52.6,
+      "month_gap": -3423643.0,
+      "client_count": 72,
+      "active_count": 47,
+      "clients": [
+        {
+          "id": "ludaxinnengyuan",
+          "name": "广东绿达新能源有限公司",
+          "month_gmv": 2295888.0,
+          "quarter_gmv": 13479176.14,
+          "last_q_gmv": 32987241.92
+        },
+        {
+          "id": "betteractive",
+          "name": "广东逸动生活服饰科技有限公司",
+          "month_gmv": 557823.0,
+          "quarter_gmv": 1134699.18,
+          "last_q_gmv": 1126903.18
+        },
+        {
+          "id": "qiandutech",
+          "name": "广东千度科技有限公司",
+          "month_gmv": 362037.0,
+          "quarter_gmv": 395251.19,
+          "last_q_gmv": 1061598.51
+        },
+        {
+          "id": "dyou7758258",
+          "name": "东莞市迪优门窗科技有限公司",
+          "month_gmv": 128039.0,
+          "quarter_gmv": 347037.7,
+          "last_q_gmv": 327688.7
+        },
+        {
+          "id": "huihedata",
+          "name": "东莞市汇合数据科技有限公司",
+          "month_gmv": 69804.0,
+          "quarter_gmv": 132172.85,
+          "last_q_gmv": 411347.3
+        },
+        {
+          "id": "dgeka",
+          "name": "东莞市益卡包装制品有限公司",
+          "month_gmv": 43478.0,
+          "quarter_gmv": 174894.52,
+          "last_q_gmv": 318162.52
+        },
+        {
+          "id": "xuchanggarment",
+          "name": "东莞市煦昌服饰有限公司",
+          "month_gmv": 40054.0,
+          "quarter_gmv": 252512.15,
+          "last_q_gmv": 492559.23
+        },
+        {
+          "id": "humenxinsheng",
+          "name": "东莞市鑫盛服装有限公司",
+          "month_gmv": 36281.0,
+          "quarter_gmv": 227018.76,
+          "last_q_gmv": 485831.31
+        },
+        {
+          "id": "yilongsheng01",
+          "name": "东莞市亿隆昇进出口贸易有限公司",
+          "month_gmv": 29595.0,
+          "quarter_gmv": 90639.34,
+          "last_q_gmv": 85132.73
+        },
+        {
+          "id": "dgxingcan",
+          "name": "东莞市星灿服饰有限公司",
+          "month_gmv": 28168.0,
+          "quarter_gmv": 114969.67,
+          "last_q_gmv": 343023.55
+        },
+        {
+          "id": "xixifushi",
+          "name": "东莞市喜喜服饰有限公司",
+          "month_gmv": 27686.0,
+          "quarter_gmv": 58525.01,
+          "last_q_gmv": 40394.1
+        },
+        {
+          "id": "dgjingyi",
+          "name": "东莞市益卡环保科技有限公司",
+          "month_gmv": 25164.0,
+          "quarter_gmv": 113266.53,
+          "last_q_gmv": 257179.46
+        },
+        {
+          "id": "tongruifashion",
+          "name": "东莞市同睿服饰有限公司",
+          "month_gmv": 20392.0,
+          "quarter_gmv": 121082.77,
+          "last_q_gmv": 343972.73
+        },
+        {
+          "id": "yktoys",
+          "name": "东莞市益康毛绒玩具有限公司",
+          "month_gmv": 17722.0,
+          "quarter_gmv": 58197.97,
+          "last_q_gmv": 154357.57
+        },
+        {
+          "id": "zerofashion01",
+          "name": "东莞市零点潮流服饰有限公司",
+          "month_gmv": 16902.0,
+          "quarter_gmv": 88456.21,
+          "last_q_gmv": 242837.8
+        },
+        {
+          "id": "cowon",
+          "name": "深圳凯万科技有限公司",
+          "month_gmv": 16124.0,
+          "quarter_gmv": 57578.7,
+          "last_q_gmv": 117010.0
+        },
+        {
+          "id": "qianjiayifz",
+          "name": "东莞市千加依电子商务有限公司",
+          "month_gmv": 14829.0,
+          "quarter_gmv": 81618.57,
+          "last_q_gmv": 230840.87
+        },
+        {
+          "id": "vansfashion",
+          "name": "东莞市虎门凡优卓服饰厂（个体工商户）",
+          "month_gmv": 11638.0,
+          "quarter_gmv": 43566.9,
+          "last_q_gmv": 93611.72
+        },
+        {
+          "id": "lanwofactory",
+          "name": "东莞市圣锦服饰有限公司",
+          "month_gmv": 11160.0,
+          "quarter_gmv": 83396.28,
+          "last_q_gmv": 325671.27
+        },
+        {
+          "id": "lingguan1688",
+          "name": "东莞市领冠服饰有限公司",
+          "month_gmv": 7771.0,
+          "quarter_gmv": 27947.0,
+          "last_q_gmv": 8048.0
+        },
+        {
+          "id": "cnxfysbz",
+          "name": "东莞市翔丰印刷包装有限公司",
+          "month_gmv": 5307.0,
+          "quarter_gmv": 44822.42,
+          "last_q_gmv": 71946.86
+        },
+        {
+          "id": "dganxi",
+          "name": "东莞市安玺服饰有限公司",
+          "month_gmv": 5191.0,
+          "quarter_gmv": 30782.05,
+          "last_q_gmv": 72183.1
+        },
+        {
+          "id": "colorwinpacking",
+          "name": "东莞市虎门联兴包装厂(个体工商户)",
+          "month_gmv": 4793.0,
+          "quarter_gmv": 35406.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgsenshen",
+          "name": "东莞市森燊五金制品有限公司",
+          "month_gmv": 4592.0,
+          "quarter_gmv": 5090.79,
+          "last_q_gmv": 4258.33
+        },
+        {
+          "id": "wintouchgroup",
+          "name": "东莞市联迪科技有限公司",
+          "month_gmv": 3902.0,
+          "quarter_gmv": 12528.43,
+          "last_q_gmv": 446517.88
+        },
+        {
+          "id": "hongcai168",
+          "name": "东莞市虹彩科技有限公司",
+          "month_gmv": 3258.0,
+          "quarter_gmv": 10241.81,
+          "last_q_gmv": 19957.57
+        },
+        {
+          "id": "yiqing1688",
+          "name": "东莞市亿青电子科技有限公司",
+          "month_gmv": 2958.0,
+          "quarter_gmv": 49542.4,
+          "last_q_gmv": 71401.72
+        },
+        {
+          "id": "uydauto",
+          "name": "东莞市优固达电子科技有限公司",
+          "month_gmv": 2730.0,
+          "quarter_gmv": 4700.51,
+          "last_q_gmv": 46380.39
+        },
+        {
+          "id": "noryanorya",
+          "name": "挪亚家家具(广东)有限公司",
+          "month_gmv": 2067.0,
+          "quarter_gmv": 2066.5,
+          "last_q_gmv": 2066.5
+        },
+        {
+          "id": "dgslgjmy",
+          "name": "东莞市顺捞国际贸易有限公司",
+          "month_gmv": 1987.0,
+          "quarter_gmv": 2275.84,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "wintouchtech",
+          "name": "深圳联合触控科技有限公司",
+          "month_gmv": 1843.0,
+          "quarter_gmv": 79737.4,
+          "last_q_gmv": 148034.87
+        },
+        {
+          "id": "liontek",
+          "name": "东莞市联迪科技有限公司",
+          "month_gmv": 1322.0,
+          "quarter_gmv": 991934.53,
+          "last_q_gmv": 980782.53
+        },
+        {
+          "id": "juemiaofs",
+          "name": "东莞市珏妙服饰有限公司",
+          "month_gmv": 775.0,
+          "quarter_gmv": 775.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "aiwosoai",
+          "name": "深圳市曹州杰成科技有限公司",
+          "month_gmv": 700.0,
+          "quarter_gmv": 1310.5,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgmjribbon",
+          "name": "东莞市明嘉绳带织造有限公司",
+          "month_gmv": 503.0,
+          "quarter_gmv": 51865.07,
+          "last_q_gmv": 163192.9
+        },
+        {
+          "id": "mjribbon",
+          "name": "东莞市明嘉绳带织造有限公司",
+          "month_gmv": 455.0,
+          "quarter_gmv": 18964.0,
+          "last_q_gmv": 63927.94
+        },
+        {
+          "id": "gdlssz",
+          "name": "广东立升数字技术有限公司",
+          "month_gmv": 406.0,
+          "quarter_gmv": 675.24,
+          "last_q_gmv": 5875.52
+        },
+        {
+          "id": "dgkaining",
+          "name": "东莞市楷宁服饰有限公司",
+          "month_gmv": 330.0,
+          "quarter_gmv": 540.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "jhcloth",
+          "name": "东莞市锦虹服装设计有限公司",
+          "month_gmv": 299.0,
+          "quarter_gmv": 16154.9,
+          "last_q_gmv": 20487.56
+        },
+        {
+          "id": "jotoys",
+          "name": "东莞市俊欧玩具有限公司",
+          "month_gmv": 189.0,
+          "quarter_gmv": 50283.12,
+          "last_q_gmv": 111477.47
+        },
+        {
+          "id": "cnmjhkj",
+          "name": "东莞市沐金恒科技有限公司",
+          "month_gmv": 183.0,
+          "quarter_gmv": 183.0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "longxinclothing",
+          "name": "东莞隆欣服饰有限公司",
+          "month_gmv": 135.0,
+          "quarter_gmv": 10408.5,
+          "last_q_gmv": 1155.9
+        },
+        {
+          "id": "gudmorning",
+          "name": "东莞市顾得么尼服饰有限公司",
+          "month_gmv": 90.0,
+          "quarter_gmv": 180.0,
+          "last_q_gmv": 4510.1
+        },
+        {
+          "id": "anmeilu",
+          "name": "东莞市安美路户外用品有限公司",
+          "month_gmv": 74.0,
+          "quarter_gmv": 74.37,
+          "last_q_gmv": 2012.62
+        },
+        {
+          "id": "unitedtouch",
+          "name": "深圳联合触控科技有限公司",
+          "month_gmv": 68.0,
+          "quarter_gmv": 1655.3,
+          "last_q_gmv": 129856.77
+        },
+        {
+          "id": "luzter",
+          "name": "东莞桐煦科技有限公司",
+          "month_gmv": 47.0,
+          "quarter_gmv": 3090.19,
+          "last_q_gmv": 7089.54
+        },
+        {
+          "id": "dghyfs",
+          "name": "东莞市宏焱服饰有限公司",
+          "month_gmv": 40.0,
+          "quarter_gmv": 49518.98,
+          "last_q_gmv": 132528.02
+        },
+        {
+          "id": "daliacrylic",
+          "name": "东莞市大利实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 3183.0,
+          "last_q_gmv": 33588.26
+        },
+        {
+          "id": "dghaoxing",
+          "name": "东莞市豪星服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgjieyu",
+          "name": "东莞市捷宇精密模具有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "echenapparel",
+          "name": "东莞市逸宸服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 27502.72,
+          "last_q_gmv": 198266.28
+        },
+        {
+          "id": "fiyoclothing",
+          "name": "东莞市飞鸥服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "getedq",
+          "name": "苏州哥特电器科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "lvtopsun",
+          "name": "深圳千帆绿达科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 3170.0
+        },
+        {
+          "id": "poda2026",
+          "name": "东莞市铂达科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "tonetron",
+          "name": "东莞台昶电子有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "weixinmould",
+          "name": "东莞市唯信精密模具有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 5132.5
+        },
+        {
+          "id": "xrfy",
+          "name": "东莞市祥荣丰源新材料科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "yb1688",
+          "name": "东莞市元邦弹簧有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 5898.59,
+          "last_q_gmv": 12306.65
+        },
+        {
+          "id": "ccnjewelry",
+          "name": "东莞市铭灏饰品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 291.0,
+          "last_q_gmv": 11132.55
+        },
+        {
+          "id": "chenghaitoys",
+          "name": "东莞市成海云禾玩具有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cngostar",
+          "name": "东莞市华耘实业有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "cnjbmr",
+          "name": "东莞市虎门建邦毛绒店",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgjlfushi",
+          "name": "东莞市江淋服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "dgnh",
+          "name": "东莞市能鸿塑胶模具有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 3905.3,
+          "last_q_gmv": 633.93
+        },
+        {
+          "id": "dgyichenclothing",
+          "name": "东莞市亿琛服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 450.0
+        },
+        {
+          "id": "haixunpackaging",
+          "name": "东莞市海讯包装制品有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "ledtraffic",
+          "name": "广东省广弘安智能交通科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 423.0,
+          "last_q_gmv": 347.0
+        },
+        {
+          "id": "lolafashion",
+          "name": "洛拉国际服装（东莞）有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "wanyao168",
+          "name": "东莞市万尧进出口贸易有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        },
+        {
+          "id": "xxsfashion",
+          "name": "东莞市兴鑫盛服饰有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 2996.0
+        },
+        {
+          "id": "yllxs520",
+          "name": "东莞市屹连电子科技有限公司",
+          "month_gmv": 0,
+          "quarter_gmv": 0,
+          "last_q_gmv": 0
+        }
+      ]
+    }
+  }
+}
