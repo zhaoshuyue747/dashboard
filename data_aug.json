@@ -86,7 +86,12 @@
       "active_clients": 28,
       "youbaopin": 5733,
       "youbaopin_target": 6564,
-      "youbaopin_pct": 87.3
+      "youbaopin_pct": 87.3,
+      "incentive_val": 3805688,
+      "incentive_target": 10000001,
+      "incentive_pct": 38.1,
+      "incentive_gap": -6194313,
+      "incentive_achieved": false
     },
     {
       "name": "赵舒越",
@@ -108,7 +113,12 @@
       "active_clients": 15,
       "youbaopin": null,
       "youbaopin_target": null,
-      "youbaopin_pct": null
+      "youbaopin_pct": null,
+      "incentive_val": 470425,
+      "incentive_target": 1000001,
+      "incentive_pct": 47.0,
+      "incentive_gap": -529576,
+      "incentive_achieved": false
     },
     {
       "name": "刘鑫",
@@ -130,7 +140,12 @@
       "active_clients": 19,
       "youbaopin": 5733,
       "youbaopin_target": 5400,
-      "youbaopin_pct": 106.2
+      "youbaopin_pct": 106.2,
+      "incentive_val": 561478,
+      "incentive_target": 1200000,
+      "incentive_pct": 46.8,
+      "incentive_gap": -638522,
+      "incentive_achieved": false
     },
     {
       "name": "冉崇明",
@@ -152,7 +167,12 @@
       "active_clients": 7,
       "youbaopin": 2280,
       "youbaopin_target": null,
-      "youbaopin_pct": null
+      "youbaopin_pct": null,
+      "incentive_val": 219066,
+      "incentive_target": 1000001,
+      "incentive_pct": 21.9,
+      "incentive_gap": -780935,
+      "incentive_achieved": false
     },
     {
       "name": "燕磊",
@@ -174,7 +194,12 @@
       "active_clients": 30,
       "youbaopin": 6642,
       "youbaopin_target": 8137,
-      "youbaopin_pct": 81.6
+      "youbaopin_pct": 81.6,
+      "incentive_val": 1011111,
+      "incentive_target": 3200000,
+      "incentive_pct": 31.6,
+      "incentive_gap": -2188889,
+      "incentive_achieved": false
     },
     {
       "name": "杨佳玮",
@@ -196,7 +221,12 @@
       "active_clients": 13,
       "youbaopin": 3540,
       "youbaopin_target": 4492,
-      "youbaopin_pct": 78.8
+      "youbaopin_pct": 78.8,
+      "incentive_val": 176951,
+      "incentive_target": 1000002,
+      "incentive_pct": 17.7,
+      "incentive_gap": -823051,
+      "incentive_achieved": false
     },
     {
       "name": "杨婷婷",
@@ -218,7 +248,12 @@
       "active_clients": 23,
       "youbaopin": 7446,
       "youbaopin_target": 7206,
-      "youbaopin_pct": 103.3
+      "youbaopin_pct": 103.3,
+      "incentive_val": 511113,
+      "incentive_target": 1300000,
+      "incentive_pct": 39.3,
+      "incentive_gap": -788887,
+      "incentive_achieved": false
     },
     {
       "name": "欧阳杰俊",
@@ -240,7 +275,12 @@
       "active_clients": 20,
       "youbaopin": 4432,
       "youbaopin_target": 5082,
-      "youbaopin_pct": 87.2
+      "youbaopin_pct": 87.2,
+      "incentive_val": 355703,
+      "incentive_target": 3000001,
+      "incentive_pct": 11.9,
+      "incentive_gap": -2644298,
+      "incentive_achieved": false
     },
     {
       "name": "李朝燕",
@@ -262,7 +302,12 @@
       "active_clients": 10,
       "youbaopin": 5110,
       "youbaopin_target": 7009,
-      "youbaopin_pct": 72.9
+      "youbaopin_pct": 72.9,
+      "incentive_val": 162923,
+      "incentive_target": 1284520,
+      "incentive_pct": 12.7,
+      "incentive_gap": -1121597,
+      "incentive_achieved": false
     },
     {
       "name": "狄鹏",
@@ -284,7 +329,12 @@
       "active_clients": 1,
       "youbaopin": 191,
       "youbaopin_target": 2295,
-      "youbaopin_pct": 8.3
+      "youbaopin_pct": 8.3,
+      "incentive_val": 15238,
+      "incentive_target": 2417200,
+      "incentive_pct": 0.6,
+      "incentive_gap": -2401962,
+      "incentive_achieved": false
     }
   ],
   "top20_up": [],
