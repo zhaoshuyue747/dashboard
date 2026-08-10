@@ -205,6 +205,98 @@
   .badge-live { background:var(--green); color:#fff; }
   .badge-coming { background:rgba(249,115,22,.2); color:#f97316; border:1px solid #f97316; }
   .month-divider { color:rgba(255,255,255,0.15); font-size:16px; }
+
+  /* ===== Ⅵ 销售指标拆解（口令保护）===== */
+  .bd-lock-mask {
+    background:var(--color-background-secondary,#f8fafc);
+    border:1.5px dashed var(--color-border-secondary,#d1d5db);
+    border-radius:10px;
+    padding:32px 20px;
+    text-align:center;
+  }
+  .bd-lock-icon { font-size:32px; margin-bottom:8px; }
+  .bd-lock-text { font-size:14px; font-weight:500; color:var(--color-text-primary,#111); }
+  .bd-lock-sub  { font-size:11px; color:var(--color-text-tertiary,#999); margin-top:4px; }
+  .bd-pass-row  { display:flex; gap:8px; justify-content:center; margin-top:14px; }
+  .bd-pass-input {
+    width:220px; padding:8px 14px; border-radius:6px;
+    border:1px solid var(--color-border-secondary,#d1d5db);
+    font-size:13px; background:var(--color-background-primary,#fff);
+    color:var(--color-text-primary,#111); outline:none;
+  }
+  .bd-pass-input:focus { border-color:var(--accent,#1677ff); }
+  .bd-pass-btn {
+    padding:8px 22px; border-radius:6px; border:none; cursor:pointer;
+    background:var(--accent,#1677ff); color:#fff; font-size:13px; font-weight:500;
+  }
+  .bd-pass-btn:hover { background:var(--accent-hover,#0958d9); }
+  .bd-pass-msg { font-size:11px; margin-top:10px; min-height:16px; }
+  .bd-pass-msg.err { color:var(--red,#dc2626); }
+  .bd-pass-msg.ok  { color:var(--green,#16a34a); }
+
+  .bd-unlock-info {
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:11px; color:var(--color-text-secondary,#666);
+    background:var(--color-background-secondary,#f8fafc);
+    border-radius:6px; padding:6px 12px; margin-bottom:10px;
+  }
+  .bd-logout { color:var(--accent,#1677ff); cursor:pointer; font-weight:500; }
+  .bd-logout:hover { text-decoration:underline; }
+
+  .bd-sales-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    gap:8px;
+  }
+  .bd-sales-card {
+    border-radius:8px; padding:10px 12px; cursor:pointer;
+    border:1px solid var(--color-border-secondary,#e5e7eb);
+    background:var(--color-background-primary,#fff);
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .bd-sales-card:hover { border-color:var(--accent,#1677ff); box-shadow:0 1px 6px rgba(22,119,255,.12); }
+  .bd-sales-card.selected { border-color:var(--accent,#1677ff); background:var(--color-status-info-bg,#eff6ff); }
+  .bd-sc-name { font-size:12px; font-weight:500; color:var(--color-text-primary,#111); margin-bottom:3px; }
+  .bd-sc-pct  { font-size:17px; font-weight:500; }
+  .bd-sc-pct.g { color:var(--green,#16a34a); }
+  .bd-sc-pct.o { color:var(--orange,#f97316); }
+  .bd-sc-pct.r { color:var(--red,#dc2626); }
+  .bd-sc-sub  { font-size:10px; color:var(--color-text-tertiary,#999); margin-top:2px; }
+  .bd-sc-bar  { height:3px; border-radius:2px; background:var(--color-border-secondary,#e5e7eb); margin-top:5px; overflow:hidden; }
+  .bd-sc-bar-f { height:100%; border-radius:2px; }
+  .bd-sc-bar-f.g { background:#22c55e; } .bd-sc-bar-f.o { background:#f97316; } .bd-sc-bar-f.r { background:#ef4444; }
+
+  .bd-detail { margin-top:12px; }
+  .bd-detail-header {
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:13px; font-weight:500; color:var(--color-text-primary,#111);
+    padding:8px 12px; background:var(--color-background-secondary,#f8fafc);
+    border:1px solid var(--color-border-secondary,#e5e7eb);
+    border-bottom:none; border-radius:8px 8px 0 0;
+  }
+  .bd-back { font-size:11px; color:var(--accent,#1677ff); cursor:pointer; font-weight:500; }
+  .bd-back:hover { text-decoration:underline; }
+  .bd-detail-summary {
+    font-size:11px; color:var(--color-text-secondary,#666);
+    background:var(--color-background-secondary,#f8fafc);
+    border:1px solid var(--color-border-secondary,#e5e7eb);
+    border-bottom:none; padding:4px 12px;
+  }
+  .bd-scroll { max-height:480px; overflow-y:auto; border:1px solid var(--color-border-secondary,#e5e7eb); border-radius:0 0 8px 8px; }
+  .bd-table { width:100%; border-collapse:collapse; font-size:11px; background:var(--color-background-primary,#fff); }
+  .bd-table th {
+    background:var(--color-background-secondary,#f5f7fa); color:var(--color-text-secondary,#666);
+    font-weight:500; padding:7px 8px; border-bottom:1px solid var(--color-border-secondary,#e5e7eb);
+    text-align:center; white-space:nowrap; position:sticky; top:0;
+  }
+  .bd-table td { padding:6px 8px; border-bottom:0.5px solid var(--color-border-tertiary,#f0f4f8); text-align:center; white-space:nowrap; color:var(--color-text-primary,#111); }
+  .bd-table tr:hover td { background:var(--color-background-secondary,#f8fafc); }
+  .bd-pct { font-weight:500; }
+  .bd-pct.g { color:var(--green,#16a34a); } .bd-pct.o { color:var(--orange,#f97316); } .bd-pct.r { color:var(--red,#dc2626); }
+  .bd-bar-wrap { display:flex; align-items:center; gap:4px; }
+  .bd-bar-bg { flex:1; height:4px; background:var(--color-border-secondary,#e5e7eb); border-radius:2px; overflow:hidden; }
+  .bd-bar-f { height:100%; border-radius:2px; }
+  .bd-bar-f.g { background:#22c55e; } .bd-bar-f.o { background:#f97316; } .bd-bar-f.r { background:#ef4444; }
 </style>
 </head>
 <body>
@@ -844,6 +936,65 @@
 
 
 
+<!-- ══════════════════════════════════════════════
+     Ⅵ 销售指标拆解（口令保护 · 涉敏数据）
+     数据源：客户分析Excel → data_breakdown.json
+════════════════════════════════════════════════ -->
+<div class="section" id="breakdown-section">
+  <div class="section-title">Ⅵ &nbsp;销售指标拆解
+    <span class="path-tip" title="客户当月信保GMV / 历史GMV / 占月度目标完成度（涉敏数据，需口令解锁）">数据源：客户分析 → 拍档销售 → 月度/季度GMV</span>
+  </div>
+
+  <!-- 锁定遮罩 -->
+  <div id="bd-lock-mask" class="bd-lock-mask">
+    <div class="bd-lock-icon">🔒</div>
+    <div class="bd-lock-text">此板块涉及客户敏感数据</div>
+    <div class="bd-lock-sub">请输入口令解锁（管理员可看全部 / 销售个人仅看自己）</div>
+    <div class="bd-pass-row">
+      <input type="password" id="bd-pass-input" class="bd-pass-input" placeholder="请输入口令" onkeydown="if(event.key==='Enter')bdTryUnlock()">
+      <button class="bd-pass-btn" onclick="bdTryUnlock()">解 锁</button>
+    </div>
+    <div id="bd-pass-msg" class="bd-pass-msg"></div>
+    <div style="font-size:10px;color:var(--color-text-tertiary,#999);margin-top:10px">
+      登录状态异常？<span style="color:var(--accent,#1677ff);cursor:pointer" onclick="bdClearState()">清除已保存状态</span>
+    </div>
+  </div>
+
+  <!-- 内容区（解锁后）-->
+  <div id="bd-content" style="display:none">
+    <div id="bd-unlock-info" class="bd-unlock-info">
+      <span id="bd-role-label"></span>
+      <span class="bd-logout" onclick="bdLogout()">退出登录</span>
+    </div>
+    <!-- 销售汇总卡片 -->
+    <div id="bd-sales-grid" class="bd-sales-grid"></div>
+    <!-- 客户明细 -->
+    <div id="bd-detail" style="display:none">
+      <div class="bd-detail-header">
+        <span id="bd-detail-title"></span>
+        <span class="bd-back" onclick="bdBackToList()">← 返回销售列表</span>
+      </div>
+      <div class="bd-detail-summary" id="bd-detail-summary"></div>
+      <div class="bd-scroll">
+        <table class="bd-table" id="bd-detail-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th style="text-align:left">客户名称</th>
+              <th>本月信保GMV</th>
+              <th>上季GMV</th>
+              <th>占月度指标</th>
+              <th style="min-width:110px">进度</th>
+            </tr>
+          </thead>
+          <tbody id="bd-detail-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- 底部 -->
 <div style="text-align:center;font-size:11px;color:var(--text-mute);margin-top:8px;padding-bottom:16px">
   东莞市橙辉供应链管理有限公司 · 实时数据大屏 v1.2 &nbsp;|&nbsp; 数据更新：2026-07
@@ -1457,9 +1608,196 @@ async function loadDashboardData() {
   }
 }
 
-// 页面加载完成后拉取数据
-window.addEventListener('DOMContentLoaded', loadDashboardData);
+// ================================================================
+// Ⅵ 销售指标拆解 — 口令保护 + 点击钻取
+// ================================================================
+const BD_PASSWORDS = {
+  admin: 'chenghui888',
+  '高盛强': 'gsq482',
+  '燕磊': 'yl917',
+  '欧阳杰俊': 'oyj583',
+  '赵舒越': 'zsy264',
+  '杨婷婷': 'ytt738',
+  '李朝燕': 'lzy105',
+  '狄鹏': 'dp629',
+  '冉崇明': 'rcm871',
+  '刘鑫': 'lx394',
+  '杨佳玮': 'yjw246',
+};
+const BD_DATA_URL = 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_breakdown.json';
+let bdUnlockedRole = localStorage.getItem('bd_unlock_role') || null;   // 'admin' 或 销售姓名
+let bdData = null;         // data_breakdown.json 数据
+let bdSelectedSales = null;
+
+// 初始化板块
+async function initBreakdown() {
+  await bdEnsureData();
+  if (bdUnlockedRole) {
+    bdShowContent();
+  } else {
+    document.getElementById('bd-lock-mask').style.display = '';
+    document.getElementById('bd-content').style.display = 'none';
+  }
+}
+
+// 确保数据已加载（未加载则拉取）
+async function bdEnsureData() {
+  if (bdData) return bdData;
+  try {
+    const resp = await fetch(BD_DATA_URL + '?t=' + Date.now());
+    if (resp.ok) bdData = await resp.json();
+  } catch(e) {
+    console.warn('销售指标拆解数据加载失败:', e.message);
+  }
+  return bdData;
+}
+
+// 尝试解锁
+async function bdTryUnlock() {
+  const input = document.getElementById('bd-pass-input').value.trim();
+  const msgEl  = document.getElementById('bd-pass-msg');
+  if (!input) {
+    msgEl.textContent = '请输入口令';
+    msgEl.className = 'bd-pass-msg err';
+    return;
+  }
+  if (input === BD_PASSWORDS.admin) {
+    bdUnlockedRole = 'admin';
+    localStorage.setItem('bd_unlock_role', 'admin');
+    msgEl.textContent = '✅ 管理员身份验证通过';
+    msgEl.className = 'bd-pass-msg ok';
+    await bdEnsureData();
+    setTimeout(bdShowContent, 400);
+    return;
+  }
+  for (const [name, pass] of Object.entries(BD_PASSWORDS)) {
+    if (pass === input) {
+      bdUnlockedRole = name;
+      localStorage.setItem('bd_unlock_role', name);
+      msgEl.textContent = '✅ 身份验证通过：' + name;
+      msgEl.className = 'bd-pass-msg ok';
+      await bdEnsureData();
+      setTimeout(bdShowContent, 400);
+      return;
+    }
+  }
+  msgEl.textContent = '❌ 口令错误，请重新输入';
+  msgEl.className = 'bd-pass-msg err';
+}
+
+// 显示内容区
+function bdShowContent() {
+  document.getElementById('bd-lock-mask').style.display = 'none';
+  document.getElementById('bd-content').style.display   = '';
+  const isAdmin = bdUnlockedRole === 'admin';
+  document.getElementById('bd-role-label').textContent = isAdmin
+    ? '👤 管理员 · 可查看全部销售数据'
+    : '👤 ' + bdUnlockedRole + ' · 仅可查看本人数据';
+  bdRenderSalesGrid();
+  if (!isAdmin) {
+    // 个人登录：自动展开自己的数据
+    bdSelectSales(bdUnlockedRole);
+  }
+}
+
+// 清除本地保存的登录状态（处理残留问题）
+function bdClearState() {
+  bdUnlockedRole = null;
+  localStorage.removeItem('bd_unlock_role');
+  document.getElementById('bd-pass-input').value = '';
+  document.getElementById('bd-pass-msg').textContent = '';
+  document.getElementById('bd-pass-msg').className = 'bd-pass-msg';
+  document.getElementById('bd-pass-msg').textContent = '✅ 已清除，请重新输入口令';
+  document.getElementById('bd-pass-msg').className = 'bd-pass-msg ok';
+}
+
+// 退出登录
+function bdLogout() {
+  bdUnlockedRole = null;
+  localStorage.removeItem('bd_unlock_role');
+  document.getElementById('bd-content').style.display = 'none';
+  document.getElementById('bd-lock-mask').style.display = '';
+  document.getElementById('bd-pass-input').value = '';
+  document.getElementById('bd-pass-msg').textContent = '';
+}
+
+// 渲染销售卡片列表
+function bdRenderSalesGrid() {
+  const grid = document.getElementById('bd-sales-grid');
+  const detail = document.getElementById('bd-detail');
+  detail.style.display = 'none';
+
+  if (!bdData || !bdData.breakdown) {
+    grid.innerHTML = '<div style="font-size:12px;color:var(--text-mute);padding:16px">数据未加载，请稍后刷新</div>';
+    return;
+  }
+
+  const isAdmin = bdUnlockedRole === 'admin';
+  const names = isAdmin
+    ? Object.keys(bdData.breakdown)
+    : [bdUnlockedRole];
+
+  const pctClass = (p) => p >= 50 ? 'g' : p >= 20 ? 'o' : 'r';
+  const barClass = (p) => p >= 50 ? 'g' : p >= 20 ? 'o' : 'r';
+
+  grid.innerHTML = names.map(name => {
+    const bd = bdData.breakdown[name];
+    if (!bd) return '';
+    const pct = bd.month_pct || 0;
+    const sel = bdSelectedSales === name ? ' selected' : '';
+    return `<div class="bd-sales-card${sel}" onclick="bdSelectSales('${name}')">
+      <div class="bd-sc-name">${name}</div>
+      <div class="bd-sc-pct ${pctClass(pct)}">${pct}%</div>
+      <div class="bd-sc-sub">${bd.client_count}家 · ${bd.active_count}家有GMV · 月GMV ${fmt(bd.total_month)}</div>
+      <div class="bd-sc-bar"><div class="bd-sc-bar-f ${barClass(pct)}" style="width:${Math.min(pct,100)}%"></div></div>
+    </div>`;
+  }).join('');
+}
+
+// 点击销售 → 钻取客户明细
+function bdSelectSales(name) {
+  bdSelectedSales = name;
+  bdRenderSalesGrid();  // 刷新选中态
+
+  const bd = bdData && bdData.breakdown ? bdData.breakdown[name] : null;
+  if (!bd) return;
+
+  const detail = document.getElementById('bd-detail');
+  detail.style.display = '';
+  document.getElementById('bd-detail-title').textContent = name + ' · 客户明细';
+  const pctCls = (p) => p >= 50 ? 'g' : p >= 20 ? 'o' : 'r';
+  const barCls = (p) => p >= 50 ? 'g' : p >= 20 ? 'o' : 'r';
+  document.getElementById('bd-detail-summary').innerHTML =
+    `本月信保GMV <b>${fmt(bd.total_month)}</b> USD &nbsp;|&nbsp; 月度目标 <b>${fmt(bd.month_target)}</b> USD &nbsp;|&nbsp; ` +
+    `完成率 <b class="${pctCls(bd.month_pct)}">${bd.month_pct}%</b> &nbsp;|&nbsp; 客户 ${bd.client_count}家（有GMV ${bd.active_count}家）`;
+
+  const tbody = document.getElementById('bd-detail-tbody');
+
+  tbody.innerHTML = bd.clients.map((c, i) => {
+    const cgmv = c.month_gmv || 0;
+    const cpct = bd.month_target > 0 ? Math.round(cgmv / bd.month_target * 1000) / 10 : 0;
+    return `<tr>
+      <td style="color:var(--text-mute)">${i+1}</td>
+      <td style="text-align:left">${c.name}</td>
+      <td style="font-weight:500">${fmt(cgmv)}</td>
+      <td style="color:var(--text-sub)">${fmt(c.last_q_gmv)}</td>
+      <td class="bd-pct ${pctCls(cpct)}">${cpct}%</td>
+      <td><div class="bd-bar-wrap"><div class="bd-bar-bg"><div class="bd-bar-f ${barCls(cpct)}" style="width:${Math.min(cpct,100)}%"></div></div></div></td>
+    </tr>`;
+  }).join('');
+}
+
+// 返回销售列表
+function bdBackToList() {
+  document.getElementById('bd-detail').style.display = 'none';
+}
+
+// 页面加载完成后初始化板块
+window.addEventListener('DOMContentLoaded', () => {
+  loadDashboardData();
+  initBreakdown();
+});
 </script>
-<!-- build:20260810085127 -->
+<!-- build:20260810092234 -->
 </body>
 </html>
