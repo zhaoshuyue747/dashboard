@@ -510,7 +510,7 @@
   <div class="person-summary">
     <div class="ps-item">
       <div class="ps-val" id="team-month">10,480,651</div>
-      <div class="ps-lbl">团队月度总实收 (USD) · 2026-07</div>
+      <div class="ps-lbl" id="team-month-label">团队月度总实收 (USD) · 2026-07</div>
     </div>
     <div class="ps-item">
       <div class="ps-val" id="team-quarter"><span class="ph">??</span></div>
@@ -997,7 +997,7 @@
 
 <!-- 底部 -->
 <div style="text-align:center;font-size:11px;color:var(--text-mute);margin-top:8px;padding-bottom:16px">
-  东莞市橙辉供应链管理有限公司 · 实时数据大屏 v1.2 &nbsp;|&nbsp; 数据更新：2026-07
+  东莞市橙辉供应链管理有限公司 · 实时数据大屏 v1.3 &nbsp;|&nbsp; 数据更新：2026-08
 </div>
 
 </div><!-- /main -->
@@ -1586,6 +1586,12 @@ function renderAll(data) {
   // 更新切换栏时间标签
   const lbl = document.getElementById('month-update-label');
   if (lbl) lbl.textContent = '数据更新：' + (data.update_time || '--');
+  // 更新KPI卡片月份标签（信保月度标题）
+  const cml = document.getElementById('cur-month-label');
+  if (cml && data.month) cml.textContent = data.month;
+  // 更新团队月度总实收标签
+  const tml = document.getElementById('team-month-label');
+  if (tml && data.month) tml.textContent = '团队月度总实收 (USD) · ' + data.month;
 }
 
 // ── 主入口：加载 data.json ──
@@ -1828,6 +1834,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initBreakdown();
 });
 </script>
-<!-- build:20260810093316 -->
+<!-- build:20260810094010 -->
 </body>
 </html>
