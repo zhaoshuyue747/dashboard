@@ -863,7 +863,7 @@
   <div class="top10-grid">
     <!-- 增长TOP10 -->
     <div class="top10-block">
-      <h4>▲ 信保增长 TOP20 &nbsp;<span style="font-weight:400;color:var(--text-mute);font-size:11px">按同比增量USD降序 · 2026-07 vs 2025-07</span></h4>
+      <h4>▲ 信保增长 TOP20 &nbsp;<span id="top20-up-period" style="font-weight:400;color:var(--text-mute);font-size:11px">按同比增量USD降序 · 2026-07 vs 2025-07</span></h4>
       <table class="t10">
         <thead>
           <tr>
@@ -898,7 +898,7 @@
 
     <!-- 下降TOP20 -->
     <div class="top10-block">
-      <h4>▼ 信保下降 TOP20 &nbsp;<span style="font-weight:400;color:var(--red);font-size:11px">⚠ 需重点跟进 · 2026-07 vs 2025-07</span></h4>
+      <h4>▼ 信保下降 TOP20 &nbsp;<span id="top20-down-period" style="font-weight:400;color:var(--red);font-size:11px">⚠ 需重点跟进 · 2026-07 vs 2025-07</span></h4>
       <table class="t10">
         <thead>
           <tr>
@@ -1407,20 +1407,36 @@ function renderTop20(d) {
   const upBody   = document.getElementById('top10-up-body');
   const downBody = document.getElementById('top10-down-body');
 
+  // 更新标题月份标签
+  const curM = d.top20_month     || d.month || '';
+  const yoyM = d.top20_yoy_month || '';
+  const periodStr = curM && yoyM ? `${curM} vs ${yoyM}` : (curM || '');
+  const periodLbl = document.getElementById('top10-period-lbl');
+  if (periodLbl && periodStr) periodLbl.textContent = periodStr;
+
+  // 同步更新增长/下降标题里的月份文字
+  if (periodStr) {
+    const upPeriod = document.getElementById('top20-up-period');
+    const dnPeriod = document.getElementById('top20-down-period');
+    if (upPeriod) upPeriod.textContent = `按同比增量USD降序 · ${periodStr}`;
+    if (dnPeriod) dnPeriod.textContent = `⚠ 需重点跟进 · ${periodStr}`;
+  }
+
   function renderRows(rows, container, isUp) {
     if (!container || !rows || !rows.length) return;
     container.innerHTML = rows.map((r, i) => {
       const deltaStr = isUp ? `+${fmt(r.delta)}` : fmt(r.delta);
       const deltaCls = isUp ? 'delta-up' : 'delta-down';
+      const yoyPct   = r.yoy_pct != null ? `${r.yoy_pct > 0 ? '+' : ''}${r.yoy_pct}%` : '--';
       const yoyEl    = isUp
-        ? `<td class="up">${r.yoy || '--'}</td>`
-        : `<td style="color:var(--red)">${r.yoy || '--'}</td>`;
+        ? `<td class="up">${yoyPct}</td>`
+        : `<td style="color:var(--red)">${yoyPct}</td>`;
       return `<tr>
         <td>${i+1}</td>
-        <td>${r.name}</td>
-        <td>${r.salesperson || '--'}</td>
-        <td>${fmt(r.last_year)}</td>
-        <td>${fmt(r.this_year)}</td>
+        <td>${r.name || '--'}</td>
+        <td>${r.sales || r.salesperson || '--'}</td>
+        <td>${fmt(r.yoy_val != null ? r.yoy_val : r.last_year)}</td>
+        <td>${fmt(r.cur_val != null ? r.cur_val : r.this_year)}</td>
         <td class="${deltaCls}">${deltaStr}</td>
         ${yoyEl}
       </tr>`;
@@ -1837,6 +1853,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initBreakdown();
 });
 </script>
-<!-- build:20260810094324 -->
+<!-- build:20260823163647 -->
 </body>
 </html>
