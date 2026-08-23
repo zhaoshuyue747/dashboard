@@ -33,8 +33,9 @@
     "val": 198,
     "cur": 198,
     "baseline": 194,
+    "quarter_target": 270,
     "pct": 102.1,
-    "delta": 4.0,
+    "delta": 4,
     "persons": {
       "高盛强": 31,
       "赵舒越": 18,
@@ -58,7 +59,8 @@
       "李朝燕": 25,
       "刘鑫": 31,
       "冉崇明": 14
-    }
+    },
+    "quarter_pct": 73.3
   },
   "youbaopin": {
     "youbaopin_val": 43996.0,
@@ -86,12 +88,7 @@
       "active_clients": 31,
       "youbaopin": 5733,
       "youbaopin_target": 6564,
-      "youbaopin_pct": 87.3,
-      "incentive_val": 8212210.0,
-      "incentive_target": 10000001,
-      "incentive_pct": 82.1,
-      "incentive_gap": -1787791.0,
-      "incentive_achieved": false
+      "youbaopin_pct": 87.3
     },
     {
       "name": "赵舒越",
@@ -111,14 +108,9 @@
       "acp_pct": 38.2,
       "acp_quarter_val": 500942.0,
       "active_clients": 18,
-      "youbaopin": null,
-      "youbaopin_target": null,
-      "youbaopin_pct": null,
-      "incentive_val": 1315003.0,
-      "incentive_target": 1000001,
-      "incentive_pct": 131.5,
-      "incentive_gap": 315002.0,
-      "incentive_achieved": true
+      "youbaopin": 2888,
+      "youbaopin_target": 4807,
+      "youbaopin_pct": 60.1
     },
     {
       "name": "狄鹏",
@@ -140,12 +132,7 @@
       "active_clients": 1,
       "youbaopin": 191,
       "youbaopin_target": 2295,
-      "youbaopin_pct": 8.3,
-      "incentive_val": 964338.0,
-      "incentive_target": 2417200,
-      "incentive_pct": 39.9,
-      "incentive_gap": -1452862.0,
-      "incentive_achieved": false
+      "youbaopin_pct": 8.3
     },
     {
       "name": "燕磊",
@@ -167,12 +154,7 @@
       "active_clients": 35,
       "youbaopin": 6642,
       "youbaopin_target": 8137,
-      "youbaopin_pct": 81.6,
-      "incentive_val": 3020764.0,
-      "incentive_target": 3200000,
-      "incentive_pct": 94.4,
-      "incentive_gap": -179236.0,
-      "incentive_achieved": false
+      "youbaopin_pct": 81.6
     },
     {
       "name": "冉崇明",
@@ -194,12 +176,7 @@
       "active_clients": 9,
       "youbaopin": 2280,
       "youbaopin_target": null,
-      "youbaopin_pct": null,
-      "incentive_val": 607450.0,
-      "incentive_target": 1000001,
-      "incentive_pct": 60.7,
-      "incentive_gap": -392551.0,
-      "incentive_achieved": false
+      "youbaopin_pct": null
     },
     {
       "name": "刘鑫",
@@ -221,12 +198,7 @@
       "active_clients": 22,
       "youbaopin": 5733,
       "youbaopin_target": 5400,
-      "youbaopin_pct": 106.2,
-      "incentive_val": 1328121.0,
-      "incentive_target": 1200000,
-      "incentive_pct": 110.7,
-      "incentive_gap": 128121.0,
-      "incentive_achieved": true
+      "youbaopin_pct": 106.2
     },
     {
       "name": "杨佳玮",
@@ -248,12 +220,7 @@
       "active_clients": 17,
       "youbaopin": 3540,
       "youbaopin_target": 4492,
-      "youbaopin_pct": 78.8,
-      "incentive_val": 524660.0,
-      "incentive_target": 1000002,
-      "incentive_pct": 52.5,
-      "incentive_gap": -475342.0,
-      "incentive_achieved": false
+      "youbaopin_pct": 78.8
     },
     {
       "name": "李朝燕",
@@ -275,12 +242,7 @@
       "active_clients": 14,
       "youbaopin": 5110,
       "youbaopin_target": 7009,
-      "youbaopin_pct": 72.9,
-      "incentive_val": 1081672.0,
-      "incentive_target": 1284520,
-      "incentive_pct": 84.2,
-      "incentive_gap": -202848.0,
-      "incentive_achieved": false
+      "youbaopin_pct": 72.9
     },
     {
       "name": "杨婷婷",
@@ -302,12 +264,7 @@
       "active_clients": 27,
       "youbaopin": 7446,
       "youbaopin_target": 7206,
-      "youbaopin_pct": 103.3,
-      "incentive_val": 1544886.0,
-      "incentive_target": 1300000,
-      "incentive_pct": 118.8,
-      "incentive_gap": 244886.0,
-      "incentive_achieved": true
+      "youbaopin_pct": 103.3
     },
     {
       "name": "欧阳杰俊",
@@ -329,14 +286,10 @@
       "active_clients": 24,
       "youbaopin": 4432,
       "youbaopin_target": 5082,
-      "youbaopin_pct": 87.2,
-      "incentive_val": 1154670.0,
-      "incentive_target": 3000001,
-      "incentive_pct": 38.5,
-      "incentive_gap": -1845331.0,
-      "incentive_achieved": false
+      "youbaopin_pct": 87.2
     }
   ],
   "top20_up": [],
-  "top20_down": []
+  "top20_down": [],
+  "customer_analysis": {}
 }
