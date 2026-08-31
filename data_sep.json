@@ -1,0 +1,485 @@
+{
+  "update_time": "2026-09-01",
+  "month": "2026-09",
+  "_status": "live",
+  "_note": "9月数据实时更新中",
+  "xinbao": {
+    "month_val": 0,
+    "month_target": 25401725.0,
+    "month_pct": 0,
+    "month_yoy": null,
+    "quarter_val": 57112273.0,
+    "quarter_target": 82046954.0,
+    "quarter_pct": 69.61,
+    "quarter_yoy": null
+  },
+  "acp": {
+    "month_val": 0,
+    "month_target": 4936712.0,
+    "month_pct": 0,
+    "month_yoy": null,
+    "quarter_val": 9998861.0,
+    "quarter_target": 15145036.0,
+    "quarter_pct": 66.02,
+    "quarter_yoy": null
+  },
+  "active": {
+    "count": 0,
+    "target": 270,
+    "pct": 0,
+    "yoy": null
+  },
+  "youbaopin": {
+    "count": 0,
+    "target": 0,
+    "pct": 0
+  },
+  "persons": {
+    "赵舒越": {
+      "month_val": 0,
+      "month_target": 1256248,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 3694593.0,
+      "quarter_target": 4057650,
+      "quarter_pct": 91.1,
+      "incentive_val": 0,
+      "incentive_target": 1000001,
+      "incentive_reached": false
+    },
+    "高盛强": {
+      "month_val": 0,
+      "month_target": 7228442,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 24829591.0,
+      "quarter_target": 23347691,
+      "quarter_pct": 106.3,
+      "incentive_val": 0,
+      "incentive_target": 10000001,
+      "incentive_reached": false
+    },
+    "冉崇明": {
+      "month_val": 0,
+      "month_target": 786614,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 1705770.0,
+      "quarter_target": 2540744,
+      "quarter_pct": 67.1,
+      "incentive_val": 0,
+      "incentive_target": 1000001,
+      "incentive_reached": false
+    },
+    "燕磊": {
+      "month_val": 0,
+      "month_target": 3784178,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 7663116.0,
+      "quarter_target": 12222801,
+      "quarter_pct": 62.7,
+      "incentive_val": 0,
+      "incentive_target": 3200000,
+      "incentive_reached": false
+    },
+    "刘鑫": {
+      "month_val": 0,
+      "month_target": 1989560,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 3622276.0,
+      "quarter_target": 6426230,
+      "quarter_pct": 56.4,
+      "incentive_val": 0,
+      "incentive_target": 1200000,
+      "incentive_reached": false
+    },
+    "狄鹏": {
+      "month_val": 0,
+      "month_target": 1145089,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 1611990.0,
+      "quarter_target": 3698609,
+      "quarter_pct": 43.6,
+      "incentive_val": 0,
+      "incentive_target": 2417200,
+      "incentive_reached": false
+    },
+    "杨佳玮": {
+      "month_val": 0,
+      "month_target": 877049,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 1520332.0,
+      "quarter_target": 2832848,
+      "quarter_pct": 53.7,
+      "incentive_val": 0,
+      "incentive_target": 1000002,
+      "incentive_reached": false
+    },
+    "杨婷婷": {
+      "month_val": 0,
+      "month_target": 2778394,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 4474444.0,
+      "quarter_target": 8974144,
+      "quarter_pct": 49.9,
+      "incentive_val": 0,
+      "incentive_target": 1300000,
+      "incentive_reached": false
+    },
+    "李朝燕": {
+      "month_val": 0,
+      "month_target": 1907773,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 3181690.0,
+      "quarter_target": 6162060,
+      "quarter_pct": 51.6,
+      "incentive_val": 0,
+      "incentive_target": 1284520,
+      "incentive_reached": false
+    },
+    "欧阳杰俊": {
+      "month_val": 0,
+      "month_target": 3648380,
+      "month_pct": 0,
+      "month_yoy": null,
+      "quarter_val": 3975510.0,
+      "quarter_target": 11784177,
+      "quarter_pct": 33.7,
+      "incentive_val": 0,
+      "incentive_target": 3000001,
+      "incentive_reached": false
+    }
+  },
+  "top20_up": [
+    {
+      "name": "广东绿达新能源有限公司",
+      "sales": "高盛强",
+      "cur_val": 5081044,
+      "yoy_val": 455510,
+      "delta": 4625534,
+      "yoy_pct": 1015.5
+    },
+    {
+      "name": "东莞市兴风林有机玻璃制品有限公司",
+      "sales": "赵舒越",
+      "cur_val": 366869,
+      "yoy_val": 20982,
+      "delta": 345887,
+      "yoy_pct": 1648.5
+    },
+    {
+      "name": "广东逸动生活服饰科技有限公司",
+      "sales": "高盛强",
+      "cur_val": 668253,
+      "yoy_val": 326830,
+      "delta": 341423,
+      "yoy_pct": 104.5
+    },
+    {
+      "name": "东莞市同恩进出口有限公司",
+      "sales": "刘鑫",
+      "cur_val": 273666,
+      "yoy_val": 544,
+      "delta": 273122,
+      "yoy_pct": 50206.2
+    },
+    {
+      "name": "广东吉盛科实业有限公司",
+      "sales": "杨婷婷",
+      "cur_val": 449844,
+      "yoy_val": 197092,
+      "delta": 252752,
+      "yoy_pct": 128.2
+    },
+    {
+      "name": "广东格瑞斯精密五金科技有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 238200,
+      "yoy_val": 0,
+      "delta": 238200,
+      "yoy_pct": null
+    },
+    {
+      "name": "深圳瑞奇包装用品有限公司",
+      "sales": "燕磊",
+      "cur_val": 473535,
+      "yoy_val": 288727,
+      "delta": 184808,
+      "yoy_pct": 64.0
+    },
+    {
+      "name": "广东飞彬机械集团有限公司",
+      "sales": "刘鑫",
+      "cur_val": 220202,
+      "yoy_val": 37718,
+      "delta": 182484,
+      "yoy_pct": 483.8
+    },
+    {
+      "name": "东莞市迪优门窗科技有限公司",
+      "sales": "高盛强",
+      "cur_val": 232424,
+      "yoy_val": 104950,
+      "delta": 127474,
+      "yoy_pct": 121.5
+    },
+    {
+      "name": "东莞市永昌美工艺品有限公司",
+      "sales": "燕磊",
+      "cur_val": 123577,
+      "yoy_val": 9366,
+      "delta": 114212,
+      "yoy_pct": 1219.5
+    },
+    {
+      "name": "广东联运达电子有限公司",
+      "sales": "燕磊",
+      "cur_val": 104978,
+      "yoy_val": 60,
+      "delta": 104918,
+      "yoy_pct": 174863.4
+    },
+    {
+      "name": "东莞市万泽家居用品有限公司",
+      "sales": "燕磊",
+      "cur_val": 144362,
+      "yoy_val": 51044,
+      "delta": 93318,
+      "yoy_pct": 182.8
+    },
+    {
+      "name": "广东华文新材料科技有限公司",
+      "sales": "燕磊",
+      "cur_val": 554126,
+      "yoy_val": 463413,
+      "delta": 90713,
+      "yoy_pct": 19.6
+    },
+    {
+      "name": "东莞市西兰包装胶袋有限公司",
+      "sales": "冉崇明",
+      "cur_val": 88039,
+      "yoy_val": 2471,
+      "delta": 85568,
+      "yoy_pct": 3462.9
+    },
+    {
+      "name": "东莞市晟熙服饰有限公司",
+      "sales": "杨婷婷",
+      "cur_val": 128001,
+      "yoy_val": 44148,
+      "delta": 83853,
+      "yoy_pct": 189.9
+    },
+    {
+      "name": "广东吉盛科实业有限公司",
+      "sales": "杨婷婷",
+      "cur_val": 85353,
+      "yoy_val": 1893,
+      "delta": 83459,
+      "yoy_pct": 4407.9
+    },
+    {
+      "name": "东莞市汇合数据科技有限公司",
+      "sales": "高盛强",
+      "cur_val": 145016,
+      "yoy_val": 65403,
+      "delta": 79614,
+      "yoy_pct": 121.7
+    },
+    {
+      "name": "东莞市宏昇印刷有限公司",
+      "sales": "赵舒越",
+      "cur_val": 79262,
+      "yoy_val": 400,
+      "delta": 78862,
+      "yoy_pct": 19715.6
+    },
+    {
+      "name": "广东迅扬科技股份有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 85691,
+      "yoy_val": 7470,
+      "delta": 78222,
+      "yoy_pct": 1047.2
+    },
+    {
+      "name": "东莞市玲之秀服饰有限公司",
+      "sales": "刘鑫",
+      "cur_val": 119288,
+      "yoy_val": 46574,
+      "delta": 72714,
+      "yoy_pct": 156.1
+    }
+  ],
+  "top20_down": [
+    {
+      "name": "东莞市联迪科技有限公司",
+      "sales": "高盛强",
+      "cur_val": 291087,
+      "yoy_val": 825133,
+      "delta": -534047,
+      "yoy_pct": -64.7
+    },
+    {
+      "name": "广东顶厨智能家居科技有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 2035,
+      "yoy_val": 455982,
+      "delta": -453947,
+      "yoy_pct": -99.6
+    },
+    {
+      "name": "深圳市刘氏太阳能铁锂能源有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 2360,
+      "yoy_val": 314981,
+      "delta": -312621,
+      "yoy_pct": -99.3
+    },
+    {
+      "name": "东莞市恒越实业有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 360,
+      "yoy_val": 219414,
+      "delta": -219054,
+      "yoy_pct": -99.8
+    },
+    {
+      "name": "东莞市净诺环境科技股份有限公司",
+      "sales": "狄鹏",
+      "cur_val": 920799,
+      "yoy_val": 1123444,
+      "delta": -202645,
+      "yoy_pct": -18.0
+    },
+    {
+      "name": "广东千度科技有限公司",
+      "sales": "高盛强",
+      "cur_val": 394834,
+      "yoy_val": 559916,
+      "delta": -165083,
+      "yoy_pct": -29.5
+    },
+    {
+      "name": "东莞市安玺服饰有限公司",
+      "sales": "高盛强",
+      "cur_val": 15119,
+      "yoy_val": 153312,
+      "delta": -138192,
+      "yoy_pct": -90.1
+    },
+    {
+      "name": "东莞敏诺科技有限公司",
+      "sales": "赵舒越",
+      "cur_val": 8621,
+      "yoy_val": 146299,
+      "delta": -137678,
+      "yoy_pct": -94.1
+    },
+    {
+      "name": "东莞市紫鹿服饰有限公司",
+      "sales": "杨佳玮",
+      "cur_val": 31619,
+      "yoy_val": 167798,
+      "delta": -136180,
+      "yoy_pct": -81.2
+    },
+    {
+      "name": "东莞市大美实业有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 0,
+      "yoy_val": 125936,
+      "delta": -125936,
+      "yoy_pct": -100.0
+    },
+    {
+      "name": "江西省胜明电子科技有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 44366,
+      "yoy_val": 146111,
+      "delta": -101745,
+      "yoy_pct": -69.6
+    },
+    {
+      "name": "东莞市信诺皮革有限公司",
+      "sales": "杨婷婷",
+      "cur_val": 10109,
+      "yoy_val": 108946,
+      "delta": -98837,
+      "yoy_pct": -90.7
+    },
+    {
+      "name": "东莞市维丽纳首饰智造有限公司",
+      "sales": "欧阳杰俊",
+      "cur_val": 14023,
+      "yoy_val": 112611,
+      "delta": -98588,
+      "yoy_pct": -87.5
+    },
+    {
+      "name": "东莞市永方电子科技有限公司",
+      "sales": "燕磊",
+      "cur_val": 71510,
+      "yoy_val": 169730,
+      "delta": -98220,
+      "yoy_pct": -57.9
+    },
+    {
+      "name": "深圳市移扩科技有限公司",
+      "sales": "燕磊",
+      "cur_val": 0,
+      "yoy_val": 97438,
+      "delta": -97438,
+      "yoy_pct": -100.0
+    },
+    {
+      "name": "东莞景行五金有限公司",
+      "sales": "杨佳玮",
+      "cur_val": 17681,
+      "yoy_val": 111169,
+      "delta": -93488,
+      "yoy_pct": -84.1
+    },
+    {
+      "name": "东莞市千加依电子商务有限公司",
+      "sales": "高盛强",
+      "cur_val": 49245,
+      "yoy_val": 129004,
+      "delta": -79759,
+      "yoy_pct": -61.8
+    },
+    {
+      "name": "东莞市瑞飞服装有限公司",
+      "sales": "燕磊",
+      "cur_val": 38908,
+      "yoy_val": 116493,
+      "delta": -77585,
+      "yoy_pct": -66.6
+    },
+    {
+      "name": "东莞市顶线电子有限公司",
+      "sales": "刘鑫",
+      "cur_val": 55572,
+      "yoy_val": 130826,
+      "delta": -75254,
+      "yoy_pct": -57.5
+    },
+    {
+      "name": "东莞市迪柯精密五金有限公司",
+      "sales": "燕磊",
+      "cur_val": 43329,
+      "yoy_val": 106774,
+      "delta": -63445,
+      "yoy_pct": -59.4
+    }
+  ],
+  "top20_month": "2026-09",
+  "top20_yoy_month": "2025-09"
+}
