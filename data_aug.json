@@ -662,5 +662,7 @@
     }
   ],
   "top20_month": "2026-08",
-  "top20_yoy_month": "2025-08"
+  "top20_yoy_month": "2025-08",
+  "_status": "frozen",
+  "_frozen_at": "2026-09-01T15:00:00"
 }
