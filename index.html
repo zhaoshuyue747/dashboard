@@ -330,8 +330,13 @@
     <span class="month-badge" id="aug-badge" style="background:#6b7280;color:#fff">已固化</span>
   </div>
   <span class="month-divider">|</span>
-  <div class="month-tab active" id="tab-sep" onclick="switchMonth('sep', this)">
+  <div class="month-tab" id="tab-sep" onclick="switchMonth('sep', this)">
     9月&nbsp;2026
+    <span class="month-badge" id="sep-badge" style="background:#6b7280;color:#fff">已固化</span>
+  </div>
+  <span class="month-divider">|</span>
+  <div class="month-tab active" id="tab-oct" onclick="switchMonth('oct', this)">
+    10月&nbsp;2026
     <span class="month-badge badge-live">冲刺中</span>
   </div>
   <span style="color:rgba(255,255,255,0.3);font-size:11px;margin-left:12px" id="month-update-label">数据更新：--</span>
@@ -1059,16 +1064,12 @@ const DATA_URLS = {
   jul: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_jul.json',
   aug: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_aug.json',
   sep: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_sep.json',
+  oct: 'https://raw.githubusercontent.com/zhaoshuyue747/dashboard/main/data_oct.json',
 };
 const DATA_URL = DATA_URLS.jul;  // 向后兼容
 
-// 当前活跃月份：9月1日15:00后默认切至9月
-(function() {
-  const now = new Date();
-  const freeze = new Date('2026-09-01T15:00:00+08:00');
-  window._augFrozen = now >= freeze;
-})();
-let currentMonth = window._augFrozen ? 'sep' : 'aug';
+// 当前活跃月份：10月为主视角
+let currentMonth = 'oct';
 
 function fmt(n) {
   if (n === null || n === undefined) return '--';
@@ -1573,24 +1574,10 @@ const AUG_PLACEHOLDER = {
 };
 
 // ── 月份切换 ──
-// 初始化：根据时间自动激活正确 tab 和徽章
+// 初始化：默认激活 10月 tab
 (function initTabs() {
-  const frozen = window._augFrozen;
-  // 8月徽章
-  const augBadge = document.getElementById('aug-badge');
-  if (augBadge) {
-    if (frozen) {
-      augBadge.textContent = '已固化';
-      augBadge.style.cssText = 'background:#6b7280;color:#fff';
-    } else {
-      augBadge.textContent = '实时';
-      augBadge.className = 'month-badge badge-live';
-    }
-  }
-  // 激活正确 tab
   document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
-  const activeId = frozen ? 'tab-sep' : 'tab-aug';
-  const activeTab = document.getElementById(activeId);
+  const activeTab = document.getElementById('tab-oct') || document.getElementById('tab-sep');
   if (activeTab) activeTab.classList.add('active');
 })();
 
@@ -1885,6 +1872,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initBreakdown();
 });
 </script>
-<!-- build:20260831090813 -->
+<!-- build:20261026214422 -->
 </body>
 </html>
